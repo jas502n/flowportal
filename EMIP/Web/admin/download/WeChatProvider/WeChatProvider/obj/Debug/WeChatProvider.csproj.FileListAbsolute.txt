@@ -1,0 +1,9 @@
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\bin\Debug\WeChatProvider.dll
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\bin\Debug\WeChatProvider.pdb
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\bin\Debug\BPM.dll
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\bin\Debug\BPM.Server.dll
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\bin\Debug\Newtonsoft.Json.dll
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\obj\Debug\WeChatProvider.dll
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\obj\Debug\WeChatProvider.pdb
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\bin\Debug\BPM.Client.dll
+F:\研发部\Flowportal\WEB_App\download\WeChatProvider\WeChatProvider\obj\Debug\WeChatProvider.csprojResolveAssemblyReference.cache

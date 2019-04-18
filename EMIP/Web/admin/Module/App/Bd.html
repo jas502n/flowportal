@@ -1,0 +1,351 @@
+﻿<script type="text/html" template lay-done="layui.data.sendParams(d)">
+    <div class="layui-form" lay-filter="LAY-filter-AppEdit-form" style="padding:10px">
+        <div class="layui-form-item">
+    <label class="layui-form-label">表单服务</label>
+    <div class="layui-input-block">
+      <input type="text" name="FormService"  lay-verify="required" autocomplete="off" placeholder="请选择表单服务" readonly="" class="layui-input">
+      <div class="eleTree ele5" lay-filter="data5"></div>
+    </div>
+  </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">表名</label>
+      <div class="layui-input-block">
+        <select name="Table" id="Table" lay-filter="Table" lay-verify="required" lay-search="">
+        </select>
+      </div>
+    </div>
+      <div class="layui-form-item">
+    <label class="layui-form-label">主键</label>
+    <div class="layui-input-block">
+       <select name="Primarykey" id="Primarykey"  lay-verify="required" lay-search="">
+        </select>
+    </div>
+  </div>
+  <fieldset class="layui-elem-field">
+  <legend>表结构</legend>
+  <div class="layui-field-box" style='height: 300px;
+    overflow: hidden;
+    overflow-y: scroll'>
+    <table class="layui-table" lay-size="sm">
+  <colgroup>
+    <col width="100">
+    <col>
+    <col width="80">
+    <col width="80">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>列名</th>
+      <th>显示名</th>
+      <th>是否显示</th>
+      <th>排序</th>
+    </tr> 
+  </thead>
+  <tbody id="bjg">
+    
+  </tbody>
+</table>
+  </div>
+</fieldset>
+
+ <fieldset class="layui-elem-field">
+  <legend>按钮组</legend>
+  <div class="layui-field-box">
+  <table class="layui-table" lay-size="sm">
+   <colgroup>
+    <col width="80">
+    <col width="80">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>按钮名</th>
+      <th>是否显示</th>
+      <th>权限</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <tr>
+      <td>新增</td>
+      <td><input type='checkbox' id="addcheck" name="addcheck" lay-skin='switch' lay-text='是|否'></td>
+      <td>
+       <select name="Add" id="SelectAdd" lay-search=""></select></td>
+    </tr>
+    <tr>
+      <td>编辑</td>
+      <td><input type='checkbox' id="editcheck" name="editcheck" lay-skin='switch' lay-text='是|否'></td>
+      <td><select name="Edit" id="SelectEdit"  lay-search=""></select></td>
+    </tr>
+    <tr>
+      <td>删除</td>
+      <td><input type='checkbox'  id="delcheck"  name="delcheck" lay-skin='switch' lay-text='是|否'></td>
+      <td> <textarea placeholder="请输入SQL" id="delsql" name="delsql" class="layui-textarea"></textarea></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+  </fieldset>
+   <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="LAY-filter-AppEdit-form_Submit">确定</button>
+
+            </div>
+        </div>
+    </div>
+</script>
+<script src="../../../assets/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var Pid = 0;
+     var _data2;
+     layui.data.sendParams = function (d) {
+         Pid = d.params.Id;
+         layui.config({
+             base: "../../../assets/layuiadmin/layui/lay/extendmodules/"
+         }).use(['form', 'table', 'eleTree', 'layer'], function () {
+             var form = layui.form
+              , $ = layui.jquery
+            , colorpicker = layui.colorpicker;
+             var eleTree = layui.eleTree;
+             var table = layui.table;
+             var layer = layui.layer;
+             var el5;
+             load = function () {
+
+                 var option = {
+                     data: {
+                         method: 'LoadAppInfo',
+                         pid: Pid
+                     },
+                     type: 'post',
+                     url: '../../../admin/Module/App/data/data.ashx',
+                     success: function (data) {
+                         if (data.appinfo == "0") {
+                             return;
+                         }
+                         var json = JSON.parse(data.appinfo);
+
+                         var option = {
+                             data: {
+                                 method: 'LoadFormservice',
+                                 formservice: json.formservice
+                             },
+                             type: 'post',
+                             url: '../../../admin/Module/App/data/data.ashx',
+                             success: function (data) {
+                                 loadcol(data.Formservice, json.table.columns, true, json.table.name);
+                                 form.val('LAY-filter-AppEdit-form', {
+                                     "FormService": json.formservice,
+                                     "Primarykey": json.primarykey,
+                                     "Table": json.table.name,
+                                     "addcheck": json.formstate.add.show,
+                                     "editcheck": json.formstate.edit.show,
+                                     "delcheck": json.formstate.del.show,
+                                     "Add": json.formstate.add.state,
+                                     "Edit": json.formstate.edit.state,
+                                     "delsql": unescape(json.formstate.del.state)
+                                 })
+                                 form.render('select');
+                             }
+                         }
+                         layui.admin.req(option);
+                     }
+                 }
+                 layui.admin.req(option);
+             }
+             load();
+             form.render(null, 'LAY-filter-AppEdit-form');
+
+
+             $("[name='FormService']").on("click", function (e) {
+                 e.stopPropagation();
+                 if (!el5) {
+                     el5 = eleTree.render({
+                         elem: '.ele5',
+                         url: '../../../admin/Module/App/data/data.ashx?method=LoadFormApplication',
+                         response: {
+                             statusName: "code",
+                             statusCode: 0,
+                             dataName: "children"
+                         },
+                         defaultExpandAll: false,
+                         expandOnClickNode: false,
+                         highlightCurrent: true
+                     });
+                 }
+                 $(".ele5").toggle();
+             })
+             loadcol = function (data, data2, flag, table) {
+           
+                 var sel = $("#Table");
+                 sel.empty();
+                 var Asel = $("#SelectAdd");
+                 Asel.empty();
+                 var Esel = $("#SelectEdit");
+                 Esel.empty();
+                 $(data.TableIdentitys).each(function (i, item) {
+                     if (i == 0 && flag == false) {
+                         loadtable(item.DataSourceName, item.IsRepeatableTable, item.TableName, data2);
+                     } else if (i == 0 && flag == true) {
+                       
+                         loadtable(item.DataSourceName, item.IsRepeatableTable, table, data2);
+                     }
+                     sel.append("<option  value=\"" + item.TableName + "\" name='" + item.TableName + "' data-DataSourceName='" + item.DataSourceName + "' data-IsRepeatableTable='" + item.IsRepeatableTable + "'>" + item.TableName + "</option>");
+                 })
+                 $(data.FormStates).each(function (i, item) {
+
+                     Asel.append("<option>" + item.Name + "</option>");
+                 })
+                 $(data.FormStates).each(function (i, item) {
+                     Esel.append("<option>" + item.Name + "</option>");
+                 })
+
+                 form.render('select');
+             }
+             loadtable = function (DataSourceName, IsRepeatableTable, TableName, data2) {
+                 _data2 = data2;
+                 var option = {
+                     data: {
+                         method: 'GetTableSchemas',
+                         DataSourceName: DataSourceName,
+                         IsRepeatableTable: IsRepeatableTable,
+                         TableName: TableName
+                     },
+                     url: "Module/App/data/data.ashx",
+                     async: false,
+                     success: function (data) {
+                         var html = "";
+                         var table = data.Tables[0];
+                         var sel = $("#Primarykey");
+                         sel.empty();
+                         $(table.Columns).each(function (i, item) {
+                             sel.append("<option  value=\"" + item.ColumnName + "\" name='" + item.ColumnName + "'>" + item.ColumnName + "</option>");
+                         })
+
+                         for (var i = 0; i < table.Columns.length; i++) {
+                             var hasdata = [];
+
+                             if (_data2 != null) {
+                                 hasdata = _data2.filter(function (e) { return e.name == table.Columns[i].ColumnName; });
+                             }
+
+                             html += "<tr><td>" + table.Columns[i].ColumnName + "</td><td><input type='text'  class='layui-input' value='" + (hasdata.length == 0 ? table.Columns[i].ColumnName : hasdata[0].text) + "'></td><td><input type='checkbox' lay-skin='switch'  " + (hasdata.length == 0 ? "" : (hasdata[0].show ? "checked" : "")) + " lay-text='是|否'></td><td><input type='number'  class='layui-input' value='" + (hasdata.length == 0 ? "" : hasdata[0].sort) + "'></td></tr>";
+                         }
+                         $("#bjg").html("");
+                         $("#bjg").html(html);
+                         form.render();
+
+                     }
+                 }
+                 parent.layui.admin.req(option);
+
+             }
+             form.on('select(Table)', function (data) {
+                 $($(data.elem).find("option")).each(function (i, item) {
+                     if ($(item).attr("value") == data.value) {
+                         var DataSourceName = $(item).attr("data-DataSourceName");
+                         var IsRepeatableTable = $(item).attr("data-IsRepeatableTable");
+                         var TableName = data.value;
+                         loadtable(DataSourceName, IsRepeatableTable, TableName, null);
+                     }
+                 })
+
+             });
+             eleTree.on("nodeClick(data5)", function (d) {
+                 if (d.data.currentData.app) {
+
+                     $("[name='FormService']").val(d.data.currentData.FullName);
+                     $(".ele5").hide();
+                     loadcol(d.data.currentData.data,false,null);
+
+
+
+                 } else {
+                     layer.msg("当前选择非表单服务，请选择表单服务!");
+
+                 }
+             })
+             $(document).on("click", function () {
+                 $(".ele5").hide();
+             })
+             //监听提交
+             form.on('submit(LAY-filter-AppEdit-form_Submit)', function (data) {
+                 debugger;
+                 var columns = new Array();
+
+
+                 $($("#bjg").find("tr")).each(function (i, item) {
+                     var column = {
+                         name: $(item).find("td").eq(0).text(),
+                         text: $(item).find("td").eq(1).find("input").val(),
+                         sort: $(item).find("td").eq(3).find("input").val(),
+                         show: $(item).find("td").eq(2).find("input").prop("checked")
+                     }
+                     columns.push(column);
+                 })
+
+                 var json = {
+                     pid: Pid,
+                     formservice: data.field.FormService,
+                     table: {
+                         name: data.field.Table,
+                         columns: columns
+                     },
+                     primarykey: data.field.Primarykey,
+                     formstate: {
+                         add: {
+                             show: $("#addcheck").prop("checked"),
+                             state: $("#SelectAdd").val()
+                         },
+                         edit: {
+                             show: $("#editcheck").prop("checked"),
+                             state: $("#SelectEdit").val()
+                         },
+                         del: {
+                             show: $("#delcheck").prop("checked"),
+                             state: escape($("#delsql").val())
+                         }
+
+                     }
+
+                 }
+
+                 if ($("#delcheck").prop("checked") && $("#delsql").val() == "") {
+                     layer.msg("请输入删除sql");
+
+                 } else {
+                     var option = {
+                         data: {
+                             method: 'SaveAppInfo',
+                             data: JSON.stringify(json),
+                             pid: Pid
+                         },
+                         type: 'post',
+                         url: '../../../admin/Module/App/data/data.ashx',
+                         success: function (data) {
+                             if (data.code == "-1") {
+
+                             } else {
+                                 layer.msg('保存成功！', {
+                                     icon: 1,
+                                     time: 1000
+                                 }, function () {
+                                     table.reload('applist');
+                                     layer.closeAll();
+                                 });
+                             }
+                         }
+                     }
+                     layui.admin.req(option);
+                 }
+             });
+
+
+
+
+
+
+         });
+     };
+
+</script>

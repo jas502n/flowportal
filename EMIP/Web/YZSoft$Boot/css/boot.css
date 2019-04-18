@@ -1,0 +1,693 @@
+/*按钮图标样式*/
+@font-face {
+  font-family: 'yzglyphsboot';
+  src: url('yzglyphs.ttf?_dc=6')  format('truetype');
+}
+
+html,
+body,
+.x-button-label,
+.x-badge,
+.x-hasbadge .x-badge
+{
+    font-family:"Microsoft YaHei", "Helvetica Neue",HelveticaNeue,"Helvetica-Neue",Helvetica,"BBAlpha Sans",sans-serif;
+}
+
+.x-button .x-button-icon.yzlg-glyph:before
+{
+    font-family: 'yzglyphsboot';
+}
+
+.yzlg-glyph-e94d:before {content: "\e94d";}
+
+/*yz-mainwin*/
+.yz-mainwin.x-layout-card-item
+{
+    background-color:transparent;
+}
+
+/*yzlg-container-login*/
+.yzlg-container-login
+{
+    background-color:White;
+}
+
+.yzlg-container-login .x-input-password
+{
+    font-family: 'Helvetica Neue', HelveticaNeue, Helvetica-Neue, Helvetica, 'BBAlpha Sans', sans-serif;
+}
+
+.yzlg-container-login input:-webkit-autofill, 
+.yzlg-container-login textarea:-webkit-autofill,
+.yzlg-container-login select:-webkit-autofill
+{
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+/*x-clear-icon*/
+.yzlg-container-login .x-field-input .x-clear-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: 6px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-position: center center;
+    background-size: 16px 16px;
+}
+
+.yzlg-container-login .x-field-clearable .x-field-input,
+.yzlg-container-login .yz-field-expand .x-field-input 
+{
+    padding-right: 20px;
+}
+
+.yzlg-container-login .x-field-select .x-input-el
+{
+    -webkit-text-fill-color:initial;
+}
+
+.yzlg-container-login .x-list-item>.x-innerhtml
+{
+    position: relative;
+    z-index: 1;
+}
+
+/*logo*/
+.yzlg-container-login .logo-cnt
+{
+    text-align:center;
+    text-align:center;
+}
+
+.yzlg-container-login .logo
+{
+    display:inline-block;
+    width:68px;
+    height:68px;
+    margin-top:70px;
+    margin-bottom:70px;
+    padding:0px;
+    background-image:url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.yzlg-container-login .x-field
+{
+    min-height:0;
+    position:relative;
+    margin-bottom:12px;
+}
+
+.yzlg-container-login .x-component-outer
+{
+    border-bottom: 1px solid #dedede;
+}
+
+.halfpx .yzlg-container-login .x-component-outer
+{
+    border-width:0.5px;
+}
+
+.ratio .yzlg-container-login .x-component-outer
+{
+    border:none;
+}
+
+.ratio .yzlg-container-login .x-component-outer:before
+{
+    content:'';
+    position:absolute;
+    bottom:0px;
+    height:1px;
+    left:0px;
+    right:0px;
+    background-position:top left;
+    pointer-events: none;
+    background-color: transparent!important;
+    z-index:1
+}
+
+.ratio2 .yzlg-container-login .x-component-outer:before
+{
+    background-image: linear-gradient(to top,#dedede 50%,transparent 50%);
+}
+
+.ratio3 .yzlg-container-login .x-component-outer:before
+{
+    background-image: linear-gradient(to top,#dedede 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yzlg-container-login .x-component-outer:before
+{
+    background-image: linear-gradient(to top,#dedede 25%,transparent 75%);
+}
+
+.ratiomax .yzlg-container-login .x-component-outer:before
+{
+    background-image: linear-gradient(to top,#dedede 20%,transparent 80%);
+}
+
+.yzlg-container-login .x-field-focused
+{
+    border-color:#11aa00;
+}
+
+.yzlg-container-login .pwd
+{
+    margin-bottom:0px;
+}
+
+.yzlg-container-login .x-field.x-field-labeled .x-form-label,
+.yzlg-container-login .x-component-outer
+{
+    display: box !important;
+    display: -moz-box !important;
+    display: -webkit-box !important;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    box-align: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    box-pack: center;
+ 
+}
+
+.yzlg-container-login .x-form-label
+{
+    background-color:#fff;
+    padding:7px 0px;
+}
+
+.yzlg-container-login .x-form-label span
+{
+    font-family:'yzglyphsboot';
+    font-size:18px;
+    line-height:18px;
+    font-weight: normal;
+    text-shadow: none;
+    color:#25a6d8;
+}
+
+.yzlg-container-login .x-input-el
+{
+    font-size:14px;
+    line-height:18px;
+    padding:7px 6px;
+}
+
+.yzlg-container-login .x-input-el,
+.yzlg-container-login .yz-form-field-body
+{
+    min-height:10px;
+    position:relative;
+}
+
+.yzlg-container-login .x-input-text
+{
+    font-family:'TW Cen MT'
+}
+
+.yzlg-container-login .x-field-select .x-component-outer:after
+{
+    font-family: 'yzglyphsboot';
+    content: '\e904';
+    font-size: 14px;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 0px;
+    left: auto;
+    bottom: 0px;
+    right: 8px;
+    -webkit-mask-image: none;
+    margin: auto;
+    background-color: transparent;
+    color: #aaa;
+}
+
+.yzlg-container-login .x-field-select.yz-field-expanded .x-component-outer:after
+{
+    content: '\e928';
+}
+
+/*yz-field-expand*/
+.yzlg-container-login .yz-field-expand
+{
+    display: block !important;
+}
+
+.yzlg-container-login .yz-form-field-body
+{
+    display: box !important;
+    display: -moz-box !important;
+    display: -webkit-box !important;
+}
+
+.yzlg-container-login .yz-form-field-picker-outer
+{
+    display:block;
+}
+
+/*x-mask*/
+.x-mask.yzl-loadmask .x-mask-inner,
+.x-mask.yzl-loadmask.x-has-message .x-mask-inner
+{
+    padding:3px;
+    border-radius:3px;
+    background-color: rgba(60,60,60,.6);
+}
+
+.x-mask.yzl-loadmask.x-has-message .x-loading-spinner-outer,
+.x-mask.yzl-loadmask .x-loading-spinner-outer
+{
+    height:36px;
+    min-width:36px;
+    padding:5px;
+    position:relative;
+}
+
+.x-mask.yzl-loadmask .x-mask-message
+{
+    font-size: 12px;
+    font-weight: normal;
+    padding: 3px 10px 0px 10px;
+}
+
+.x-mask.yzl-loadmask .x-mask-message
+{
+    position:relative;
+    color:White;
+}
+
+.yzl-loadmask .x-loading-spinner
+{
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+}
+
+/*x-msgbox*/
+.x-msgbox.yzlg-messagebox
+{
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    background-color: #fff;
+    margin:3px;
+    padding:12px;
+}
+
+.x-msgbox-dark.yzlg-messagebox .x-msgbox-text {
+    color: #262626;
+    text-shadow: none;
+    font-size: 12px;
+    line-height: 1.6em;
+}
+
+.x-msgbox.yzlg-messagebox .x-title {
+    line-height: 1.4em;
+    font-size: 18px;
+    padding:10px;
+}
+
+.x-msgbox.yzlg-messagebox .x-toolbar-dark .x-title
+{
+    color:#262626;
+    text-shadow: none;
+}
+
+.x-msgbox.yzlg-messagebox .x-msgbox-title,
+.x-msgbox.yzlg-messagebox .x-msgbox-title.x-docked-top
+{
+    height:40px;
+}
+
+.x-msgbox.yzlg-messagebox .x-msgbox-inner
+{
+    padding:10px;
+    max-height:400px;
+}
+
+.x-msgbox.yzlg-messagebox .x-button
+{
+    min-height: 42px;
+}
+
+.x-msgbox.yzlg-messagebox .x-toolbar .x-button-label
+{
+    font-size:18px;
+    line-height:18px;
+}
+
+.x-msgbox.yzlg-messagebox .x-msgbox-buttons .x-button-normal span
+{
+    opacity: 1;
+}
+
+/*yzlg-field-select-editable*/
+.yzlg-field-select-editable .x-field-mask
+{
+    left:auto;
+    width:30px;
+}
+
+/*yzlg-noscroll-autosize*/
+.yzlg-noscroll-autosize .x-scroll-scroller,
+.yzlg-noscroll-autosize .x-scroll-container
+{
+    position:relative;
+}
+
+/*yzlg-list-item-flat*/
+.yzlg-list-item-flat,
+.yzlg-list-item-flat>.x-innerhtml
+{
+    background-color:White;
+}
+
+/*yzlg-list-item-border*/
+.x-list-normal .x-list-item.x-list-item-tpl.yzlg-list-item-border
+{
+    border:none;
+}
+
+.yzlg-list-item-border:before
+{
+    content:'';
+    position:absolute;
+    top:0px;
+    height:1px;
+    left:0px;
+    right:0px;
+    background-position:top left;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.yzlg-list-item-border:before
+{
+    border-top:solid 1px #dedede;
+}
+
+.halfpx .yzlg-list-item-border:before
+{
+    border-top-width:0.5px;
+}
+
+.ratio .yzlg-list-item-border:before
+{
+    border-top:none;
+}
+
+.ratio2 .yzlg-list-item-border:before
+{
+    background-image: -webkit-linear-gradient(top,#dedede 50%,transparent 50%);
+    background-image: linear-gradient(to top,#dedede 50%,transparent 50%);
+}
+
+.ratio3 .yzlg-list-item-border:before
+{
+    background-image: -webkit-linear-gradient(top,#dedede 33.333333333%,transparent 66.666666666%);
+    background-image: linear-gradient(to top,#dedede 33.333333333%,transparent 66.666666666%);
+}
+
+.ratio4 .yzlg-list-item-border:before
+{
+    background-image: -webkit-linear-gradient(top,#dedede 25%,transparent 75%);
+    background-image: linear-gradient(to top,#dedede 25%,transparent 75%);
+}
+
+.ratiomax .yzlg-list-item-border:before
+{
+    background-image: -webkit-linear-gradient(top,#dedede 20%,transparent 80%);
+    background-image: linear-gradient(to top,#dedede 20%,transparent 80%);
+}
+
+.yzlg-list-item-border.x-list-item-last:after
+{
+    content:'';
+    position:absolute;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    height:1px;
+    background-position:top left;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.yzlg-list-item-border.x-list-item-last:after
+{
+    border-top:solid 1px #dedede;
+}
+
+.halfpx .yzlg-list-item-border.x-list-item-last:after
+{
+    border-top-width:0.5px;
+}
+
+.ratio .yzlg-list-item-border.x-list-item-last:after
+{
+    border-top:none;
+}
+
+.ratio2 .yzlg-list-item-border.x-list-item-last:after
+{
+    background-image: -webkit-linear-gradient(bottom,#dedede 50%,transparent 50%);
+    background-image: linear-gradient(to bottom,#dedede 50%,transparent 50%);
+}
+
+.ratio3 .yzlg-list-item-border.x-list-item-last:after
+{
+    background-image: -webkit-linear-gradient(bottom,#dedede 33.333333333%,transparent 66.666666666%);
+    background-image: linear-gradient(to bottom,#dedede 33.333333333%,transparent 66.666666666%);
+}
+
+.ratio4 .yzlg-list-item-border.x-list-item-last:after
+{
+    background-image: -webkit-linear-gradient(bottom,#dedede 25%,transparent 75%);
+    background-image: linear-gradient(to bottom,#dedede 25%,transparent 75%);
+}
+
+.ratiomax .yzlg-list-item-border.x-list-item-last:after
+{
+    background-image: -webkit-linear-gradient(bottom,#dedede 20%,transparent 80%);
+    background-image: linear-gradient(to bottom,#dedede 20%,transparent 80%);
+}
+
+/*yzlg-button-flat*/
+.x-toolbar .yzlg-button-flat,
+.x-toolbar .yzlg-button-flat.x-button-pressing,
+.yzlg-button-flat,
+.yzlg-button-flat.x-button-pressing
+{
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    border:none;
+    margin:0px 0px;
+}
+
+.x-toolbar .yzlg-button-flat.x-button-pressing,
+.yzlg-button-flat.x-button-pressing
+{
+    opacity:0.5;
+}
+
+.x-toolbar .yzlg-button-flat,
+.yzlg-button-flat
+{
+    color:#38adff;
+}
+
+.x-toolbar .yzlg-button-flat.x-button-pressing,
+.x-toolbar .yzlg-button-flat.x-button-pressing .x-button-icon,
+.yzlg-button-flat.x-button-pressing,
+.yzlg-button-flat.x-button-pressing .x-button-icon
+{
+}
+
+.yzlg-button-flat .x-button-label,
+.x-toolbar .yzlg-button-flat .x-button-label
+{
+    font-weight:normal;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.yzlg-button-flat.x-iconalign-left .x-button-label
+{
+    margin-left:3px;
+}
+
+.yzlg-button-flat .x-button-icon
+{
+    width:14px;
+    height:14px;
+}
+
+.yzlg-button-flat .x-button-icon:before,
+.x-toolbar .yzlg-button-flat .x-button-icon:before
+{
+    font-size: 14px;
+    line-height: 14px;
+}
+
+/*yzlg-button-action-hot*/
+.x-toolbar .yzlg-button-action-hot,
+.yzlg-button-action-hot
+{
+    background-color:#25a6d8;
+    color:#fff;
+}
+
+.x-toolbar .yzlg-button-action-hot.x-button-pressing,
+.yzlg-button-action-hot.x-button-pressing
+{
+    background-color:#25a6d8;
+    color:#fff;
+}
+
+/*yzlg-button-list-option*/
+.yzlg-button-list-option
+{
+    border-radius: 0px;
+    color:#fff;
+    font-size:16px;
+}
+
+/*yzlg-button-login*/
+.yzlg-button-login,
+.yzlg-button-login.x-button-pressing
+{
+    background-image: none;
+    box-shadow: none;
+    border:none;
+    background-color:#99cfec;
+    color:#fff;
+    margin:0px 0px;
+    padding:10px;
+}
+
+.yzlg-button-login.x-button-pressing
+{
+    opacity:0.5;
+}
+
+.yzlg-button-login .x-button-label
+{
+    font-size:18px;
+    line-height:24px;
+}
+
+/*yzlg-button-sendvcode*/
+.yzlg-button-sendvcode,
+.yzlg-button-sendvcode.x-button-pressing
+{
+    padding:3px 10px;
+    border-radius:4px;
+}
+
+.yzlg-button-sendvcode .x-button-label
+{
+    font-size:13px;
+    font-weight: normal;
+}
+
+/*yzlg-button-trial*/
+.yzlg-button-trial,
+.yzlg-button-trial.x-button-pressing
+{
+    padding:3px 10px;
+    border-radius:4px;
+    background-color: transparent;
+    color:#25a6d8;
+}
+
+.yzlg-button-trial .x-button-label
+{
+    font-size:19px;
+    font-weight: 300;
+    margin-right:12px;
+    line-height:26px;
+}
+
+.yzlg-button-trial .x-button-icon:before
+{
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.yzlg-button-trial .x-button-icon
+{
+    width:26px;
+    height:26px;
+}
+
+.yzlg-button-scan
+{
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+.yzlg-button-scan.x-button-pressing
+{
+    background-color: #efefef;
+}
+
+.yzlg-button-scan .x-button-icon
+{
+    width:26px;
+    height:26px;
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAMAAADypuvZAAAAY1BMVEUAAAAeptceptdubm5VVVVBQUGYmJgPDw+urq4vLy8VV296enqRkZEeptd0dHQeptdHR0dRUVEnJyc3NzceHh4eptcPDw8PDw8eptf///8eptfExMS1tbXx8fGXl5e7u7t1dXWB+RC7AAAAGXRSTlMAUGDJpUzgIPx5B+je2tnNvqR3cFA/GBIQwSbo6AAAAItJREFUSMft1tkKgzAQBdCbbmPTWtu6L1H//ysFMRAwoIkLKDlvyXBf7wwcRdiUgz90Wjl+KZ+3XHpCp5bjaoWQd+1F0Pn2s88o9MCk+/lDPyHeM0JCeMozJUowiRMRnCPhMTMTcyAoTAWAbxzygYxdzLAMzo6sOsKqjY7TsFuGbDfhfova7o5wFusAxHAgbIDgZiQAAAAASUVORK5CYII=);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain;
+}
+
+/*yzlg-list-server*/
+.yzlg-list-server
+{
+    margin-left:32px;
+}
+
+/*yzlg-list-item-server*/
+.yzlg-list-item-server.x-list-item-first:before
+{
+    display:none;
+}
+
+.x-list .yzlg-list-item-server.x-list-item-tpl .x-innerhtml
+{
+    padding: 12px 6px;
+}
+
+.yzlg-list-item-server .url
+{
+    font-size:14px;
+    line-height: 14px;
+    color:#929396;
+    font-family: 'TW Cen MT';
+}
+
+/*yzlg-list-option-wrap*/
+.yzlg-list-option-wrap
+{
+    position: absolute;
+    z-index: 0;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+/*yzlg-cmp-sendto*/
+.yzlg-cmp-sendto .x-innerhtml
+{
+    padding:3px 6px;
+    font-size: 12px;
+    color: #929396;
+}

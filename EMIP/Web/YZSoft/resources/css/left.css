@@ -1,0 +1,63 @@
+﻿.yz-button-sp-approve
+{
+    position:relative;
+}
+
+.yz-button-sp-approve:before
+{
+    border-left: solid 1px #fff;
+}
+
+.halfpx .yz-button-sp-approve:before
+{
+    border-left-width:0.5px !important;
+}
+
+.ratio .yz-button-sp-approve:before
+{
+    border-left:none;
+}
+
+.yz-button-sp-approve:before
+{
+    content:'';
+    position:absolute;
+    left:0px;
+    width:1px;
+    top:0px;
+    bottom:0px;
+    pointer-events: none;
+    background-color: transparent!important;
+    z-index:2;    
+}
+
+.ratio2 .yz-button-sp-approve:before
+{
+    background-image: linear-gradient(to right,#fff 50%,transparent 50%);
+}
+
+.ratio3 .yz-button-sp-approve:before
+{
+    border-top:none;
+    background-image: linear-gradient(to right,#fff 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-button-sp-approve:before
+{
+    border-top:none;
+    background-image: linear-gradient(to right,#fff 25%,transparent 75%);
+}
+
+.ratiomax .yz-button-sp-approve:before
+{
+    border-top:none;
+    background-image: linear-gradient(to right,#fff 20%,transparent 80%);
+}
+
+
+
+.yz-button-sp-approve:before
+{
+    top:10px;
+    bottom:10px;
+}

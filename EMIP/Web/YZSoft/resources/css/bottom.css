@@ -1,0 +1,271 @@
+﻿
+.yz-container-border-bottom,
+.yz-container-border-bottom-dark,
+.yz-tab-text,
+.yz-form .x-field,
+.yz-searchbar
+{
+    position:relative;
+}
+
+.yz-container-border-bottom,
+.yz-titlebar-panel.x-docked-top,
+.yz-button-app,
+.yz-form .x-field
+{
+    border-bottom: solid 1px #eee;
+}
+
+.x-picker .x-picker-bar,
+.yz-button-sheet-action,
+.yz-tab-text.x-docked-top,
+.yz-searchbar
+{
+    border-bottom: solid 1px #ddd;
+}
+
+.yz-container-border-bottom-dark
+{
+    border-bottom: solid 1px #ccc;
+}
+
+.yz-titlebar.x-docked-top
+{
+    border-bottom: solid 1px #b2b2b2;
+}
+
+.halfpx .x-picker .x-picker-bar,
+.halfpx .yz-container-border-bottom,
+.halfpx .yz-container-border-bottom-dark,
+.halfpx .yz-titlebar.x-docked-top,
+.halfpx .yz-titlebar-panel.x-docked-top,
+.halfpx .yz-button-sheet-action,
+.halfpx .yz-tab-text.x-docked-top,
+.halfpx .yz-button-app,
+.halfpx .yz-form .x-field,
+.halfpx .yz-searchbar
+{
+    border-bottom-width:0.5px !important;
+}
+
+.ratio .x-picker .x-picker-bar,
+.ratio .yz-container-border-bottom,
+.ratio .yz-container-border-bottom-dark,
+.ratio .yz-titlebar.x-docked-top,
+.ratio .yz-titlebar-panel.x-docked-top,
+.ratio .yz-button-sheet-action,
+.ratio .yz-tab-text.x-docked-top,
+.ratio .yz-button-app,
+.ratio .yz-form .x-field,
+.ratio .yz-searchbar
+{
+    border-bottom:none;
+}
+
+.ratio .x-picker .x-picker-bar:after,
+.ratio .yz-container-border-bottom:after,
+.ratio .yz-container-border-bottom-dark:after,
+.ratio .yz-titlebar.x-docked-top:after,
+.ratio .yz-titlebar-panel.x-docked-top:after,
+.ratio .yz-button-sheet-action:after,
+.ratio .yz-tab-text.x-docked-top:after,
+.yz-button-list-bborder:after,
+.yz-list-item-border.x-list-item-last:after,
+.ratio .yz-button-app:after,
+.ratio .yz-form .x-field:after,
+.ratio .yz-searchbar:after
+{
+    content:'';
+    position:absolute;
+    bottom:0px;
+    height:1px;
+    left:0px;
+    right:0px;
+    pointer-events: none;
+    background-color: transparent!important;
+    z-index:2;    
+}
+
+.yz-list-item-border.x-list-item-last:after
+{
+    border-bottom:solid 1px #ddd;
+}
+
+.yz-button-list-bborder:after
+{
+    border-bottom: solid 1px #eee;
+}
+
+.halfpx .yz-list-item-border.x-list-item-last:after,
+.halfpx .yz-button-list-bborder:after
+{
+    border-bottom-width:0.5px !important;
+}
+
+.ratio .yz-list-item-border.x-list-item-last:after,
+.ratio .yz-button-list-bborder:after
+{
+    border-bottom:none;
+}
+
+/*#eee*/
+.ratio2 .yz-button-list-bborder:after,
+.ratio2 .yz-container-border-bottom:after,
+.ratio2 .yz-titlebar-panel.x-docked-top:after,
+.ratio2 .yz-button-app:after,
+.ratio2 .yz-form .x-field:after
+{
+    background-image: linear-gradient(to top,#eee 50%,transparent 50%);
+}
+
+.ratio3 .yz-button-list-bborder:after,
+.ratio3 .yz-container-border-bottom:after,
+.ratio3 .yz-titlebar-panel.x-docked-top:after,
+.ratio3 .yz-button-app:after,
+.ratio3 .yz-form .x-field:after
+{
+    background-image: linear-gradient(to top,#eee 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-button-list-bborder:after,
+.ratio4 .yz-container-border-bottom:after,
+.ratio4 .yz-titlebar-panel.x-docked-top:after,
+.ratio4 .yz-button-app:after,
+.ratio4 .yz-form .x-field:after
+{
+    background-image: linear-gradient(to top,#eee 25%,transparent 75%);
+}
+
+.ratiomax .yz-button-list-bborder:after,
+.ratiomax .yz-container-border-bottom:after,
+.ratiomax .yz-titlebar-panel.x-docked-top:after,
+.ratiomax .yz-button-app:after.
+.ratiomax .yz-form .x-field:after
+{
+    background-image: linear-gradient(to top,#eee 20%,transparent 80%);
+}
+
+/*#ddd*/
+.ratio2 .x-picker .x-picker-bar:after,
+.ratio2 .yz-button-sheet-action:after,
+.ratio2 .yz-tab-text.x-docked-top:after,
+.ratio2 .yz-list-item-border.x-list-item-last:after,
+.ratio2 .yz-searchbar:after
+{
+    background-image: linear-gradient(to top,#ddd 50%,transparent 50%);
+}
+
+.ratio3 .x-picker .x-picker-bar:after,
+.ratio3 .yz-button-sheet-action:after,
+.ratio3 .yz-tab-text.x-docked-top:after,
+.ratio3 .yz-list-item-border.x-list-item-last:after,
+.ratio3 .yz-searchbar:after
+{
+    background-image: linear-gradient(to top,#ddd 33.33%,transparent 66.66%);
+}
+
+.ratio4 .x-picker .x-picker-bar:after,
+.ratio4 .yz-button-sheet-action:after,
+.ratio4 .yz-tab-text.x-docked-top:after,
+.ratio4 .yz-list-item-border.x-list-item-last:after,
+.ratio4 .yz-searchbar:after
+{
+    background-image: linear-gradient(to top,#ddd 25%,transparent 75%);
+}
+
+.ratiomax .x-picker .x-picker-bar:after,
+.ratiomax .yz-button-sheet-action:after,
+.ratiomax .yz-tab-text.x-docked-top:after,
+.ratiomax .yz-list-item-border.x-list-item-last:after,
+.ratiomax .yz-searchbar:after
+{
+    background-image: linear-gradient(to top,#ddd 20%,transparent 80%);
+}
+
+/*#ccc*/
+.ratio2 .yz-container-border-bottom-dark:after
+{
+    background-image: linear-gradient(to top,#ccc 50%,transparent 50%);
+}
+
+.ratio3 .yz-container-border-bottom-dark:after
+{
+    background-image: linear-gradient(to top,#ccc 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-container-border-bottom-dark:after
+{
+    background-image: linear-gradient(to top,#ccc 25%,transparent 75%);
+}
+
+.ratiomax .yz-container-border-bottom-dark:after
+{
+    background-image: linear-gradient(to top,#ccc 20%,transparent 80%);
+}
+
+/*#b2b2b2*/
+.ratio2 .yz-titlebar.x-docked-top:after
+{
+    background-image: linear-gradient(to top,#b2b2b2 50%,transparent 50%);
+}
+
+.ratio3 .yz-titlebar.x-docked-top:after
+{
+    background-image: linear-gradient(to top,#b2b2b2 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-titlebar.x-docked-top:after
+{
+    background-image: linear-gradient(to top,#b2b2b2 25%,transparent 75%);
+}
+
+.ratiomax .yz-titlebar.x-docked-top:after
+{
+    background-image: linear-gradient(to top,#b2b2b2 20%,transparent 80%);
+}
+
+/*无边框的情况*/
+/*yz-field-noborder*/
+.yz-form .x-field:last-child,
+.yz-form .x-field:last-child,
+.yz-form .x-field.yz-field-noborder,
+.halfpx .yz-form .x-field:last-child,
+.halfpx .yz-form .x-field.yz-field-noborder,
+.yz-form.yz-form-process1 .x-field,
+.yz-titlebar-light.x-docked-top {
+    border-bottom: none;
+}
+
+.ratio .yz-form .x-field:last-child:after,
+.ratio .yz-form .x-field.yz-field-noborder:after,
+.yz-form.yz-form-process1 .x-field:after,
+.ratio .yz-titlebar-light.x-docked-top:after
+{
+    display:none;
+}
+
+/*位置*/
+.yz-button-list-bborder:after
+{
+    left: 36px;
+}
+
+.yz-list-button-container-left10 .yz-button-list-bborder:after
+{
+    left:10px;
+}
+
+.yz-list-button-container-left15 .yz-button-list-bborder:after
+{
+    left:15px;
+}
+
+.yz-button-sheet-action:last-child
+{
+    border-bottom:none;
+}
+
+.ratio .yz-button-sheet-action:last-child:after
+{
+    display:none;
+}

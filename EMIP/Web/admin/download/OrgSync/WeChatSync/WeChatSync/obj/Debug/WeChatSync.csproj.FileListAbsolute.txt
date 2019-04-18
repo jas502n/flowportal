@@ -1,0 +1,18 @@
+c:\users\lin\documents\visual studio 2015\Projects\WeChatSync\WeChatSync\obj\Debug\WeChatSync.csprojResolveAssemblyReference.cache
+c:\users\lin\documents\visual studio 2015\Projects\WeChatSync\WeChatSync\bin\Debug\WeChatSync.exe.config
+c:\users\lin\documents\visual studio 2015\Projects\WeChatSync\WeChatSync\bin\Debug\WeChatSync.exe
+c:\users\lin\documents\visual studio 2015\Projects\WeChatSync\WeChatSync\bin\Debug\WeChatSync.pdb
+c:\users\lin\documents\visual studio 2015\Projects\WeChatSync\WeChatSync\bin\Debug\Newtonsoft.Json.dll
+c:\users\lin\documents\visual studio 2015\Projects\WeChatSync\WeChatSync\obj\Debug\WeChatSync.exe
+c:\users\lin\documents\visual studio 2015\Projects\WeChatSync\WeChatSync\obj\Debug\WeChatSync.pdb
+E:\wechat\WeChatSync\WeChatSync\bin\Debug\WeChatSync.exe.config
+E:\wechat\WeChatSync\WeChatSync\obj\Debug\WeChatSync.exe
+E:\wechat\WeChatSync\WeChatSync\obj\Debug\WeChatSync.pdb
+E:\wechat\WeChatSync\WeChatSync\bin\Debug\WeChatSync.exe
+E:\wechat\WeChatSync\WeChatSync\bin\Debug\WeChatSync.pdb
+E:\wechat\WeChatSync\WeChatSync\obj\Debug\WeChatSync.csprojResolveAssemblyReference.cache
+F:\再鼎\wechat\WeChatSync\WeChatSync\bin\Debug\WeChatSync.exe.config
+F:\再鼎\wechat\WeChatSync\WeChatSync\obj\Debug\WeChatSync.exe
+F:\再鼎\wechat\WeChatSync\WeChatSync\obj\Debug\WeChatSync.pdb
+F:\再鼎\wechat\WeChatSync\WeChatSync\bin\Debug\WeChatSync.exe
+F:\再鼎\wechat\WeChatSync\WeChatSync\bin\Debug\WeChatSync.pdb

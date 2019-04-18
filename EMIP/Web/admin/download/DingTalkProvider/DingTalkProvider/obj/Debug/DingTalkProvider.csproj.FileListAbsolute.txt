@@ -1,0 +1,7 @@
+F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\bin\Debug\DingTalkProvider.dll
+F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\bin\Debug\DingTalkProvider.pdb
+F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\bin\Debug\BPM.dll
+F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\bin\Debug\BPM.Server.dll
+F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\bin\Debug\Newtonsoft.Json.dll
+F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\obj\Debug\DingTalkProvider.dll
+F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\obj\Debug\DingTalkProvider.pdb

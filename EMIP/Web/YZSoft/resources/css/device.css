@@ -1,0 +1,32 @@
+﻿
+.yz-statusbar-overlays .yz-titlebar
+{
+    min-height: 52px;
+    padding: 15px 0px 0px 0px;
+}
+
+.yz-statusbar-overlays .yz-titlebar-searching
+{
+    border-bottom:none !important;
+}
+
+.yz-statusbar-overlays .yz-titlebar-searching.x-docked-top:after
+{
+    content:'';
+    position:absolute;
+    bottom:0px;
+    top:0px;
+    left:0px;
+    right:0px;
+    height:auto;
+    pointer-events: none;
+    background-color: #f5f5f5!important;
+    z-index:2;
+    background-image:none;
+}
+
+.yz-statusbar-overlays .yz-panel-scan .cnt-topic
+{
+    padding-top:10px;
+    height: 138px;
+}

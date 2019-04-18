@@ -1,0 +1,30 @@
+﻿.app .layui-card {
+    text-align: center;
+    padding-right: 0px;
+}
+
+    .app .layui-card i {
+        font-size: 30px;
+    }
+   
+    .wxicon {
+       color:rgb(62, 177, 53);
+    }
+
+     .app .layui-col-md6:first-child .layui-btn {
+       background-color:rgb(62, 177, 53);
+    }
+     .ddicon {
+       color: rgb(58, 162, 235);
+    }
+      .app .layui-col-md6:nth-child(2) .layui-btn {
+       background-color:rgb(58, 162, 235);
+    }
+.app .layui-col-md6:hover {
+box-shadow: 0 10px 60px rgba(29, 29, 31, 0.09)
+
+}
+
+.layui-table[lay-size=sm] td, .layui-table[lay-size=sm] th {
+text-align:center;
+}

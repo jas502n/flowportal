@@ -1,0 +1,13 @@
+﻿
+//让所有表单控件支持xdatabind
+Ext.define('YZSoft.form.override.field.Field', {
+    override: 'Ext.field.Field',
+
+    performBind1: function (viewmodel, row) {
+        var me = this,
+            xdatabind = me.config.xdatabind;
+
+        if (xdatabind)
+            viewmodel.bindField(row, xdatabind, me);
+    }
+});

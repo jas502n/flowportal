@@ -1,0 +1,143 @@
+﻿<script type="text/html" template lay-done="layui.data.sendParams(d)">
+    <div class="layui-form" lay-filter="LAY-filter-AppEdit-form" style="padding:10px">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">应用名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="AppName" value="{{d.params.AppName==undefined?"":d.params.AppName}}" lay-verify="required" autocomplete="off" placeholder="请输入应用名称" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">应用图标</label>
+            <div class="layui-input-block">
+                <input type="text" name="Icon" value="{{d.params.Icon==undefined?"":d.params.Icon}}" lay-verify="required" placeholder="请输入应用图标" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">图标背景</label>
+            <div class="layui-input-inline">
+                <input type="text" id="IconColor" name="IconColor" readonly value="{{d.params.IconColor==undefined?"":d.params.IconColor}}" lay-verify="required" placeholder="请输入图标颜色" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-inline" style="left: -11px;">
+                <div id="colorform"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">图标大小</label>
+            <div class="layui-input-block">
+                <input type="number" name="IconSize" value="{{d.params.IconSize==undefined?"26":d.params.IconSize}}" lay-verify="required" placeholder="请输入图标大小" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">角标</label>
+            <div class="layui-input-block">
+                <textarea   name="BADGE" lay-verify="required" placeholder="请输入角标SQL" autocomplete="off" class="layui-textarea">{{d.params.BADGE==undefined?"":d.params.BADGE}}</textarea>
+                <div class="layui-form-mid layui-word-aux">填写0，则不显示角标</div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">应用分类</label>
+            <div class="layui-input-block">
+                <input type="text" name="ViewType" value="{{d.params.ViewType==undefined?"":d.params.ViewType}}" lay-verify="required" placeholder="请输入应用类别" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">页面类别</label>
+            <div class="layui-input-block">
+                <select name="Type" lay-verify="required">
+                    <option value="">请选择</option>
+                    <option value="SYSTEM">SYSTEM</option>
+                    <option value="IFRAME">IFRAME</option>
+                    <option value="CUSTOM">CUSTOM</option>
+                    <option value="PROCESS">PROCESS</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">应用路径</label>
+            <div class="layui-input-block">
+                <input type="text" name="AppUrl" value="{{d.params.AppUrl==undefined?"":d.params.AppUrl}}"    placeholder="请输入应用路径" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">应用排序</label>
+            <div class="layui-input-block">
+                <input type="number" name="Sort" value="{{d.params.Sort==undefined?"":d.params.Sort}}" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">是否启用</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="Enable" lay-skin="switch" lay-text="是|否" {{ d.params.Enable=="True" ? 'checked' : '' }}>
+
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="LAY-filter-AppEdit-form_Submit">确定</button>
+
+            </div>
+        </div>
+    </div>
+</script>
+<script>
+    layui.data.sendParams = function (d) {
+        layui.use(['form', 'colorpicker', 'table'], function () {
+            var form = layui.form
+              , $ = layui.jquery
+            , colorpicker = layui.colorpicker;
+            var table = layui.table;
+            //表单赋值
+            colorpicker.render({
+                elem: '#colorform'
+              , color: d.params.IconColor
+              , done: function (color) {
+                  $('#IconColor').val(color);
+              }
+            });
+            form.render(null, 'LAY-filter-AppEdit-form');
+         
+            form.val('LAY-filter-AppEdit-form', {
+                "Type": d.params.Type
+            })
+            //监听提交
+            form.on('submit(LAY-filter-AppEdit-form_Submit)', function (data) {
+                data.field.Id = d.params.Id;
+                if (data.field.Enable == "on") {
+                    data.field.Enable = 1;
+                }
+                else {
+                    data.field.Enable = 0;
+                }
+                var option = {
+                    data: {
+                        method: 'SaveApp',
+                        data: JSON.stringify(data.field)
+                    },
+                    url: "../../../Admin/Module/App/data/data.ashx",
+                    success: function (data) {
+                        if (data.code == "-1") {
+                            
+                        } else {
+                            layer.msg('保存成功！', {
+                                icon: 1,
+                                time: 1000
+                            }, function () {
+                                table.reload('applist');
+                                layer.closeAll();
+                            });
+                        }
+
+
+                    }
+                }
+                layui.admin.req(option);
+               
+            });
+        });
+    };
+
+</script>

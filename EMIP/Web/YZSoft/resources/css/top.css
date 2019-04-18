@@ -1,0 +1,280 @@
+﻿
+.yz-container-border-top,
+.yz-container-border-top-dark,
+.yz-tab-panel
+{
+    position:relative;
+}
+
+.yz-tab-panel.x-docked-bottom
+{
+    border-top: solid 1px #f0f3f5;
+}
+
+.x-picker .x-picker-bar,
+.x-picker,
+.x-picker>.x-dock>.x-dock-body,
+.yz-button-sheet-topborder,
+.yz-toolbar-flat,
+.yz-container-social-assist
+{
+    border-top: solid 1px #ddd;
+}
+
+.yz-container-border-top,
+.yz-list-item-notify .notify-more,
+.yz-sp-border-1
+{
+    border-top: solid 1px #eee;
+}
+
+.yz-container-border-top-dark
+{
+    border-top: solid 1px #ccc;
+}
+
+.yz-tab-main.x-docked-bottom
+{
+    border-top: solid 1px #b2b2b2;
+}
+
+.yz-keyboard-tel .yz-button-keyboard
+{
+    border-top: solid 1px #8c8c8c;
+}
+
+.halfpx .x-picker .x-picker-bar,
+.halfpx .x-picker,
+.halfpx .x-picker>.x-dock>.x-dock-body,
+.halfpx .yz-container-border-top,
+.halfpx .yz-container-border-top-dark,
+.halfpx .yz-tab-main.x-docked-bottom,
+.halfpx .yz-tab-panel.x-docked-bottom,
+.halfpx .yz-button-sheet-topborder,
+.halfpx .yz-keyboard-tel .yz-button-keyboard,
+.halfpx .yz-list-item-notify .notify-more,
+.halfpx .yz-toolbar-flat,
+.halfpx .yz-container-social-assist,
+.halfpx .yz-sp-border-1
+{
+    border-top-width:0.5px !important;
+}
+
+.ratio .x-picker .x-picker-bar,
+.ratio .x-picker,
+.ratio .x-picker>.x-dock>.x-dock-body,
+.ratio .yz-container-border-top,
+.ratio .yz-container-border-top-dark,
+.ratio .yz-tab-main.x-docked-bottom,
+.ratio .yz-tab-panel.x-docked-bottom,
+.ratio .yz-button-sheet-topborder,
+.ratio .yz-keyboard-tel .yz-button-keyboard,
+.ratio .yz-list-item-notify .notify-more,
+.ratio .yz-toolbar-flat,
+.ratio .yz-container-social-assist,
+.ratio .yz-sp-border-1
+{
+    border-top:none;
+}
+
+.ratio .x-picker .x-picker-bar:before,
+.ratio .x-picker:before,
+.ratio .x-picker>.x-dock>.x-dock-body:before,
+.ratio .yz-container-border-top:before,
+.ratio .yz-container-border-top-dark:before,
+.ratio .yz-tab-main.x-docked-bottom:after,
+.ratio .yz-tab-panel.x-docked-bottom:after,
+.ratio .yz-button-sheet-topborder:before,
+.yz-list-item-border:before,
+.ratio .yz-keyboard-tel .yz-button-keyboard:before,
+.ratio .yz-list-item-notify .notify-more:before,
+.ratio .yz-toolbar-flat:before,
+.ratio .yz-container-social-assist:before,
+.ratio .yz-sp-border-1:before
+{
+    content:'';
+    position:absolute;
+    top:0px;
+    height:1px;
+    left:0px;
+    right:0px;
+    pointer-events: none;
+    background-color: transparent!important;
+    z-index:2;
+}
+
+.yz-list-item-border:before
+{
+    border-top:solid 1px #ddd;
+}
+
+.halfpx .yz-list-item-border:before
+{
+    border-top-width:0.5px;
+}
+
+.ratio .yz-list-item-border:before
+{
+    border-top:none;
+}
+
+.yz-list-firstitemnotopborder .x-list-item-first:before {
+    display: none !important;
+}
+
+/*#f0f3f5*/
+.ratio2 .yz-tab-panel.x-docked-bottom:after {
+    background-image: linear-gradient(to bottom,#f0f3f5 50%,transparent 50%);
+}
+
+.ratio3 .yz-tab-panel.x-docked-bottom:after
+{
+    background-image: linear-gradient(to bottom,#f0f3f5 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-tab-panel.x-docked-bottom:after
+{
+    background-image: linear-gradient(to bottom,#f0f3f5 25%,transparent 75%);
+}
+
+.ratiomax .yz-tab-panel.x-docked-bottom:after
+{
+    background-image: linear-gradient(to bottom,#f0f3f5 20%,transparent 80%);
+}
+
+/*#eee*/
+.ratio2 .yz-container-border-top:before,
+.ratio2 .yz-list-item-notify .notify-more:before,
+.ratio2 .yz-sp-border-1:before
+{
+    background-image: linear-gradient(to bottom,#eee 50%,transparent 50%);
+}
+
+.ratio3 .yz-container-border-top:before,
+.ratio3 .yz-list-item-notify .notify-more:before,
+.ratio3 .yz-sp-border-1:before
+{
+    background-image: linear-gradient(to top,#eee 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-container-border-top:before,
+.ratio4 .yz-list-item-notify .notify-more:before,
+.ratio4 .yz-sp-border-1:before
+{
+    background-image: linear-gradient(to bottom,#eee 25%,transparent 75%);
+}
+
+.ratiomax .yz-container-border-top:before,
+.ratiomax .yz-list-item-notify .notify-more:before,
+.ratiomax .yz-sp-border-1:before
+{
+    background-image: linear-gradient(to bottom,#eee 20%,transparent 80%);
+}
+
+/*#ddd*/
+.ratio2 .x-picker .x-picker-bar:before,
+.ratio2 .x-picker:before,
+.ratio2 .x-picker>.x-dock>.x-dock-body:before,
+.ratio2 .yz-button-sheet-topborder:before,
+.ratio2 .yz-list-item-border:before,
+.ratio2 .yz-toolbar-flat:before,
+.ratio2 .yz-container-social-assist:before
+{
+    background-image: linear-gradient(to bottom,#ddd 50%,transparent 50%);
+}
+
+.ratio3 .x-picker .x-picker-bar:before,
+.ratio3 .x-picker:before,
+.ratio3 .x-picker>.x-dock>.x-dock-body:before,
+.ratio3 .yz-button-sheet-topborder:before,
+.ratio3 .yz-list-item-border:before,
+.ratio3 .yz-toolbar-flat:before,
+.ratio3 .yz-container-social-assist:before
+{
+    background-image: linear-gradient(to bottom,#ddd 33.33%,transparent 66.66%);
+}
+
+.ratio4 .x-picker .x-picker-bar:before,
+.ratio4 .x-picker:before,
+.ratio4 .x-picker>.x-dock>.x-dock-body:before,
+.ratio4 .yz-button-sheet-topborder:before,
+.ratio4 .yz-list-item-border:before,
+.ratio4 .yz-toolbar-flat:before,
+.ratio4 .yz-container-social-assist:before
+{
+    background-image: linear-gradient(to bottom,#ddd 25%,transparent 75%);
+}
+
+.ratiomax .x-picker .x-picker-bar:before,
+.ratiomax .x-picker:before,
+.ratiomax .x-picker>.x-dock>.x-dock-body:before,
+.ratiomax .yz-button-sheet-topborder:before,
+.ratiomax .yz-list-item-border:before,
+.ratiomax .yz-toolbar-flat:before,
+.ratiomax .yz-container-social-assist:before
+{
+    background-image: linear-gradient(to bottom,#ddd 20%,transparent 80%);
+}
+
+/*#ccc*/
+.ratio2 .yz-container-border-top-dark:before
+{
+    background-image: linear-gradient(to bottom,#ccc 50%,transparent 50%);
+}
+
+.ratio3 .yz-container-border-top-dark:before
+{
+    background-image: linear-gradient(to bottom,#ccc 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-container-border-top-dark:before
+{
+    background-image: linear-gradient(to bottom,#ccc 25%,transparent 75%);
+}
+
+.ratiomax .yz-container-border-top-dark:before
+{
+    background-image: linear-gradient(to bottom,#ccc 20%,transparent 80%);
+}
+
+/*#b2b2b2*/
+.ratio2 .yz-tab-main.x-docked-bottom:after
+{
+    background-image: linear-gradient(to bottom,#b2b2b2 50%,transparent 50%);
+}
+
+.ratio3 .yz-tab-main.x-docked-bottom:after
+{
+    background-image: linear-gradient(to bottom,#b2b2b2 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-tab-main.x-docked-bottom:after
+{
+    background-image: linear-gradient(to bottom,#b2b2b2 25%,transparent 75%);
+}
+
+.ratiomax .yz-tab-main.x-docked-bottom:after
+{
+    background-image: linear-gradient(to bottom,#b2b2b2 20%,transparent 80%);
+}
+
+/*#8c8c8c*/
+.ratio2 .yz-keyboard-tel .yz-button-keyboard:before
+{
+    background-image: linear-gradient(to bottom,#8c8c8c 50%,transparent 50%);
+}
+
+.ratio3 .yz-keyboard-tel .yz-button-keyboard:before
+{
+    background-image: linear-gradient(to bottom,#8c8c8c 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-keyboard-tel .yz-button-keyboard:before
+{
+    background-image: linear-gradient(to bottom,#8c8c8c 25%,transparent 75%);
+}
+
+.ratiomax .yz-keyboard-tel .yz-button-keyboard:before
+{
+    background-image: linear-gradient(to bottom,#8c8c8c 20%,transparent 80%);
+}

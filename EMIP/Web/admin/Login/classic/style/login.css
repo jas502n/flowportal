@@ -1,0 +1,142 @@
+﻿html, body { color: #666666; margin: 0px; height: 100%; overflow: hidden;}
+body, td, input, select, textarea { font: 9pt/22px Arial, Tahoma, "宋体"; }
+ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, p { margin: 0px; padding: 0px; }
+table {   border:0;  border-collapse:separate; border-spacing:0; +border-collapse:collapse;}
+td , th{ padding: 5px; vertical-align: top; }
+p { text-align: justify; text-justify:inter-ideograph; text-indent: 2em; margin-bottom: 0.75em; line-height: 1.75em; }
+li { list-style: none; }
+em { font-style: normal; color: #CCCCCC; }
+strong { color: #000000; }
+input, select, textarea { color: #000000; }
+img { border: 0px none #FFFFFF; background-color: #FFFFFF; }
+hr { border-bottom: 1px solid #f5f5f5; border-top-style: none; border-right-style: none; border-left-style: none; height: 1px; }
+a { color: #1F376D; text-decoration: none; }
+a:hover, a:hover strong { color: #E35000; text-decoration: underline; }
+.bg { position: absolute; z-index: -1; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; }
+.frame { height: 100%; width: 100%; }
+.frame > tbody > tr > td{ padding-bottom: 100px; vertical-align: middle; }
+.main { height: 500px; width: 960px; margin: auto; background: url(ui/login_map.png) no-repeat 0px 0px; position: relative;}
+.login { background: url(ui/login_frame.png) no-repeat center center; height: 240px; width: 360px; padding: 10px; position: absolute; right: 30px; bottom: 10px; z-index: 5;_background-image:none}
+.login a  { text-decoration: none; }
+.login-bg {display:none;_display:block;height: 240px; width: 360px; padding: 10px; position: absolute; right: 30px; bottom: 10px; z-index: 5;_filter : progid:DXImageTransform.Microsoft.AlphaImageLoader (sizingMethod='crop',src='style/ui/login_frame.png')}
+
+.login .title { line-height: 38px; height: 38px; padding-right: 40px; padding-left: 40px; background: url(ui/icon_user.png) no-repeat 12px center; font-weight: bold; color: #000; padding-top: 2px; }
+.login .form { }
+
+.login .form table{ margin: auto; margin-top: 20px; }
+.login .form td { padding: 8px; }
+.login .form .userguid { font-weight: bold; color: #F30; border-bottom: 1px solid #F30; }
+
+.login .errorTip  { color: #F30;  position:absolute; top:21px; right:20px;}
+
+.login .form .waitContainer  { text-align: right; vertical-align: middle; }
+.login .form .waitContainer img { height: 16px; width: 16px; }
+
+
+
+
+.login .form .input{ border: 1px solid #D3D3D3; height: 20px; padding: 3px 5px; background: #FFFFFF url(ui/control_input_bg.png) repeat-x 0px 0px; color: #000; font: bold 10.5pt/20px Tahoma; width: 160px; vertical-align: middle; margin-right: 20px;}
+.login .form .input:focus { border-color:#51BEE5; outline:none; }
+.login .form .input-disabled { color: #999; background-color: #f5f5f5; }
+.login .form .button{ cursor: pointer; height: 30px; color: #2d5f21; background: url(ui/login_btn.png) no-repeat 0px 0px; border:0; width: 100px; font-weight: bold; font-size: 10.5pt; outline:none; vertical-align: middle; }
+.login .form .button[disabled] , .login .form .button[disabled]:hover{ color: #FFF; background-position: 0px -90px; }
+
+.login .form .button:hover { background-position: 0px -30px; color: #224b07; }
+.login .form .button:focus { background-position: 0px -60px; }
+.login .form .button:active { background-position: 1px -59px; }
+
+
+
+.login .form .header { font-weight: bold; color: #000; vertical-align: middle; width: 40px; }
+
+.login .tip { }
+.login .tip .content{ text-align: center; padding-top: 68px; font-family: "宋体";  color: #000; }
+.login .tip .point { font-size: 11px; color: #F93; }
+.login .tip .arrorw { font: 11px "Wingdings 3"; color: #999; }
+
+.login .tip_ie { }
+.login .tip_ie .ieDownload table { width: 320px; margin-right: 20px; margin-left: 20px; }
+.login .tip_ie .ieDownload table td { border-top: 1px dotted #CCC; padding: 0px; text-align: right; }
+.login .tip_ie .ieDownload table td .more { color: #999; margin-top: 6px; display: inline-block; }
+.login .tip_ie .ieDownload table td:first-child {text-align: left; }
+.login .tip_ie .ieDownload table tr:first-child td {border-top: 0; }
+.login .tip_ie strong { color: #F90; }
+.login .tip_ie .getIE     { background: url(ui/login_getIE.png); height: 0px; width: 320px; padding-top: 60px; overflow: hidden; display: block; position: absolute; bottom: 48px; left: 30px; right: 30px; }
+.login .tip_ie .title { background-image: url(ui/icon_error.png); }
+
+.login .tip_ie .content{ padding-top: 20px; padding-right: 20px; padding-left: 20px; }
+.login .tip_ie .content a { color: #999; }
+
+.login .tip_activex { }
+.login .tip_activex .no { color: #F30; font-weight: bold; }
+.login .tip_activex .yes { color: #093; font-weight: bold; }
+.login .tip_activex .content{ padding-top: 20px; padding-right: 20px; padding-left: 20px; }
+.login .tip_activex .skip { text-align: right; }
+.login .tip_activex .skip a { color: #999; }
+.login .tip_activex .title { background-image: url(ui/icon_error.png); }
+.pointContainer { position: absolute; left: 0px; top: 0px; width: 960px; height: 500px; z-index: 2; }
+
+.pointContainer .pointer { background: url(ui/login_point.png) no-repeat; height: 12px; width: 12px; display: block; position: absolute; left: 409px; top: 345px; }
+.pointContainer .pointer:hover { background-position: -12px 0px; cursor: pointer; }
+.pointContainer span.selected , .pointContainer span.selected:hover{ background-position: -24px 0px; }
+
+.pointContainer  table { position: absolute; display: none; empty-cells: show; left: 198px; top: 216px; z-index: 10; }
+.pointContainer  table td { padding: 0px; background: url(ui/login_list.png) no-repeat; overflow: hidden; font-size:1px; line-height:1px; }
+.pointContainer  table .c1 { background-position: left top; width: 6px; height: 6px; }
+.pointContainer  table .c2 { background-position: center top; height: 6px; }
+.pointContainer  table .c3 { background-position: right top; height: 6px; width: 6px; }
+.pointContainer  table .c4 { background-position: left center; width: 6px; }
+.pointContainer  table .c5 { background-position: center center; }
+.pointContainer  table .c6 { background-position: right center; width: 6px; }
+.pointContainer  table .c7 { background-position: left bottom; width: 6px; height: 13px; }
+.pointContainer  table .c8 { background-position: center bottom; height: 13px; }
+.pointContainer  table .c9 { background-position: right bottom; height: 13px; width: 6px; }
+.pointContainer table .close { display: block; height: 17px; width: 17px; background: url(ui/login_list_close.png); position: absolute; top: -5px; right: -5px; cursor: pointer; }
+
+.pointContainer  table .list { font-size: 9pt; line-height: 20px; padding: 0px; }
+.pointContainer  table .list a { white-space: nowrap; display: block; text-decoration: none; padding: 3px 8px 1px; border-top: 1px solid #fff; color: #2684A8; }
+.pointContainer  table .list a:first-child { border-top: 0; }
+.pointContainer table .list a.selected { color: #005073; background: url(ui/login_list_selected_arrow.png) no-repeat 0px center; }
+
+.pointContainer table .list a:hover { color: #005073; background-color: #eee; }
+.pointContainer table.hide { display: block; visibility: hidden; }
+
+.pointContainer table.hover { display: block; }
+
+.pointContainer  table.selected { display: block; }
+.pointContainer  table.selected td    { background-image: url(ui/login_list_selected.png); }
+.pointContainer table.selected .list a { border-color: #eee; }
+
+.main .logo{position:absolute;left:10px;top:10px;background-color:Transparent;width:400px;height:80px;background-repeat:no-repeat;}
+
+.yz-login-lang-cnt
+{
+    position:absolute;
+    top:0px;
+    right:0px;
+    margin-right:10px;
+    margin-top:5px;
+}
+
+.yz-login-lang-sp
+{
+    padding:0px 10px;
+    color:#eee;
+}
+
+.yz-login-lang-item
+{
+    color:#333;
+    text-decoration:none;
+}
+
+.yz-login-lang-item:hover
+{
+    color:#333;
+    text-decoration:none;
+}
+
+.yz-login-lang-item-selected
+{
+    font-weight:bold;
+}

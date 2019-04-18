@@ -1,0 +1,125 @@
+﻿
+.yz-container-border-right-dark
+{
+    position:relative;
+}
+
+.yz-button-app
+{
+    border-right: solid 1px #eee;
+}
+
+.yz-container-border-right-dark
+{
+    border-right: solid 1px #ccc;
+}
+
+.yz-keyboard-tel .yz-button-keyboard
+{
+    border-right: solid 1px #8c8c8c;
+}
+
+.halfpx .yz-container-border-right-dark,
+.halfpx .yz-button-app,
+.halfpx .yz-keyboard-tel .yz-button-keyboard
+{
+    border-right-width:0.5px !important;
+}
+
+.ratio .yz-container-border-right-dark,
+.ratio .yz-button-app,
+.ratio .yz-keyboard-tel .yz-button-keyboard
+{
+    border-right:none;
+}
+
+.ratio .yz-container-border-right-dark:after,
+.ratio .yz-button-app:before,
+.ratio .yz-keyboard-tel .yz-button-keyboard:after
+{
+    content:'';
+    position:absolute;
+    right:0px;
+    width:1px;
+    top:0px;
+    bottom:0px;
+    pointer-events: none;
+    background-color: transparent!important;
+    z-index:2;
+}
+
+/*#eee*/
+.ratio2 .yz-button-app:before
+{
+    background-image: linear-gradient(to left,#eee 50%,transparent 50%);
+}
+
+.ratio3 .yz-button-app:before
+{
+    background-image: linear-gradient(to left,#eee 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-button-app:before
+{
+    background-image: linear-gradient(to left,#eee 25%,transparent 75%);
+}
+
+.ratiomax .yz-button-app:before
+{
+    background-image: linear-gradient(to left,#eee 20%,transparent 80%);
+}
+
+/*#ccc*/
+.ratio2 .yz-container-border-right-dark:after
+{
+    background-image: linear-gradient(to left,#ccc 50%,transparent 50%);
+}
+
+.ratio3 .yz-container-border-right-dark:after
+{
+    background-image: linear-gradient(to left,#ccc 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-container-border-right-dark:after
+{
+    background-image: linear-gradient(to left,#ccc 25%,transparent 75%);
+}
+
+.ratiomax .yz-container-border-right-dark:after
+{
+    background-image: linear-gradient(to left,#ccc 20%,transparent 80%);
+}
+
+/*#8c8c8c*/
+.ratio2 .yz-keyboard-tel .yz-button-keyboard:after
+{
+    background-image: linear-gradient(to left,#8c8c8c 50%,transparent 50%);
+}
+
+.ratio3 .yz-keyboard-tel .yz-button-keyboard:after
+{
+    background-image: linear-gradient(to left,#8c8c8c 33.33%,transparent 66.66%);
+}
+
+.ratio4 .yz-keyboard-tel .yz-button-keyboard:after
+{
+    background-image: linear-gradient(to left,#8c8c8c 25%,transparent 75%);
+}
+
+.ratiomax .yz-keyboard-tel .yz-button-keyboard:after
+{
+    background-image: linear-gradient(to left,#8c8c8c 20%,transparent 80%);
+}
+
+/*无边框*/
+.yz-keyboard-tel .yz-button-keyboard:last-child,
+.yz-button-app:last-child
+{
+    border-right:none;
+}
+
+.ratio .yz-keyboard-tel .yz-button-keyboard:last-child:after,
+.ratio .yz-button-app:last-child:before
+{
+    display:none;
+}

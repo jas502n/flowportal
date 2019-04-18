@@ -1,0 +1,22 @@
+﻿.app .layui-card {
+    text-align: center;
+    padding-right: 0px;
+}
+
+    .app .layui-card i {
+        font-size: 30px;
+    }
+   
+    .app .layui-col-md6:first-child i {
+       color:rgb(62, 177, 53);
+    }
+     .app .layui-col-md6:nth-child(2) i {
+       color: rgb(58, 162, 235);
+    }
+       .app .layui-col-md6:nth-child(3) i {
+       color: rgb(220, 195, 54);
+    }
+.app .layui-col-md6:hover {
+box-shadow: 0 10px 60px rgba(29, 29, 31, 0.09)
+
+}

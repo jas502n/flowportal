@@ -1,0 +1,2358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="All__AM" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="All_Form_Approve_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All__Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="All__Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="All__DayG17" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="All__DayLE11" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="All__DayLE13" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="All__DayLE17" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="All__DayLE7" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="All__Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="All__Month" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="All__MonthName1" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="All__MonthName10" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="All__MonthName11" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="All__MonthName12" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="All__MonthName2" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="All__MonthName3" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="All__MonthName4" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="All__MonthName5" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="All__MonthName6" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="All__MonthName7" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="All__MonthName8" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="All__MonthName9" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="All__MsgTitleFailed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All__Title_Information" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="All__No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="All__OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="All__PM" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="All_BPM_Reject_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_BPM_Reject_Mask_Succeed" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="All_BPM_ReturnToInitiatorFailedTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_BPM_ReturnToInitiatorSucceed" xml:space="preserve">
+    <value>Returned to : {0}！</value>
+  </data>
+  <data name="All__WeekDayName0" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="All__WeekDayName1" xml:space="preserve">
+    <value>Mon</value>
+  </data>
+  <data name="All__WeekDayName10" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="All__WeekDayName11" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="All__WeekDayName12" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="All__WeekDayName13" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="All__WeekDayName14" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="All__WeekDayName15" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="All__WeekDayName16" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="All__WeekDayName2" xml:space="preserve">
+    <value>Tue</value>
+  </data>
+  <data name="All__WeekDayName3" xml:space="preserve">
+    <value>Wed</value>
+  </data>
+  <data name="All__WeekDayName4" xml:space="preserve">
+    <value>Thu</value>
+  </data>
+  <data name="All__WeekDayName5" xml:space="preserve">
+    <value>Fri</value>
+  </data>
+  <data name="All__WeekDayName6" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="All__Year" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="All__Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="All__DateFmt_Days0" xml:space="preserve">
+    <value>A g:i</value>
+  </data>
+  <data name="All__DateFmt_Days1" xml:space="preserve">
+    <value>j/n G:i</value>
+  </data>
+  <data name="All__DateFmt_Days2" xml:space="preserve">
+    <value>j/n G:i</value>
+  </data>
+  <data name="All__DateFmt_fmt" xml:space="preserve">
+    <value>y-n-j G:i</value>
+  </data>
+  <data name="All__DateFmt_Hours" xml:space="preserve">
+    <value>A g:i</value>
+  </data>
+  <data name="All__DateFmt_Months0" xml:space="preserve">
+    <value>j/n G:i</value>
+  </data>
+  <data name="All__DateFmt_Weeks0" xml:space="preserve">
+    <value>L G:i</value>
+  </data>
+  <data name="All__DateFmt_Weeks1" xml:space="preserve">
+    <value>j/n G:i</value>
+  </data>
+  <data name="All__DateFmt_Years0" xml:space="preserve">
+    <value>j/n G:i</value>
+  </data>
+  <data name="All__Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="All__HourPostfix" xml:space="preserve">
+    <value>h</value>
+  </data>
+  <data name="All__MinutePostfix" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="All__MissField" xml:space="preserve">
+    <value>Miss</value>
+  </data>
+  <data name="All_BPM_Reject_Title" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="All_BPM_ReturnToInitiatorTitle" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="All__Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="All__Saving" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="All__SN" xml:space="preserve">
+    <value>Serial No</value>
+  </data>
+  <data name="Aspx_FormData_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Aspx_FormData_Desc" xml:space="preserve">
+    <value>Desc.</value>
+  </data>
+  <data name="Aspx_FormData_StepName" xml:space="preserve">
+    <value>Sep</value>
+  </data>
+  <data name="All_OutOfOffice_EndDate" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="All_OutOfOffice_SaveFailed" xml:space="preserve">
+    <value>Reason :&lt;br/&gt;{0}</value>
+  </data>
+  <data name="All_OutOfOffice_StartDate" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="All_OutOfOffice_StatusInOffice" xml:space="preserve">
+    <value>At Office</value>
+  </data>
+  <data name="All_OutOfOffice_StatusOut" xml:space="preserve">
+    <value>Out</value>
+  </data>
+  <data name="All_OutOfOffice_StatusPeriod" xml:space="preserve">
+    <value>Out in following period</value>
+  </data>
+  <data name="All_OutOfOffice_ValidateEndDate" xml:space="preserve">
+    <value>Please enter end time</value>
+  </data>
+  <data name="All_OutOfOffice_ValidateEndLTStart" xml:space="preserve">
+    <value>End time must be later than start time</value>
+  </data>
+  <data name="All_OutOfOffice_ValidateStartDate" xml:space="preserve">
+    <value>Please enter start time</value>
+  </data>
+  <data name="All_BPM_Reject_Mask" xml:space="preserve">
+    <value>Rejecting...</value>
+  </data>
+  <data name="All_BPM_ReturnToInitiator_Mask" xml:space="preserve">
+    <value>Returning...</value>
+  </data>
+  <data name="All__Abort_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_TaskOpt_Abort_Mask_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All__Abort_Title" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="All_Form_Inform" xml:space="preserve">
+    <value>Inform</value>
+  </data>
+  <data name="All_Form_InviteIndicate" xml:space="preserve">
+    <value>Invite</value>
+  </data>
+  <data name="All_BPM_Inform_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_BPM_InformSucceed" xml:space="preserve">
+    <value>Informed：{0}</value>
+  </data>
+  <data name="All_BPM_InviteIndicateFailedTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_BPM_InviteIndicateSucceed" xml:space="preserve">
+    <value>Invited：{0}</value>
+  </data>
+  <data name="All_BPM_PickRestartFailedTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_BPM_PickRestartSucceed" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All_BPM_PickRestartTitle" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="All_TaskOpt_Inform_Title" xml:space="preserve">
+    <value>Inform</value>
+  </data>
+  <data name="All_TaskOpt_InviteIndicate_Title" xml:space="preserve">
+    <value>Invite</value>
+  </data>
+  <data name="All_BPM_Inform_Mask" xml:space="preserve">
+    <value>Informing...</value>
+  </data>
+  <data name="All_BPM_InviteIndicate_Mask" xml:space="preserve">
+    <value>Inviting...</value>
+  </data>
+  <data name="All_BPM_PickbackFailedTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_BPM_Pickback_Mask_Succeed" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All_BPM_PickbackTitle" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="All__Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="All__DateFmt_MonthDay" xml:space="preserve">
+    <value>L j/n</value>
+  </data>
+  <data name="All_BPM_RecedeBack" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="All_BPM_RecedeBackFailedTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_BPM_RecedeBackSucceed" xml:space="preserve">
+    <value>Returned to : {0}！</value>
+  </data>
+  <data name="Aspx_BPMSite_SettingError" xml:space="preserve">
+    <value>Please set BPMSiteUrl in web.config "appSettings" section\ne.g.\n&lt;add key="BPMSiteUrl" value="http://192.168.1.100/2015"/&gt;\ndisable : &lt;add key="BPMSiteUrl" value="false"/&gt;</value>
+  </data>
+  <data name="All_BPM_RecedeBack_Mask" xml:space="preserve">
+    <value>Returning...</value>
+  </data>
+  <data name="All__DayPostfix" xml:space="preserve">
+    <value>d</value>
+  </data>
+  <data name="All__YearPostfix" xml:space="preserve">
+    <value />
+  </data>
+  <data name="All_Personal_About" xml:space="preserve">
+    <value>About {0}</value>
+  </data>
+  <data name="All_Personal_Security" xml:space="preserve">
+    <value>Account Security</value>
+  </data>
+  <data name="All_Bind_Disabled" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="All_Bind_Enabled" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="All_Bind_Welcome_Value" xml:space="preserve">
+    <value>Having a phone number associated with your account will prevent login activities from other devices without SMS verification.</value>
+  </data>
+  <data name="All_Bind_Close_Mask" xml:space="preserve">
+    <value>Unbinding...</value>
+  </data>
+  <data name="All_Bind_Close_Mask_Success" xml:space="preserve">
+    <value>Unbinded</value>
+  </data>
+  <data name="All_Bind_Close_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_Bind_Open_Mask" xml:space="preserve">
+    <value>Enabling...</value>
+  </data>
+  <data name="All_Bind_Open_Mask_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All_Bind_Open_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_Bind_DeviceRename_EmptyName" xml:space="preserve">
+    <value>Device name can't be blank</value>
+  </data>
+  <data name="All_Bind_DeviceRename_Title" xml:space="preserve">
+    <value>Rename the device</value>
+  </data>
+  <data name="All_Bind_Final_Title" xml:space="preserve">
+    <value>Account Protection</value>
+  </data>
+  <data name="All_Bind_Final_Protect" xml:space="preserve">
+    <value>Protection</value>
+  </data>
+  <data name="All__All" xml:space="preserve">
+    <value>all</value>
+  </data>
+  <data name="All_Apps_FindTask_Title" xml:space="preserve">
+    <value>History Tasks</value>
+  </data>
+  <data name="All__Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="All__Apps" xml:space="preserve">
+    <value>Apps</value>
+  </data>
+  <data name="All_Apps_Arriange" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="All_Apps_Favorite" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="All__Attachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="All_Apps_AudioRecord" xml:space="preserve">
+    <value>Recording</value>
+  </data>
+  <data name="All_Apps_AudioRecord_My_Title" xml:space="preserve">
+    <value>Saved Recordings</value>
+  </data>
+  <data name="All__Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="AudioRecord_BackToList" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="All_Apps_BarcodeScan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="BarcodeScan_Continue" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="BarcodeScan_GetProductInfo_Failed" xml:space="preserve">
+    <value>Fail to obtain product info</value>
+  </data>
+  <data name="BarcodeScan_History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="BarcodeScan_ProductDesc" xml:space="preserve">
+    <value>Product Info</value>
+  </data>
+  <data name="All__BarcodeScan_Prompt" xml:space="preserve">
+    <value>Align barcode within frame to scan</value>
+  </data>
+  <data name="BarcodeScan_Scan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="All_Bind_Welcome_Title" xml:space="preserve">
+    <value>Manage Phone Number</value>
+  </data>
+  <data name="All_Bind_Welcome_Bind" xml:space="preserve">
+    <value>Add Phone Number</value>
+  </data>
+  <data name="All_Bind_ChangedPhone_Mask_Success" xml:space="preserve">
+    <value>Device changed</value>
+  </data>
+  <data name="All_Bind_Welcome_BindValue" xml:space="preserve">
+    <value>Having a phone number associated with your account will prevent login activities from other devices without SMS verification.</value>
+  </data>
+  <data name="All_Bind_Mask_Success" xml:space="preserve">
+    <value>Binded</value>
+  </data>
+  <data name="All_Bind_Change_Value" xml:space="preserve">
+    <value>New phone number would be used in login and contacts</value>
+  </data>
+  <data name="All_Bind_CloseWarning_Message" xml:space="preserve">
+    <value>Unbinding the device would put account in risk.</value>
+  </data>
+  <data name="All_Bind_Final_Desc" xml:space="preserve">
+    <value>After binding a device with your account {0}, any login activities from unfamiliar devices would need SMS verification.</value>
+  </data>
+  <data name="All_Bind_Device" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="All_Bind_NewPhone_Desc_FMT" xml:space="preserve">
+    <value>New phone number would be used in login. &lt;br/&gt;Current phone number: {0}</value>
+  </data>
+  <data name="All_Bind_PhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="All_Bind_ValidationCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="All_Bind_Validation_PlaceHolder" xml:space="preserve">
+    <value>Enter verification code</value>
+  </data>
+  <data name="All_Bind_Validation_Desc" xml:space="preserve">
+    <value>Please enter the verification code sent to your phone.</value>
+  </data>
+  <data name="All_Bind_Validation_Desc_FMT" xml:space="preserve">
+    <value>SMS code have been sent to : {0}</value>
+  </data>
+  <data name="All_Bind_Change_Caption_FMT" xml:space="preserve">
+    <value>Your phone : {0}</value>
+  </data>
+  <data name="All_Apps_BusinessTrip" xml:space="preserve">
+    <value>Business Trip</value>
+  </data>
+  <data name="BusinessTrip_Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="BusinessTrip_Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="All_Apps_BusinessTrip_Request" xml:space="preserve">
+    <value>Trip Application</value>
+  </data>
+  <data name="BusinessTrip_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="All__Social_CapturePhoto" xml:space="preserve">
+    <value>Take a picture</value>
+  </data>
+  <data name="All__CapturePhoto" xml:space="preserve">
+    <value>Take a picture</value>
+  </data>
+  <data name="All_Apps_CashMemo" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="All_Apps_CashMemo_Title" xml:space="preserve">
+    <value>Expense List</value>
+  </data>
+  <data name="All__Cash_DefaultText" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="All_ChangePassword_Change_Title" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="All_ChangePassword_PlaceHolder_EnterNewPassword" xml:space="preserve">
+    <value>Enter a new password</value>
+  </data>
+  <data name="All_ScreenLock_ChangePassword_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_ChangePassword_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_ChangePasword_Mask" xml:space="preserve">
+    <value>Changing...</value>
+  </data>
+  <data name="All_ChangePasword_Mask_Success" xml:space="preserve">
+    <value>Changed</value>
+  </data>
+  <data name="All_ChangePasword_Message" xml:space="preserve">
+    <value>New password would be used to login both {0} desktop and mobile version.</value>
+  </data>
+  <data name="All_ChangePasword_NewPasswordNotMatch" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="All_ScreenLock_ChangePassword" xml:space="preserve">
+    <value>Change PIN</value>
+  </data>
+  <data name="All_ChangePassword_Validate_Title" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="All_Security_ChangeBindPhone" xml:space="preserve">
+    <value>Change Phone Number</value>
+  </data>
+  <data name="All_Bind_Change_Title" xml:space="preserve">
+    <value>Change Phone Number</value>
+  </data>
+  <data name="All_Bind_Change_Next" xml:space="preserve">
+    <value>Change Phone Number</value>
+  </data>
+  <data name="All__ClickToExitApp" xml:space="preserve">
+    <value>Click to exit app</value>
+  </data>
+  <data name="All__Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="All__Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="All_Apps_CompanyAddressBook" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="All__Title_CompressImageFailed" xml:space="preserve">
+    <value>Compress image failed</value>
+  </data>
+  <data name="All_Apps_CompanyAdmin" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="All__Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="All_Social_StartChat_Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="All_Apps_Contract_Request" xml:space="preserve">
+    <value>Contract Application</value>
+  </data>
+  <data name="DeilyReport_CoordinateJob" xml:space="preserve">
+    <value>Need assist</value>
+  </data>
+  <data name="MonthlyReport_CoordinateJob" xml:space="preserve">
+    <value>Need assist</value>
+  </data>
+  <data name="WeeklyReport_CoordinateJob" xml:space="preserve">
+    <value>Need assist</value>
+  </data>
+  <data name="All__CosterCenter" xml:space="preserve">
+    <value>Cost Center</value>
+  </data>
+  <data name="All__Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="All__Currency_RMB" xml:space="preserve">
+    <value>￥</value>
+  </data>
+  <data name="All_ServiceCenter_Title" xml:space="preserve">
+    <value>Helpdesk</value>
+  </data>
+  <data name="All_Apps_DailyReport" xml:space="preserve">
+    <value>Daily Report</value>
+  </data>
+  <data name="DailyReport_MyReport_Subtitle" xml:space="preserve">
+    <value>Reported {0} time(s) this month</value>
+  </data>
+  <data name="DailyReport_Personal_Title" xml:space="preserve">
+    <value>{0}'s Report</value>
+  </data>
+  <data name="DailyReport_Post_Title" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="DailyReport_Validate_Done" xml:space="preserve">
+    <value>Please fill "done" column</value>
+  </data>
+  <data name="All__Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="All__DateFmt_Week" xml:space="preserve">
+    <value>Week : {0} {1}~{2}</value>
+  </data>
+  <data name="All__DateFmt_YMD" xml:space="preserve">
+    <value>d/m/Y</value>
+  </data>
+  <data name="All__DateJoinedCompany" xml:space="preserve">
+    <value>Date Joined</value>
+  </data>
+  <data name="DeilyReport_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="DeilyReport_My_Title" xml:space="preserve">
+    <value>My Daily Report</value>
+  </data>
+  <data name="DeilyReport_Team_Title" xml:space="preserve">
+    <value>Team's</value>
+  </data>
+  <data name="DeilyReport_Team_Title_FMT" xml:space="preserve">
+    <value>Team's({0})</value>
+  </data>
+  <data name="All_BPM_DelegationBy_FMT" xml:space="preserve">
+    <value>(proxy:{0})</value>
+  </data>
+  <data name="All__Delegation_FMT" xml:space="preserve">
+    <value>(owner: {0})</value>
+  </data>
+  <data name="All__Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="All__Title_DeleteFailed" xml:space="preserve">
+    <value>Delete failed</value>
+  </data>
+  <data name="All__Deleting" xml:space="preserve">
+    <value>Deleting...</value>
+  </data>
+  <data name="All_Form_DirectSend" xml:space="preserve">
+    <value>Direct Send</value>
+  </data>
+  <data name="All__Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="All__EMail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="All_ScreenLock_EnableScreenLock" xml:space="preserve">
+    <value>Screen Lock</value>
+  </data>
+  <data name="All_ScreenLock_EnableTouchIDUnLock" xml:space="preserve">
+    <value>Unlock with Touch ID</value>
+  </data>
+  <data name="All__EndTime" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="All_ScreenLock_EnterPassword" xml:space="preserve">
+    <value>Enter your PIN</value>
+  </data>
+  <data name="All_ScreenLock_EnterPasswordAgain" xml:space="preserve">
+    <value>Re-enter the PIN</value>
+  </data>
+  <data name="All_ChangePassword_Validate_Message_FMT" xml:space="preserve">
+    <value>Please enter your password</value>
+  </data>
+  <data name="All__ValidatePassword_Message_FMT" xml:space="preserve">
+    <value>Enter login password</value>
+  </data>
+  <data name="All_Bind_NewPhone_Title" xml:space="preserve">
+    <value>New Phone</value>
+  </data>
+  <data name="All_Apps_Expense" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="All_Apps_Expense_Title" xml:space="preserve">
+    <value>Expense Application</value>
+  </data>
+  <data name="All__File_Download" xml:space="preserve">
+    <value>Click Download</value>
+  </data>
+  <data name="All__File_OpenPrompt" xml:space="preserve">
+    <value>This file does not support online preview. Please open it in other application</value>
+  </data>
+  <data name="All__File_OpenWith" xml:space="preserve">
+    <value>Open With</value>
+  </data>
+  <data name="All__File_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="All__Finished" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="All__FixedPhone" xml:space="preserve">
+    <value>Office Phone</value>
+  </data>
+  <data name="Footmark_Team_Title" xml:space="preserve">
+    <value>Team's</value>
+  </data>
+  <data name="Footmark_DaySignCount" xml:space="preserve">
+    <value>Signed {0} time(s) today</value>
+  </data>
+  <data name="Footmark_ShowMy" xml:space="preserve">
+    <value>Me</value>
+  </data>
+  <data name="Footmark_Status_NoSign" xml:space="preserve">
+    <value>Unsigned</value>
+  </data>
+  <data name="All_Apps_Footmark" xml:space="preserve">
+    <value>Footmark</value>
+  </data>
+  <data name="Footmark_Status_Sign" xml:space="preserve">
+    <value>Signed</value>
+  </data>
+  <data name="Footmark_Sign" xml:space="preserve">
+    <value>Sign</value>
+  </data>
+  <data name="Footmark_Module_Sign" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="Footmark_SignAddr" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Footmark_SignComments" xml:space="preserve">
+    <value>Enter comments</value>
+  </data>
+  <data name="Footmark_SignDate" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Footmark_My_SubTitle" xml:space="preserve">
+    <value>Signed {0} time(s) this month</value>
+  </data>
+  <data name="All_Form_AddRecord" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="All_Form_RecordTitle_FMT" xml:space="preserve">
+    <value>Item {0}</value>
+  </data>
+  <data name="All_Apps_FieldsDemo" xml:space="preserve">
+    <value>Fields</value>
+  </data>
+  <data name="All_Apps_FieldsDemo_Title" xml:space="preserve">
+    <value>Form Fields</value>
+  </data>
+  <data name="All__Locating" xml:space="preserve">
+    <value>Locating...</value>
+  </data>
+  <data name="All__Locating_Adjust" xml:space="preserve">
+    <value>Location Tunning</value>
+  </data>
+  <data name="All__Locating_Failed" xml:space="preserve">
+    <value>Failed to obtain location</value>
+  </data>
+  <data name="CompanyAddressBook_Group" xml:space="preserve">
+    <value>Group Chat</value>
+  </data>
+  <data name="All_Social_Search_Group_Title" xml:space="preserve">
+    <value>Group Chat</value>
+  </data>
+  <data name="All_Social_StartChat_CreateGroup_Mask" xml:space="preserve">
+    <value>Creating...</value>
+  </data>
+  <data name="All_Group_DeleteMember_FMT" xml:space="preserve">
+    <value>Done({0})</value>
+  </data>
+  <data name="All_Social_StartChat_SelGroup" xml:space="preserve">
+    <value>Select a Group</value>
+  </data>
+  <data name="All_Social_StartChat_SelGroup_Title" xml:space="preserve">
+    <value>Select a Group</value>
+  </data>
+  <data name="All_Group_Title" xml:space="preserve">
+    <value>Group Info</value>
+  </data>
+  <data name="All_Group_Title_FMT" xml:space="preserve">
+    <value>Group Info({0})</value>
+  </data>
+  <data name="All_Group_Member_Delete" xml:space="preserve">
+    <value>Remove Member</value>
+  </data>
+  <data name="All_Group_Member_More" xml:space="preserve">
+    <value>View More</value>
+  </data>
+  <data name="All_Group_Member_Title" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="All_Group_Member_Title_FMT" xml:space="preserve">
+    <value>Members({0})</value>
+  </data>
+  <data name="All_Group_ChangeName" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="All_Group_EmptyName" xml:space="preserve">
+    <value>Please enter a group name</value>
+  </data>
+  <data name="All_Group_Exit" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="All_Group_ExitConfirmMessage" xml:space="preserve">
+    <value>Are you sure to quit the group?</value>
+  </data>
+  <data name="All_Group_ExitConfirm_Exit" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="All_Group_Exit_Mask" xml:space="preserve">
+    <value>Quitting...</value>
+  </data>
+  <data name="All_Group_Exit_Mask_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All_Group_Exit_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_Group_GroupName" xml:space="preserve">
+    <value>Group Name</value>
+  </data>
+  <data name="All_Group_Icon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="All__HRID" xml:space="preserve">
+    <value>HRID</value>
+  </data>
+  <data name="All__ImageAttachment_Delete_Message" xml:space="preserve">
+    <value>Delete image?</value>
+  </data>
+  <data name="All__ImageAttachment_Title" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="All__Keyword" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
+  <data name="All_Apps_Leaving" xml:space="preserve">
+    <value>Leaving</value>
+  </data>
+  <data name="All_Apps_Leaving_Title" xml:space="preserve">
+    <value>Leaving Application</value>
+  </data>
+  <data name="All_ScreenLock_ConfirmNewPassword" xml:space="preserve">
+    <value>Re-enter new PIN</value>
+  </data>
+  <data name="All_ChangePassword_PlaceHolder_ConfirmNewPassword" xml:space="preserve">
+    <value>Re-enter your password</value>
+  </data>
+  <data name="All_ScreenLock_EnterNewPassword" xml:space="preserve">
+    <value>Enter a new PIN</value>
+  </data>
+  <data name="All_ScreenLock_EnterOrgPassword" xml:space="preserve">
+    <value>Enter your PIN</value>
+  </data>
+  <data name="All__MessageConvert_Audio" xml:space="preserve">
+    <value>[audio]</value>
+  </data>
+  <data name="All__MessageConvert_Face" xml:space="preserve">
+    <value>[emoj]</value>
+  </data>
+  <data name="All__MessageConvert_File" xml:space="preserve">
+    <value>[file]</value>
+  </data>
+  <data name="All__MessageConvert_Image" xml:space="preserve">
+    <value>[img]</value>
+  </data>
+  <data name="All__MessageConvert_PostAt" xml:space="preserve">
+    <value>Request at : </value>
+  </data>
+  <data name="All__MessageConvert_RejectedBy" xml:space="preserve">
+    <value>Rejected by : </value>
+  </data>
+  <data name="All__MessageConvert_SN" xml:space="preserve">
+    <value>SN : </value>
+  </data>
+  <data name="All__MessageConvert_TaskApproved_FMT" xml:space="preserve">
+    <value>Your {0} is approved</value>
+  </data>
+  <data name="All__MessageConvert_TaskDeleted" xml:space="preserve">
+    <value>Task is deleted</value>
+  </data>
+  <data name="All__MessageConvert_TaskRejected_FMT" xml:space="preserve">
+    <value>Your {0} is rejected</value>
+  </data>
+  <data name="All__MessageConvert_Video" xml:space="preserve">
+    <value>[video]</value>
+  </data>
+  <data name="All_Form_MobileForm" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="All__Mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="All__Modify" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="All_Apps_MonthlyReport" xml:space="preserve">
+    <value>Monthly Report</value>
+  </data>
+  <data name="MonthlyReport_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="MonthlyReport_My_Title" xml:space="preserve">
+    <value>My Monthly Report</value>
+  </data>
+  <data name="MonthlyReport_Team_Title" xml:space="preserve">
+    <value>Team's</value>
+  </data>
+  <data name="MonthlyReport_Team_Title_FMT" xml:space="preserve">
+    <value>Team's({0})</value>
+  </data>
+  <data name="MonthlyReport_Personal_Title" xml:space="preserve">
+    <value>{0}'s Report</value>
+  </data>
+  <data name="MonthlyReport_Post_Title" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="MonthlyReport_Validate_Done" xml:space="preserve">
+    <value>Please fill "done" column</value>
+  </data>
+  <data name="MonthlyReport_My_Caption" xml:space="preserve">
+    <value>Reported {0} time(s) this year</value>
+  </data>
+  <data name="WeeklyReport_My_Caption" xml:space="preserve">
+    <value>Reported {0} time(s) this year</value>
+  </data>
+  <data name="All__MonthNo" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="All__MultiSelect" xml:space="preserve">
+    <value>Multi select</value>
+  </data>
+  <data name="All_BPM_MyRequest" xml:space="preserve">
+    <value>My Requets</value>
+  </data>
+  <data name="All__MySubordinates" xml:space="preserve">
+    <value>Subordinates</value>
+  </data>
+  <data name="All__NetworkUnavaliable" xml:space="preserve">
+    <value>Network Unavaliable</value>
+  </data>
+  <data name="All_ScreenLock_NewPasswordNotMatch" xml:space="preserve">
+    <value>PIN do not match</value>
+  </data>
+  <data name="All__NextStep" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="All__None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="All_Bind_NotClose" xml:space="preserve">
+    <value>Keep</value>
+  </data>
+  <data name="All_NotificationType_NewTask" xml:space="preserve">
+    <value>New Task</value>
+  </data>
+  <data name="All_NotificationType_Social" xml:space="preserve">
+    <value>Chats</value>
+  </data>
+  <data name="All_Notification_At" xml:space="preserve">
+    <value>@</value>
+  </data>
+  <data name="All_Notification_BPAGroup" xml:space="preserve">
+    <value>BPA Team</value>
+  </data>
+  <data name="All_Notification_Group" xml:space="preserve">
+    <value>Group Chat</value>
+  </data>
+  <data name="All_Notification_Mail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="All_Notification_MobilePushNotification" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="All_Notification_SMS" xml:space="preserve">
+    <value>SMS</value>
+  </data>
+  <data name="All_Notification_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="All_Notification_Task" xml:space="preserve">
+    <value>Task Dizcuss</value>
+  </data>
+  <data name="All__Office" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="All_OutOfOffice_Period" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="All_Apps_Outside" xml:space="preserve">
+    <value>Outside</value>
+  </data>
+  <data name="All_Apps_Outside_Request" xml:space="preserve">
+    <value>Outside Application</value>
+  </data>
+  <data name="All_Security_SignInPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="All__PasswordValidate_FailMessage" xml:space="preserve">
+    <value>Verification failed. Please re-enter your password.</value>
+  </data>
+  <data name="All_Apps_Payment_Request" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="All_Form_PCForm" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="All__PhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="All__Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="All__PickImage" xml:space="preserve">
+    <value>Choose from album</value>
+  </data>
+  <data name="All__PlaceHolder_Comments" xml:space="preserve">
+    <value>Please enter comments...</value>
+  </data>
+  <data name="All_Apps_PostRequest" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="All__Production" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="All__PullRefresh_PullText" xml:space="preserve">
+    <value>Pull Refresh</value>
+  </data>
+  <data name="All__PullRefresh_ReleaseText" xml:space="preserve">
+    <value>Release Refresh</value>
+  </data>
+  <data name="All__Purchase" xml:space="preserve">
+    <value>Purchase</value>
+  </data>
+  <data name="All_Apps_Purchase_Request" xml:space="preserve">
+    <value>Purchase Application</value>
+  </data>
+  <data name="All__QQSpace" xml:space="preserve">
+    <value>QQ Space</value>
+  </data>
+  <data name="All__Range" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="All_Social_Recording_ReleaseToCancel" xml:space="preserve">
+    <value>Release finger to cancel</value>
+  </data>
+  <data name="All_Social_Recording_SwipUpToCancel" xml:space="preserve">
+    <value>Swipe up to cancel</value>
+  </data>
+  <data name="All_Social_Recording_TooShort" xml:space="preserve">
+    <value>Talking time is too short</value>
+  </data>
+  <data name="All_Social_Record_PressToRecord" xml:space="preserve">
+    <value>Hold to talk</value>
+  </data>
+  <data name="All_Social_Record_ReleaseToEnd" xml:space="preserve">
+    <value>Release end talk</value>
+  </data>
+  <data name="All__Refreshing" xml:space="preserve">
+    <value>Refreshing...</value>
+  </data>
+  <data name="All__Mask_RenameSuccess" xml:space="preserve">
+    <value>Renamed</value>
+  </data>
+  <data name="All__Title_RenameFailed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_Apps_BPMReport" xml:space="preserve">
+    <value>Stats</value>
+  </data>
+  <data name="All_Apps_BPMReport_Title" xml:space="preserve">
+    <value>BPM Stats</value>
+  </data>
+  <data name="All_Form_RequestPosition" xml:space="preserve">
+    <value>Apply as</value>
+  </data>
+  <data name="All__Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="All__ResignIn" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="All__Saving_Mask_Succeed" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="All__Title_SaveFailed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_Security_ScreenLock" xml:space="preserve">
+    <value>PIN</value>
+  </data>
+  <data name="All_ScreenLockPanel_Title" xml:space="preserve">
+    <value>PIN</value>
+  </data>
+  <data name="All_ScreenLock_ApplyTo" xml:space="preserve">
+    <value>Use PIN for :</value>
+  </data>
+  <data name="All_ScreenLock_ChangePassword_Mask" xml:space="preserve">
+    <value>Changing...</value>
+  </data>
+  <data name="All_ScreenLock_ChangePassword_Mask_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All_ScreenLock_ChangePassword_Title" xml:space="preserve">
+    <value>Change PIN</value>
+  </data>
+  <data name="All_ScreenLock_Desc" xml:space="preserve">
+    <value>PIN is required when this app has been in backgroud for 30 seconds.</value>
+  </data>
+  <data name="All_ScreenLock_ForgetPassword" xml:space="preserve">
+    <value>Forgot your PIN?</value>
+  </data>
+  <data name="All_ScreenLock_ResetPassword" xml:space="preserve">
+    <value>Reset PIN</value>
+  </data>
+  <data name="All_ScreenLock_ResetPassword_Mask" xml:space="preserve">
+    <value>Reseting...</value>
+  </data>
+  <data name="All_ScreenLock_ResetPassword_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All_ScreenLock_ResetPassword_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_ScreenLock_SetPassword_Mask" xml:space="preserve">
+    <value>Setting...</value>
+  </data>
+  <data name="All_ScreenLock_SetPassword_Success" xml:space="preserve">
+    <value>Sucess</value>
+  </data>
+  <data name="All_ScreenLock_SetPassword_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_ScreenUnlock_Caption" xml:space="preserve">
+    <value>Enter your PIN</value>
+  </data>
+  <data name="All_ScreenUnlock_ForgetPassword" xml:space="preserve">
+    <value>Forgot？</value>
+  </data>
+  <data name="All_ScreenUnlock_ResignInAndClose" xml:space="preserve">
+    <value>Restart {0} and turn screen lock off</value>
+  </data>
+  <data name="All_ScreenUnlock_TouchUnlock_Prompt" xml:space="preserve">
+    <value>Tap Home to unlock</value>
+  </data>
+  <data name="All_ScreenUnlock_TrialInfo" xml:space="preserve">
+    <value>Enter any PIN to unlock</value>
+  </data>
+  <data name="All__Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="All_Social_Search_MultiMessage_FMT" xml:space="preserve">
+    <value>{0} messages find</value>
+  </data>
+  <data name="All_Social_Search_Message_Title" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="All_Social_Search_TopicResult_Topic" xml:space="preserve">
+    <value>{resName}({total} records)</value>
+  </data>
+  <data name="All_Apps_FindTask" xml:space="preserve">
+    <value>Search Task</value>
+  </data>
+  <data name="All__SelectEmployee" xml:space="preserve">
+    <value>Select User</value>
+  </data>
+  <data name="All__Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="All_Form_Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="All_Bind_SendValidationCode_Mask" xml:space="preserve">
+    <value>Sending...</value>
+  </data>
+  <data name="All_Bind_SendValidationCode_Mask_Success" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="All_Bind_SendValidationCode_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_Personal_ServiceCenter" xml:space="preserve">
+    <value>Service Center</value>
+  </data>
+  <data name="All_Personal_Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="All_Setting_Title" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="All_ScreenLock_SettingPassword_Title" xml:space="preserve">
+    <value>Set PIN</value>
+  </data>
+  <data name="All_Setting_Lang" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="All_Setting_Message" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="All_Setting_OutOfOffice" xml:space="preserve">
+    <value>Out of Office</value>
+  </data>
+  <data name="All_Setting_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="All_BPM_SharePool" xml:space="preserve">
+    <value>Shared</value>
+  </data>
+  <data name="All_Personal_Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="All__Share_Wechat_Session_Title" xml:space="preserve">
+    <value>Found a good enterprise mobile application platform! Free registration trial</value>
+  </data>
+  <data name="All__Share_Wechat_Session_Desc" xml:space="preserve">
+    <value>Workflow, portal, enterprise applications all in one</value>
+  </data>
+  <data name="All__Share_Wechat_Timeline_Title" xml:space="preserve">
+    <value>Found a good enterprise mobile application platform! Free registration trial</value>
+  </data>
+  <data name="All__ShowDetail" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="All_Form_SignOrder" xml:space="preserve">
+    <value>Routing</value>
+  </data>
+  <data name="All__SignOut" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+  <data name="All__SMS" xml:space="preserve">
+    <value>SMS</value>
+  </data>
+  <data name="All_Social_StartChat_Title" xml:space="preserve">
+    <value>Select Contacts</value>
+  </data>
+  <data name="All_Group_Member_SelUser_Title" xml:space="preserve">
+    <value>Choose Member</value>
+  </data>
+  <data name="All_Social_Title" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="All_Social_StartChat" xml:space="preserve">
+    <value>Start Chat</value>
+  </data>
+  <data name="All__StartTime" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="All_Form_SelParticipantSingle" xml:space="preserve">
+    <value>{0}(Single)</value>
+  </data>
+  <data name="All__Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="All__Submiting" xml:space="preserve">
+    <value>Submiting</value>
+  </data>
+  <data name="All_Form_Submiting" xml:space="preserve">
+    <value>Submiting...</value>
+  </data>
+  <data name="All__Mask_SubmitSuccess" xml:space="preserve">
+    <value>Submited</value>
+  </data>
+  <data name="All__Title_SubmitFailed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_Form_SubmitValidation_Title_Failed" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="All__Supervisor" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="All_ScreenLock_Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="All_ScreenLock_On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="All_Apps_MyProcessedTask" xml:space="preserve">
+    <value>Approvals</value>
+  </data>
+  <data name="All_BPM_TaskFilter_ProcessName" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="All_BPM_TaskFilter_RequestDate" xml:space="preserve">
+    <value>Request Date</value>
+  </data>
+  <data name="All_BPM_TaskFilter_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="All_TaskOpt_Abort_Mask" xml:space="preserve">
+    <value>Aborting...</value>
+  </data>
+  <data name="All_TaskOpt_CheckIn_Mask" xml:space="preserve">
+    <value>Putting Back...</value>
+  </data>
+  <data name="All_TaskOpt_CheckIn_Mask_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All_TaskOpt_CheckIn_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_TaskOpt_CheckOut_Mask" xml:space="preserve">
+    <value>Picking Up...</value>
+  </data>
+  <data name="All_TaskOpt_CheckOut_Mask_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All_TaskOpt_CheckOut_Title_Failed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_TaskOpt_Pickback_Mask" xml:space="preserve">
+    <value>Picking back...</value>
+  </data>
+  <data name="All_TaskOpt_RecedeBack_SelStep" xml:space="preserve">
+    <value>Return To</value>
+  </data>
+  <data name="All_Form_TaskSN_FMT" xml:space="preserve">
+    <value>SN : {0}</value>
+  </data>
+  <data name="All_Form_ActionBar_Abort" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="All_Form_ActionBar_Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="All_Form_ActionBar_Chat" xml:space="preserve">
+    <value>Discuss</value>
+  </data>
+  <data name="All_Form_CheckInShareTask" xml:space="preserve">
+    <value>Put Back</value>
+  </data>
+  <data name="All_Form_CheckOutShareTask" xml:space="preserve">
+    <value>Pick Up</value>
+  </data>
+  <data name="All_Form_ActionBar_Inform" xml:space="preserve">
+    <value>Inform</value>
+  </data>
+  <data name="All_Form_ActionBar_InviteInvitade" xml:space="preserve">
+    <value>Invite</value>
+  </data>
+  <data name="All_Form_More_Operation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="All_BPM_MyProcessed" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="All_Form_ActionBar_Pickback" xml:space="preserve">
+    <value>Pick Back</value>
+  </data>
+  <data name="All_Form_ActionBar_PickbackRestart" xml:space="preserve">
+    <value>Pick Back</value>
+  </data>
+  <data name="All_Form_ActionBar_Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="All_Form_ActionBar_Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="All_Form_ActionBar_ReturnToInitiator" xml:space="preserve">
+    <value>Retun</value>
+  </data>
+  <data name="All_BPM_Title" xml:space="preserve">
+    <value>Task Center</value>
+  </data>
+  <data name="All_BPM_Worklist" xml:space="preserve">
+    <value>Worklist</value>
+  </data>
+  <data name="Footmark_Module_Team" xml:space="preserve">
+    <value>Footmark</value>
+  </data>
+  <data name="All__Call" xml:space="preserve">
+    <value>Call</value>
+  </data>
+  <data name="All__Title_OperationFailed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All_Bind_Validation_Title" xml:space="preserve">
+    <value>Verification</value>
+  </data>
+  <data name="All__Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="DeilyReport_UndoneJob" xml:space="preserve">
+    <value>To do</value>
+  </data>
+  <data name="MonthlyReport_UndoneJob" xml:space="preserve">
+    <value>To do</value>
+  </data>
+  <data name="WeeklyReport_UndoneJob" xml:space="preserve">
+    <value>To do</value>
+  </data>
+  <data name="All__Updating" xml:space="preserve">
+    <value>Updating...</value>
+  </data>
+  <data name="All__Title_UploadFailed" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All__Validation_Mask" xml:space="preserve">
+    <value>Verifying...</value>
+  </data>
+  <data name="All_Bind_Validation_Mask" xml:space="preserve">
+    <value>Verfying...</value>
+  </data>
+  <data name="All_Bind_Validation_Mask_Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="All__Title_ValidationFailed" xml:space="preserve">
+    <value>Verification Failed</value>
+  </data>
+  <data name="All__Title_FormValidationFailed" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="All__Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="Footmark_VisitTo" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="All_Bind_CloseWarning_Title" xml:space="preserve">
+    <value>Security Warining</value>
+  </data>
+  <data name="All__WeChat" xml:space="preserve">
+    <value>WeChat</value>
+  </data>
+  <data name="All__WeChatTimeline" xml:space="preserve">
+    <value>Moments</value>
+  </data>
+  <data name="All_Apps_WeeklyReport" xml:space="preserve">
+    <value>Weekly Report</value>
+  </data>
+  <data name="WeeklyReport_Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="WeeklyReport_My_Title" xml:space="preserve">
+    <value>My Weekly Report</value>
+  </data>
+  <data name="WeeklyReport_Team_Title" xml:space="preserve">
+    <value>Team's</value>
+  </data>
+  <data name="WeeklyReport_Team_Title_FMT" xml:space="preserve">
+    <value>Team's({0})</value>
+  </data>
+  <data name="WeeklyReport_Personal_Title" xml:space="preserve">
+    <value>{0}'s Report</value>
+  </data>
+  <data name="WeeklyReport_Post_Title" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="WeeklyReport_Validate_Done" xml:space="preserve">
+    <value>Please fill "done" column</value>
+  </data>
+  <data name="All__WeekNo" xml:space="preserve">
+    <value>Week {0}</value>
+  </data>
+  <data name="All__WeiBo" xml:space="preserve">
+    <value>WeiBo</value>
+  </data>
+  <data name="All__WrongClick" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="All__DataFMT_MonthInYear" xml:space="preserve">
+    <value>Y/F</value>
+  </data>
+  <data name="All__YesISee" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DemoFields_Type_Checkbox1" xml:space="preserve">
+    <value>Checkbox1</value>
+  </data>
+  <data name="DemoFields_Type_Checkbox2" xml:space="preserve">
+    <value>Checkbox2</value>
+  </data>
+  <data name="DemoFields_Type_Email" xml:space="preserve">
+    <value>EMail</value>
+  </data>
+  <data name="DemoFields_Type_ExpandIconSelect" xml:space="preserve">
+    <value>ExpandSelect</value>
+  </data>
+  <data name="DemoFields_Type_MonthPicker" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="DemoFields_Type_Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="DemoFields_Type_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="DemoFields_Type_Radio1" xml:space="preserve">
+    <value>Radio1</value>
+  </data>
+  <data name="DemoFields_Type_Radio2" xml:space="preserve">
+    <value>Radio2</value>
+  </data>
+  <data name="DemoFields_Type_Radio3" xml:space="preserve">
+    <value>Radio3</value>
+  </data>
+  <data name="DemoFields_Type_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="DemoFields_Type_TextArea" xml:space="preserve">
+    <value>TextArea</value>
+  </data>
+  <data name="DemoFields_Type_TextBox" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+  <data name="DemoFields_Type_TimePicker" xml:space="preserve">
+    <value>TimePicker</value>
+  </data>
+  <data name="DemoFields_Type_Toggle1" xml:space="preserve">
+    <value>Toggle1</value>
+  </data>
+  <data name="DemoFields_Type_Toggle2" xml:space="preserve">
+    <value>Toggle2</value>
+  </data>
+  <data name="DemoFields_Type_Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="DemoFields_Type_UsersSingle" xml:space="preserve">
+    <value>Users(single)</value>
+  </data>
+  <data name="DemoFields_Type_WeekPicker" xml:space="preserve">
+    <value>WeekPicker</value>
+  </data>
+  <data name="DemoFields_Type_YearPicker" xml:space="preserve">
+    <value>YearPicker</value>
+  </data>
+  <data name="BPMReport_FrequentlyUsed_Process" xml:space="preserve">
+    <value>Company Popular Process</value>
+  </data>
+  <data name="BPMReport_FrequentlyUsed_Process_my" xml:space="preserve">
+    <value>My Popular Process</value>
+  </data>
+  <data name="BPMReport_Performance_My" xml:space="preserve">
+    <value>My Performance</value>
+  </data>
+  <data name="BPMReport_Performance_Per" xml:space="preserve">
+    <value>Beat {per}% of employees</value>
+  </data>
+  <data name="BPMReport_Performance_Top10" xml:space="preserve">
+    <value>Top10 Performance</value>
+  </data>
+  <data name="BPMReport_ProcessTime_Avg" xml:space="preserve">
+    <value>Avg Time Taken</value>
+  </data>
+  <data name="BPMReport_ProcessTime_Minutes" xml:space="preserve">
+    <value>1H20M</value>
+  </data>
+  <data name="Expense_AddRecord" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Expense_Amount" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Expense_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Expense_ItemAmount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Expense_ItemComments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Expense_Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Expense_Reason" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="Expense_RecordTitle" xml:space="preserve">
+    <value>Item {0}</value>
+  </data>
+  <data name="Expense_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Leaving_Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="Leaving_EnterDays" xml:space="preserve">
+    <value>Please fill "Days" column</value>
+  </data>
+  <data name="Leaving_Reason" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Leaving_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Outside_Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="Outside_Reason" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Outside_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="All_Face_e100" xml:space="preserve">
+    <value>Smile</value>
+  </data>
+  <data name="All_Face_e101" xml:space="preserve">
+    <value>Grimace</value>
+  </data>
+  <data name="All_Face_e102" xml:space="preserve">
+    <value>Drooling</value>
+  </data>
+  <data name="All_Face_e103" xml:space="preserve">
+    <value>Scowl</value>
+  </data>
+  <data name="All_Face_e104" xml:space="preserve">
+    <value>Chill</value>
+  </data>
+  <data name="All_Face_e105" xml:space="preserve">
+    <value>Sob</value>
+  </data>
+  <data name="All_Face_e106" xml:space="preserve">
+    <value>Shy</value>
+  </data>
+  <data name="All_Face_e107" xml:space="preserve">
+    <value>Silence</value>
+  </data>
+  <data name="All_Face_e108" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="All_Face_e109" xml:space="preserve">
+    <value>Cry</value>
+  </data>
+  <data name="All_Face_e110" xml:space="preserve">
+    <value>Embarrassed</value>
+  </data>
+  <data name="All_Face_e111" xml:space="preserve">
+    <value>On Fire</value>
+  </data>
+  <data name="All_Face_e112" xml:space="preserve">
+    <value>Wink</value>
+  </data>
+  <data name="All_Face_e113" xml:space="preserve">
+    <value>Grin</value>
+  </data>
+  <data name="All_Face_e114" xml:space="preserve">
+    <value>Surprised</value>
+  </data>
+  <data name="All_Face_e115" xml:space="preserve">
+    <value>Frown</value>
+  </data>
+  <data name="All_Face_e116" xml:space="preserve">
+    <value>Cool</value>
+  </data>
+  <data name="All_Face_e117" xml:space="preserve">
+    <value>Blush</value>
+  </data>
+  <data name="All_Face_e118" xml:space="preserve">
+    <value>Scream</value>
+  </data>
+  <data name="All_Face_e119" xml:space="preserve">
+    <value>Puke</value>
+  </data>
+  <data name="All_Face_e120" xml:space="preserve">
+    <value>Chuckle</value>
+  </data>
+  <data name="All_Face_e121" xml:space="preserve">
+    <value>Pleased</value>
+  </data>
+  <data name="All_Face_e122" xml:space="preserve">
+    <value>Doubtful</value>
+  </data>
+  <data name="All_Face_e123" xml:space="preserve">
+    <value>Smug</value>
+  </data>
+  <data name="All_Face_e124" xml:space="preserve">
+    <value>Sneer</value>
+  </data>
+  <data name="All_Face_e125" xml:space="preserve">
+    <value>Drowsy</value>
+  </data>
+  <data name="All_Face_e126" xml:space="preserve">
+    <value>Panic</value>
+  </data>
+  <data name="All_Face_e127" xml:space="preserve">
+    <value>Sweating</value>
+  </data>
+  <data name="All_Face_e128" xml:space="preserve">
+    <value>Laugh</value>
+  </data>
+  <data name="All_Face_e129" xml:space="preserve">
+    <value>Soldier</value>
+  </data>
+  <data name="All_Face_e130" xml:space="preserve">
+    <value>Strive</value>
+  </data>
+  <data name="All_Face_e131" xml:space="preserve">
+    <value>Scold</value>
+  </data>
+  <data name="All_Face_e132" xml:space="preserve">
+    <value>Confused</value>
+  </data>
+  <data name="All_Face_e133" xml:space="preserve">
+    <value>Shhh</value>
+  </data>
+  <data name="All_Face_e134" xml:space="preserve">
+    <value>Hypnotized</value>
+  </data>
+  <data name="All_Face_e135" xml:space="preserve">
+    <value>Frustrated</value>
+  </data>
+  <data name="All_Face_e136" xml:space="preserve">
+    <value>In the Dark</value>
+  </data>
+  <data name="All_Face_e137" xml:space="preserve">
+    <value>Skull</value>
+  </data>
+  <data name="All_Face_e138" xml:space="preserve">
+    <value>Hammer</value>
+  </data>
+  <data name="All_Face_e139" xml:space="preserve">
+    <value>Wave</value>
+  </data>
+  <data name="All_Face_e140" xml:space="preserve">
+    <value>Relieved</value>
+  </data>
+  <data name="All_Face_e141" xml:space="preserve">
+    <value>Pick Nose</value>
+  </data>
+  <data name="All_Face_e142" xml:space="preserve">
+    <value>Applause</value>
+  </data>
+  <data name="All_Face_e143" xml:space="preserve">
+    <value>Flushed</value>
+  </data>
+  <data name="All_Face_e144" xml:space="preserve">
+    <value>Hellooo</value>
+  </data>
+  <data name="All_Face_e145" xml:space="preserve">
+    <value>Snub 1</value>
+  </data>
+  <data name="All_Face_e146" xml:space="preserve">
+    <value>Snub 2</value>
+  </data>
+  <data name="All_Face_e147" xml:space="preserve">
+    <value>Yawn</value>
+  </data>
+  <data name="All_Face_e148" xml:space="preserve">
+    <value>Booo</value>
+  </data>
+  <data name="All_Face_e149" xml:space="preserve">
+    <value>Distressed</value>
+  </data>
+  <data name="All_Face_e150" xml:space="preserve">
+    <value>Sniffle</value>
+  </data>
+  <data name="All_Face_e151" xml:space="preserve">
+    <value>Sly</value>
+  </data>
+  <data name="All_Face_e152" xml:space="preserve">
+    <value>Pucker</value>
+  </data>
+  <data name="All_Face_e153" xml:space="preserve">
+    <value>Uh Oh</value>
+  </data>
+  <data name="All_Face_e154" xml:space="preserve">
+    <value>Whimper</value>
+  </data>
+  <data name="All_Face_e155" xml:space="preserve">
+    <value>Cleaver</value>
+  </data>
+  <data name="All_Face_e156" xml:space="preserve">
+    <value>watermelon</value>
+  </data>
+  <data name="All_Face_e157" xml:space="preserve">
+    <value>Beer</value>
+  </data>
+  <data name="All_Face_e158" xml:space="preserve">
+    <value>Basketball</value>
+  </data>
+  <data name="All_Face_e159" xml:space="preserve">
+    <value>Ping Pong</value>
+  </data>
+  <data name="All_Face_e160" xml:space="preserve">
+    <value>Coffee</value>
+  </data>
+  <data name="All_Face_e161" xml:space="preserve">
+    <value>Rice</value>
+  </data>
+  <data name="All_Face_e162" xml:space="preserve">
+    <value>Pig</value>
+  </data>
+  <data name="All_Face_e163" xml:space="preserve">
+    <value>Rose</value>
+  </data>
+  <data name="All_Face_e164" xml:space="preserve">
+    <value>Wilt</value>
+  </data>
+  <data name="All_Face_e165" xml:space="preserve">
+    <value>Kisses</value>
+  </data>
+  <data name="All_Face_e166" xml:space="preserve">
+    <value>Heart</value>
+  </data>
+  <data name="All_Face_e167" xml:space="preserve">
+    <value>Broken Heart</value>
+  </data>
+  <data name="All_Face_e168" xml:space="preserve">
+    <value>Cake</value>
+  </data>
+  <data name="All_Face_e169" xml:space="preserve">
+    <value>Lightning</value>
+  </data>
+  <data name="All_Face_e170" xml:space="preserve">
+    <value>Bomb</value>
+  </data>
+  <data name="All_Face_e171" xml:space="preserve">
+    <value>Dagger</value>
+  </data>
+  <data name="All_Face_e172" xml:space="preserve">
+    <value>Soccer</value>
+  </data>
+  <data name="All_Face_e173" xml:space="preserve">
+    <value>Ladybug</value>
+  </data>
+  <data name="All_Face_e174" xml:space="preserve">
+    <value>Poop</value>
+  </data>
+  <data name="All_Face_e175" xml:space="preserve">
+    <value>Moon</value>
+  </data>
+  <data name="All_Face_e176" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="All_Face_e177" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="All_Face_e178" xml:space="preserve">
+    <value>Hug</value>
+  </data>
+  <data name="All_Face_e179" xml:space="preserve">
+    <value>Thumbs Up</value>
+  </data>
+  <data name="All_Face_e180" xml:space="preserve">
+    <value>Thumbs Down</value>
+  </data>
+  <data name="All_Face_e181" xml:space="preserve">
+    <value>Shake</value>
+  </data>
+  <data name="All_Face_e182" xml:space="preserve">
+    <value>Victory</value>
+  </data>
+  <data name="All_Face_e183" xml:space="preserve">
+    <value>Admire</value>
+  </data>
+  <data name="All_Face_e184" xml:space="preserve">
+    <value>Beckon</value>
+  </data>
+  <data name="All_Face_e185" xml:space="preserve">
+    <value>Fist</value>
+  </data>
+  <data name="All_Face_e186" xml:space="preserve">
+    <value>Pinky</value>
+  </data>
+  <data name="All_Face_e187" xml:space="preserve">
+    <value>Love</value>
+  </data>
+  <data name="All_Face_e188" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="All_Face_e189" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="All__About_Title" xml:space="preserve">
+    <value>About {0}</value>
+  </data>
+  <data name="All_Security_Bind" xml:space="preserve">
+    <value>Account Security</value>
+  </data>
+  <data name="All_Security_Title" xml:space="preserve">
+    <value>Account Security</value>
+  </data>
+  <data name="All_BPM_Aborted" xml:space="preserve">
+    <value>Aborted</value>
+  </data>
+  <data name="All_BPM_Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="All_ConsignReturnType" xml:space="preserve">
+    <value>Return Type</value>
+  </data>
+  <data name="All_ConsignReturnType_Forward" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="All_ConsignReturnType_Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="All_ConsignRoutingType" xml:space="preserve">
+    <value>Routing</value>
+  </data>
+  <data name="All_ConsignRoutingType_Parallel" xml:space="preserve">
+    <value>Parallel</value>
+  </data>
+  <data name="All_ConsignRoutingType_Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="All_BPM_Deleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="All__DirectSend" xml:space="preserve">
+    <value>Direct Send</value>
+  </data>
+  <data name="All__DirectSendItemFmt" xml:space="preserve">
+    <value>[{0}]{1}</value>
+  </data>
+  <data name="All_BPM_InformSubmit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="All__LangPostfix" xml:space="preserve">
+    <value />
+    <comment>Diff</comment>
+  </data>
+  <data name="All__Languages" xml:space="preserve">
+    <value>1033,2052,1028</value>
+    <comment>Diff</comment>
+  </data>
+  <data name="All__Languages_1028" xml:space="preserve">
+    <value>繁體中文</value>
+    <comment>Diff</comment>
+  </data>
+  <data name="All__Languages_1033" xml:space="preserve">
+    <value>English</value>
+    <comment>Diff</comment>
+  </data>
+  <data name="All__Languages_2052" xml:space="preserve">
+    <value>简体中文</value>
+    <comment>Diff</comment>
+  </data>
+  <data name="All__Languages_Cur" xml:space="preserve">
+    <value>English</value>
+    <comment>Diff</comment>
+  </data>
+  <data name="All_BPM_PostComments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="All_BPM_Post_MissFreeRoutingDeclare" xml:space="preserve">
+    <value>Please specify at least one participant for the "{0}" step!</value>
+  </data>
+  <data name="All_BPM_Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="All__Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="All_BPM_SignComments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="All__Title_ConsignUsers" xml:space="preserve">
+    <value>Consign Users</value>
+  </data>
+  <data name="All__Title_InviteIndicateUsers" xml:space="preserve">
+    <value>Indicate Users</value>
+  </data>
+  <data name="All_BPM_UnknownStatus" xml:space="preserve">
+    <value>Unknown Status</value>
+  </data>
+  <data name="Form_Result_Indicator" xml:space="preserve">
+    <value>Invite Indicator:{0}</value>
+  </data>
+  <data name="Form_SendToOthUsers" xml:space="preserve">
+    <value>Submit succeed! Serial Number: {0}\nTask is transfered to : {1}{2}\nWindow will be closed.{3}</value>
+  </data>
+  <data name="Form_TaskFinishedApproved" xml:space="preserve">
+    <value>Submit succeed! Serial Number: {0}\nTask is approved\nWindow will be closed.{1}</value>
+  </data>
+  <data name="Form_TaskFinishedRejected" xml:space="preserve">
+    <value>Submit succeed! Serial Number: {0}\nTask is rejected\nWindow will be closed.{1}</value>
+  </data>
+  <data name="Form_TaskInWaiting" xml:space="preserve">
+    <value>Submit succeed! Serial Number: {0}{1}\nWindow will be closed.{2}</value>
+  </data>
+  <data name="Form_WaitingOthUsers" xml:space="preserve">
+    <value>Submit succeed! Serial Number: {0}\nTask is waiting for other user process : {1}{2}\nWindow will be closed.{3}</value>
+  </data>
+  <data name="WeeklyReport_Tab_My" xml:space="preserve">
+    <value>Mine</value>
+  </data>
+  <data name="WeeklyReport_Tab_Team" xml:space="preserve">
+    <value>Team's</value>
+  </data>
+  <data name="All__Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="All_Bind_Close" xml:space="preserve">
+    <value>Unbind</value>
+  </data>
+  <data name="All_Module_Apps" xml:space="preserve">
+    <value>Apps</value>
+  </data>
+  <data name="All_Module_My" xml:space="preserve">
+    <value>Me</value>
+  </data>
+  <data name="All_Module_Notification" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="All_Module_Workflow" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="All__Languages_css" xml:space="preserve">
+    <value>lang_en</value>
+    <comment>Diff</comment>
+  </data>
+  <data name="All_Security_BindPhone" xml:space="preserve">
+    <value>Manage Phone Number</value>
+  </data>
+  <data name="All__Process_Feedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="All__Process_Feedback_Title" xml:space="preserve">
+    <value>Produce Feedback</value>
+  </data>
+  <data name="Aspx_Auth_DeviceDisabled" xml:space="preserve">
+    <value>Your device is denied</value>
+  </data>
+  <data name="Aspx_Auth_GetValidationCodeAgain" xml:space="preserve">
+    <value>Please get validation code again!</value>
+  </data>
+  <data name="Aspx_Auth_GetValidationCodeFirst" xml:space="preserve">
+    <value>Please get validation code first!</value>
+  </data>
+  <data name="Aspx_Auth_IncorrectValidationCode" xml:space="preserve">
+    <value>Incorrect validation code</value>
+  </data>
+  <data name="Aspx_Auth_StrangerDevice" xml:space="preserve">
+    <value>Stranger device</value>
+  </data>
+  <data name="Aspx_MDM_TableAccessDenied" xml:space="preserve">
+    <value>Access denied, table: {0}</value>
+  </data>
+  <data name="All_BPM_Task_Title_FMT" xml:space="preserve">
+    <value>{0}'s {1}</value>
+  </data>
+  <data name="All_Notification_DingTalk" xml:space="preserve">
+    <value>DingTalk</value>
+  </data>
+  <data name="All_Notification_WeChat" xml:space="preserve">
+    <value>WeChat</value>
+  </data>
+  <data name="All__Title_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="All__Title_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="All__MobileAppName" xml:space="preserve">
+    <value>EMIP</value>
+    <comment>999</comment>
+  </data>
+  <data name="All__Ext_cssfile" xml:space="preserve">
+    <value>app_en.css</value>
+    <comment>diff</comment>
+  </data>
+  <data name="All__GoProcess" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="All__Remind" xml:space="preserve">
+    <value>Remind</value>
+  </data>
+  <data name="All__RemindTitle" xml:space="preserve">
+    <value>{1}({0})</value>
+  </data>
+  <data name="All__SystemRemind" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Aspx_User_NoPosition" xml:space="preserve">
+    <value>账号“{0}”不属于任何组织</value>
+  </data>
+  <data name="All_BPM_Remind" xml:space="preserve">
+    <value>Remind</value>
+  </data>
+  <data name="All_BPM_RemindFailedTitle" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="All_BPM_RemindSucceed" xml:space="preserve">
+    <value>Remind: {0}</value>
+  </data>
+  <data name="All_BPM_Remind_Mask" xml:space="preserve">
+    <value>Reminding...</value>
+  </data>
+  <data name="All_BPM_TransferFailedTitle" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="All_BPM_Transfer_Mask" xml:space="preserve">
+    <value>Transfering...</value>
+  </data>
+  <data name="All_BPM_Transfer_Succeed" xml:space="preserve">
+    <value>Transferred: {0}</value>
+  </data>
+  <data name="All_BPM_Transfer_Title" xml:space="preserve">
+    <value>Transfer: {0}</value>
+  </data>
+  <data name="All_Form_ActionBar_Remind" xml:space="preserve">
+    <value>Remind</value>
+  </data>
+  <data name="All_Form_Transfer" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="All_TaskOpt_Remind_SelTarget" xml:space="preserve">
+    <value>Transfer To</value>
+  </data>
+  <data name="All__TimeSpanFormatDHM" xml:space="preserve">
+    <value>{0}D{1}H{2}M</value>
+  </data>
+  <data name="All__TimeSpanFormatHM" xml:space="preserve">
+    <value>{0}H{1}M</value>
+  </data>
+  <data name="All__TimeSpanFormatM" xml:space="preserve">
+    <value>{0}M</value>
+  </data>
+  <data name="All_Social_Search_User_Title" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="All_DataType_Error" xml:space="preserve">
+    <value>The value "{0}" is not a valid {1}</value>
+  </data>
+  <data name="All_MaxLen_Error" xml:space="preserve">
+    <value>{0}\nThe string over the max length:{1}</value>
+  </data>
+  <data name="All_DataSourceMgr_DSID_ESB" xml:space="preserve">
+    <value>ESB: {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_DataSourceMgr_DSID_Procedure" xml:space="preserve">
+    <value>Procedure: {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_DataSourceMgr_DSID_Table" xml:space="preserve">
+    <value>Table: {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_DataSourceMgr_Load_Failed" xml:space="preserve">
+    <value>Failed to load data from {0}! Reason: n {1}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Module_Process" xml:space="preserve">
+    <value>Initiate</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Post_AllProcess" xml:space="preserve">
+    <value>all</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_App_AllApp" xml:space="preserve">
+    <value>all</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Post_Favorite" xml:space="preserve">
+    <value>Favorite</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Post_Recently" xml:space="preserve">
+    <value>Recently</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_Checkbox_MissValue" xml:space="preserve">
+    <value>Checkbox groups whose value property cannot be empty, id: {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_ChildForm" xml:space="preserve">
+    <value>Subform</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_DataBrowserButton_MissDataSource" xml:space="preserve">
+    <value>Data source not set</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_HistoryFormLink_EmptyText" xml:space="preserve">
+    <value>Not Yet Associated</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_JSFunc_Err" xml:space="preserve">
+    <value>Error with js function: {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_Miss_CType" xml:space="preserve">
+    <value>Runtime type not defined for ctype: {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_PositionMap_Label" xml:space="preserve">
+    <value>Position Map</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_Radio_MissValue" xml:space="preserve">
+    <value>Radio groups whose value property cannot be empty, id: {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_Uniform_ValidateFunc_Miss" xml:space="preserve">
+    <value>Verification function {0} is not defined</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_ViewModel_Column_Miss" xml:space="preserve">
+    <value>Column {1} does not exist in table {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_ViewModel_Filter_InvalidDepency" xml:space="preserve">
+    <value>Data source filtering is incorrect, flat or superior data should be used\n{0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All_ViewModel_Var_Miss" xml:space="preserve">
+    <value>Miss variable {0}</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__Cancel_Selection" xml:space="preserve">
+    <value>Cancel Selection</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__DetailTable" xml:space="preserve">
+    <value>Detail Table</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__Empty" xml:space="preserve">
+    <value>(empty)</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__From" xml:space="preserve">
+    <value>From</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__Open" xml:space="preserve">
+    <value>Open</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__Org" xml:space="preserve">
+    <value>Organization</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__Select" xml:space="preserve">
+    <value>Select</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__To" xml:space="preserve">
+    <value>To</value>
+    <comment>2</comment>
+  </data>
+  <data name="All__Validation_Failed" xml:space="preserve">
+    <value>Validation Failed</value>
+    <comment>2</comment>
+  </data>
+</root>

@@ -1,0 +1,127 @@
+============================同步部门开始,日期2019-1-25 11:42:42=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步部门数量
+17
+生成部门Csv
+上传部门Csv到微信
+获取media_id:3e8FEb8_xOwyAFka2AzUvur9pBvKAIARgHEFN70qpz_k
+执行覆盖部门
+============================异步任务id:1_1548387764_63336=======================
+
+===========================同步结果======================={"errcode":40058,"errmsg":"invalid Request Parameter, hint: [1548387765_4_4657b463c8a6802edb679ed38d7ed44a], more info at https://open.work.weixin.qq.com/devtool/query?e=40058","result":[]}
+============================结束同步=======================
+
+
+============================同步用户开始,日期2019-1-25 11:42:45=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步用户数量
+0
+============================用户数量为0,结束同步=======================
+============================同步部门开始,日期2019-1-25 11:44:58=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步部门数量
+17
+生成部门Csv
+上传部门Csv到微信
+获取media_id:3XH2lM7IDgcZM9y5FT-XbeKNPmjudj9ZuguxtlgGniGA
+执行覆盖部门
+============================异步任务id:1_1548387899_282547=======================
+
+===========================同步结果=======================
+{"errcode":40058,"errmsg":"invalid Request Parameter, hint: [1548387900_2_76b78b7ac515c818e70e3e7d66776ed7], more info at https://open.work.weixin.qq.com/devtool/query?e=40058","result":[]}
+============================结束同步=======================
+
+
+============================同步用户开始,日期2019-1-25 11:45:00=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步用户数量
+0
+============================用户数量为0,结束同步=======================
+============================同步部门开始,日期2019-1-25 11:46:05=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步部门数量
+17
+生成部门Csv
+上传部门Csv到微信
+获取media_id:3p7zTqRMr3PqnsBHNkdUf6UNF1EJv5SvNciKVKSCeWWk
+执行覆盖部门
+============================异步任务id:1_1548387966_468786=======================
+
+===========================同步结果=======================
+{"errcode":302004,"errmsg":"invalid corp architecture, Details please see the document, hint: [1548387968_1_58445abd09103673c479f14be7f4f748], more info at https://open.work.weixin.qq.com/devtool/query?e=302004","type":"replace_party","result":[{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3059},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3060},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3061},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3062},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3063},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3064},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3065},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3076},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3077},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3078},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3070},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3071},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3072},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3073},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3067},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3068},{"action":0,"errcode":302004,"errmsg":"invalid arch, orphan party","partyid":3074}],"total":4294967295,"percentage":100,"status":3}
+============================结束同步=======================
+
+
+============================同步用户开始,日期2019-1-25 11:46:08=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步用户数量
+0
+============================用户数量为0,结束同步=======================
+============================同步部门开始,日期2019-1-25 11:48:39=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步部门数量
+17
+生成部门Csv
+上传部门Csv到微信
+获取media_id:3STfiyArPoKH0rn4NmjvCw3FA8behKjffpS3eziXNcfc
+执行覆盖部门
+============================异步任务id:1_1548388120_868252=======================
+
+===========================同步结果=======================
+{"errcode":0,"errmsg":"ok","type":"replace_party","result":[{"action":1,"errcode":0,"errmsg":"ok","partyid":3076},{"action":1,"errcode":0,"errmsg":"ok","partyid":3077},{"action":1,"errcode":0,"errmsg":"ok","partyid":3064},{"action":1,"errcode":0,"errmsg":"ok","partyid":3060},{"action":1,"errcode":0,"errmsg":"ok","partyid":3061},{"action":1,"errcode":0,"errmsg":"ok","partyid":3065},{"action":1,"errcode":0,"errmsg":"ok","partyid":3062},{"action":1,"errcode":0,"errmsg":"ok","partyid":3063},{"action":1,"errcode":0,"errmsg":"ok","partyid":3059},{"action":1,"errcode":0,"errmsg":"ok","partyid":3078},{"action":1,"errcode":0,"errmsg":"ok","partyid":3067},{"action":1,"errcode":0,"errmsg":"ok","partyid":3068},{"action":1,"errcode":0,"errmsg":"ok","partyid":3074},{"action":1,"errcode":0,"errmsg":"ok","partyid":3070},{"action":1,"errcode":0,"errmsg":"ok","partyid":3071},{"action":1,"errcode":0,"errmsg":"ok","partyid":3072},{"action":1,"errcode":0,"errmsg":"ok","partyid":3073},{"action":8,"errcode":0,"errmsg":"ok","partyid":1}],"total":17,"percentage":100,"status":3}
+============================结束同步=======================
+
+
+============================同步用户开始,日期2019-1-25 11:48:44=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步用户数量
+117
+生成用户Csv
+上传用户Csv到微信
+获取media_id:3EXf509b4vAkWf0xEVpjj2YL7LSNhGb_cHVr36kkHJDo
+执行覆盖用户
+============================异步任务id:3_1548388125_2081=======================
+
+===========================同步结果=======================
+{"errcode":0,"errmsg":"ok","type":"sync_user","result":[{"userid":"anxingyu","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"baiping","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"cairui","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"caishuo","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"caiyuan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"changshihao","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"chenglu","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"chenkai","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"chenli","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"chenlin","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"chenxing","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"chenyong","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"daijihong","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"dengliang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"dingjingqun","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"dinglan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"dingzhu","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"dongxide","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"dongzhongwei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"duanjunhao","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"dukening","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"futianlin","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"ganmengbo","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"gaoshengqiang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"gaozhenyi","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"guoli","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"guoxing","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"guren","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"haoshuisheng","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"hejiadan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"heweilong","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"huangjunnan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"huanglei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"huangmiao","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"huqunbo","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"jianghong","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"lanxianglin","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"liangmansha","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"licong","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"limengqiang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"lingjiayue","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"linxueyang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"liudan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"liuheng","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"liuhongjiang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"liushaojin","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"liuxingchen","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"liuxufeng","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"lixiaoting","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"lixiuquan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"liyong","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"louzhenyu","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"luoliang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"maolingli","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"maxinhui","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"minmajiajun","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"mojianbing","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"niuruiyun","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"qiushifa","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"rendongping","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"renkunkun","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"shangkunming","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"shuaichangchun","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"sunerwei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"sunxianqiang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"tangzhuang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"tanjiawei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wangguangbo","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wanghaibing","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wanghonggang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wanghuanqing","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wanghui","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wanglei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wangqi","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wangrui","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wangtao","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wangting","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wangxinfeng","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wangyiqiang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wangzeya","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"weihuaifa","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"weilu","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wenbing","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wencheng","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wuchengjie","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wuqi","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"wurui","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"xingwanzhao","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"xuejiawei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"xulizhe","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"xuxiaofang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"yanbin","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"yangdechen","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"yangjunlong","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"yesi","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"yeting","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"yinweikang","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"yutao","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"yutianling","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhangchenlei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhanghuan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhanghui","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhangjunchao","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhanglei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhangnan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhangpeifei","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhangqin","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhangqinjian","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhangyi","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhangzhibin","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhaoguanghui","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhaozhikun","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhengmengjie","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhouquan","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhuchuanli","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhuqing","errcode":40066,"errmsg":"invalid department id: 3058"},{"userid":"zhutantan","errcode":40066,"errmsg":"invalid department id: 3058"}],"total":117,"percentage":100,"status":3}============================结束同步=======================
+
+
+============================同步部门开始,日期2019-1-25 11:50:53=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步部门数量
+17
+生成部门Csv
+上传部门Csv到微信
+获取media_id:3SzbYJBcstI_StXKi6yPMXEpnzMr9hw3ccg55gIbexSI
+执行覆盖部门
+============================异步任务id:1_1548388254_463596=======================
+
+===========================同步结果=======================
+{"errcode":0,"errmsg":"ok","type":"replace_party","result":[],"total":17,"percentage":100,"status":3}
+============================结束同步=======================
+
+
+============================同步用户开始,日期2019-1-25 11:50:55=======================
+获取Access_Token
+xFQGr4OrhVPlnD7ZqpGE5tgeH2kwrS-bQTK7klIdgczDdd_JC-xJrUJTIDS2WOuiHiMO8lwhSUOItDm_jHxpaT9nWLi9gzs-tc4wM1BQM4BZQI673tRySOCtaM7UsQcevtHpcn-X23w2EMXbBmltJd-UrTfSdqsjinsxSqRhy7GeqDys9GRi9xpmwm45Kd1kyEQp4mmmgXZ8w2zRVEEqmw
+获取同步用户数量
+117
+生成用户Csv
+上传用户Csv到微信
+获取media_id:3Gu3Pzxzt39LyIPbkhu103u9-Y49OBlliTU1g4nHWLZc
+执行覆盖用户
+============================异步任务id:3_1548388256_56506=======================
+
+===========================同步结果=======================
+{"errcode":0,"errmsg":"ok","type":"sync_user","result":[],"total":117,"percentage":0,"status":2}============================结束同步=======================
+
+

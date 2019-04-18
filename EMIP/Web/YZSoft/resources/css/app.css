@@ -1,0 +1,17 @@
+@import url(base.css?_dc=68);
+@import url(top.css?_dc=7);
+@import url(bottom.css?_dc=6);
+@import url(left.css?_dc=1);
+@import url(right.css?_dc=1);
+@import url(device.css?_dc=2);
+@import url(bootstrap.mini.css?_dc=2);
+
+.lang_en .yz-search-cancel
+{
+    font-size:14px;
+}
+
+.lang_en .yz-list-item-task .statustext
+{
+    width:5em;
+}
