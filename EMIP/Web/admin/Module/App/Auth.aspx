@@ -45,6 +45,7 @@
                             </div>
                         </div>
                         <div class="layui-col-xs8">
+                       
                             <div id="applist">
                                
                             </div>
