@@ -1,0 +1,16 @@
+﻿admin
+App_Code\YZSoft.Services.REST.Mobile\core\Auth.cs
+App_Code\YZApp
+assets
+YZSoft.Services.REST.Mobile\YZApp
+dingtalk.aspx
+wechat.aspx
+YZSoft\app
+YZSoft\form\aspx\field\ScanQRCode.js
+YZSoft\form\field\ScanQRCode.js
+YZSoft\form\src\field\ScanQRCode.js
+YZSoft\form\src\ScanQRCode
+YZSoft\resources\base.css
+
+
+
