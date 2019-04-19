@@ -6,6 +6,7 @@ CREATE TABLE [dbo].[APP_APPINFO] (
 )
 
 
+
 CREATE TABLE [dbo].[APP_INDEX] (
 [Id] int NOT NULL IDENTITY(1,1) ,
 [CreateDate] datetime NULL ,
@@ -22,7 +23,6 @@ CREATE TABLE [dbo].[APP_INDEX] (
 [BADGE] nvarchar(1000) NULL 
 )
 
-
 CREATE TABLE [dbo].[APP_LOGIN_CONFIG] (
 [CREATEDATE] datetime NULL ,
 [CREATEUSER] nvarchar(50) NULL ,
@@ -35,8 +35,11 @@ CREATE TABLE [dbo].[APP_LOGIN_CONFIG] (
 [OLOGIN] nvarchar(50) NULL ,
 [WXAGENTID] nvarchar(50) NULL ,
 [DDAGENTID] nvarchar(50) NULL ,
-[DDCORPID] nvarchar(50) NULL 
+[DDCORPID] nvarchar(50) NULL ,
+[WXLINKSQL] nvarchar(1000) NULL ,
+[DDLINKSQL] nvarchar(1000) NULL 
 )
+
 
 
 CREATE TABLE [dbo].[APP_NOTICE_CONFIG] (
@@ -49,8 +52,11 @@ CREATE TABLE [dbo].[APP_NOTICE_CONFIG] (
 [DDID] nvarchar(50) NULL ,
 [DDAGENTID] nvarchar(50) NULL ,
 [DDSECRET] nvarchar(200) NULL ,
-[DDPUSHURL] nvarchar(500) NULL 
+[DDPUSHURL] nvarchar(500) NULL ,
+[WXLINKSQL] nvarchar(1000) NULL ,
+[DDLINKSQL] nvarchar(1000) NULL 
 )
+
 
 
 CREATE TABLE [dbo].[APP_ORGSYNC] (
@@ -63,3 +69,5 @@ CREATE TABLE [dbo].[APP_ORGSYNC] (
 [DDOUSQL] nvarchar(MAX) NULL ,
 [DDUSERSQL] nvarchar(MAX) NULL 
 )
+
+

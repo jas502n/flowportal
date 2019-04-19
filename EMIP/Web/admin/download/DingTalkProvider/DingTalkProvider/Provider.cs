@@ -60,7 +60,7 @@ namespace DingTalkProvider
                 });
                 DBUtil_APP.connectionString = connectionString;
               
-                string sql = "Select DDID,DDAGENTID,DDSECRET,DDPUSHURL from  APP_NOTICE_CONFIG";
+                string sql = "Select DDID,DDAGENTID,DDSECRET,DDPUSHURL,DDLINKSQL from  APP_NOTICE_CONFIG";
                 DataTable dt = DBUtil_APP.Query(sql).Tables[0];
                 if (dt.Rows.Count == 0)
                 {
@@ -79,6 +79,13 @@ namespace DingTalkProvider
                 urlBuilder.QueryString["access_token"] = accessToken;
                 JObject jObject = jtExtra as JObject;
                 object o;
+                string DDLINKSQL = Convert.ToString(dt.Rows[0][4]);
+                if (!string.IsNullOrEmpty(DDLINKSQL))
+                {
+                    string sql2 = string.Format(DDLINKSQL, address);
+                    address = Convert.ToString(DBUtil_APP.GetSingle(sql2));
+                }
+
                 if (string.IsNullOrEmpty(Server.EMIPSiteUrl) || jObject == null)
                 {
                     o = new

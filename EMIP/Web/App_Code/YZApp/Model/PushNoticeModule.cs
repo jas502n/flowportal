@@ -18,5 +18,7 @@ namespace YZAppAdmin
         public string DdId { get; set; }
         public string DdSecret { get; set; }
         public string DdPushUrl { get; set; }
+        public string WxLinkSql { get; set; }
+        public string DdLinkSql { get; set; }
     }
 }

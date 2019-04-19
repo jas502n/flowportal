@@ -62,7 +62,7 @@ namespace WeChatProvider
             innerText4
                 });
                 DBUtil_APP.connectionString = connectionString;
-                string sql = "Select WXID,WXAGENTID,WXSECRET,WXPUSHURL from  APP_NOTICE_CONFIG";
+                string sql = "Select WXID,WXAGENTID,WXSECRET,WXPUSHURL,WXLINKSQL from  APP_NOTICE_CONFIG";
                 DataTable dt = DBUtil_APP.Query(sql).Tables[0];
                 if (dt.Rows.Count == 0)
                 {
@@ -81,6 +81,12 @@ namespace WeChatProvider
                 urlBuilder.QueryString["access_token"] = accessToken;
                 JObject jObject = jtExtra as JObject;
                 object o;
+                string WXLINKSQL = Convert.ToString(dt.Rows[0][4]);
+                if (!string.IsNullOrEmpty(WXLINKSQL))
+                {
+                    string sql2 = string.Format(WXLINKSQL, address);
+                    address = Convert.ToString(DBUtil_APP.GetSingle(sql2));
+                }
                 if (string.IsNullOrEmpty(Server.EMIPSiteUrl) || jObject == null)
                 {
                     o = new

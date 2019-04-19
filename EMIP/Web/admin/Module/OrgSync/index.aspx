@@ -31,19 +31,17 @@
                                 <div class="layui-card-header" style="height: 80px; line-height: 25px; text-align: center">
                                     <i class="iconfont wxicon" style="font-size: 80px; display: block; margin-top: 30px;
                                         margin-bottom: 30px;">&#xe768;</i><div>
-                                              <button type="button" class="tbbm layui-btn layui-btn-xs">
-                                                同步部门</button>  
-                                                <button type="button" class="tbry layui-btn layui-btn-xs">
+                                            <button type="button" class="tbbm layui-btn layui-btn-xs">
+                                                同步部门</button>
+                                            <button type="button" class="tbry layui-btn layui-btn-xs">
                                                 同步人员</button>
                                             <button type="button" class="qbtb layui-btn layui-btn-xs">
                                                 全部同步</button>
-                                                  <button type="button" class="wxxz layui-btn layui-btn-xs">
+                                            <button type="button" class="wxxz layui-btn layui-btn-xs">
                                                 下载同步程序</button>
-                                               
                                         </div>
                                 </div>
                                 <div class="layui-card-body">
-                                    
                                     <div id="wxcs">
                                         <div class="wx">
                                             <div class="layui-form-item">
@@ -62,22 +60,39 @@
                                                 </div>
                                             </div>
                                             <div class="layui-form-item layui-form-text">
-                                                <label class="layui-form-label">部门SQL</label>
+                                                <label class="layui-form-label">
+                                                    部门SQL</label>
                                                 <div class="layui-input-block">
-                                                    <textarea placeholder="请输入部门SQL" name="WxOuSql"  class="layui-textarea"></textarea>
+                                                    <textarea placeholder="请输入部门SQL" name="WxOuSql" class="layui-textarea"></textarea>
+                                                </div>
+                                            </div>
+                                               <div class="layui-form-item layui-form-text">
+                                                <label class="layui-form-label">
+                                                    注意</label>
+                                                <div class="layui-input-block">
+                                                    <div class="layui-form-mid layui-word-aux" style="text-align: left;">
+                                                       部门默认获取OUID为1下面的子部门，如不一致则请修改上述SQL语句
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="layui-form-item layui-form-text">
-                                                <label class="layui-form-label">人员SQL</label>
+                                                <label class="layui-form-label">
+                                                    人员SQL</label>
                                                 <div class="layui-input-block">
                                                     <textarea placeholder="请输入人员SQL" name="WxUserSql" class="layui-textarea"></textarea>
                                                 </div>
                                             </div>
-                                         
-                                             <div class="layui-form-item layui-form-text">
-                                                <label class="layui-form-label">注意</label>
+                                            <div class="layui-form-item layui-form-text">
+                                                <label class="layui-form-label">
+                                                    注意</label>
                                                 <div class="layui-input-block">
-                                                      <div class="layui-form-mid layui-word-aux">将文件夹"EMIP\Web\admin\Module\OrgSync\WxSync"设置为可读写</div>
+                                                    <div class="layui-form-mid layui-word-aux" style="text-align: left;">
+                                                        将文件夹"EMIP\Web\admin\Module\OrgSync\WxSync"设置为可读写<br>
+                                                        人员同步默认字段：姓名，账号，手机号，邮箱，部门，职位，性别，<br>
+                                                        如需同步其他字段，则需修改<br>
+                                                        1.修改EMIP\Web\admin\Module\OrgSync\WxSync\Default.aspx.cs中 dt2csv(dt, UserPath, "姓名,帐号,手机号,邮箱,所在部门,职位,性别")新增字段<br>
+                                                        2.修改同步人员SQL
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -90,13 +105,11 @@
                                 <div class="layui-card-header" style="height: 80px; line-height: 25px; text-align: center">
                                     <i class="iconfont ddicon" style="font-size: 80px; display: block; margin-top: 30px;
                                         margin-bottom: 30px;">&#xe601;</i><div>
-                                          
                                             <button type="button" class="ddtscs layui-btn layui-btn-xs">
                                                 立即同步</button>
                                         </div>
                                 </div>
                                 <div class="layui-card-body">
-                                  
                                     <div id="ddcs">
                                         <div class="layui-form-item">
                                             <a class="layui-form-label" href="https://open-doc.dingtalk.com/microapp/serverapi2/eev437#a-namebq4tsta%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E8%AF%A6%E6%83%85"
@@ -112,18 +125,20 @@
                                                     class="layui-input">
                                             </div>
                                         </div>
-                                         <div class="layui-form-item layui-form-text">
-                                                <label class="layui-form-label">部门SQL</label>
-                                                <div class="layui-input-block">
-                                                    <textarea placeholder="请输入部门SQL" name="DdOuSql"  class="layui-textarea"></textarea>
-                                                </div>
+                                        <div class="layui-form-item layui-form-text">
+                                            <label class="layui-form-label">
+                                                部门SQL</label>
+                                            <div class="layui-input-block">
+                                                <textarea placeholder="请输入部门SQL" name="DdOuSql" class="layui-textarea"></textarea>
                                             </div>
-                                            <div class="layui-form-item layui-form-text">
-                                                <label class="layui-form-label">人员SQL</label>
-                                                <div class="layui-input-block">
-                                                    <textarea placeholder="请输入人员SQL" name="DdUserSql" class="layui-textarea"></textarea>
-                                                </div>
+                                        </div>
+                                        <div class="layui-form-item layui-form-text">
+                                            <label class="layui-form-label">
+                                                人员SQL</label>
+                                            <div class="layui-input-block">
+                                                <textarea placeholder="请输入人员SQL" name="DdUserSql" class="layui-textarea"></textarea>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -141,16 +156,15 @@
             <div class="app layui-card-body">
                 <div class="layui-row layui-col-space15">
                     <div class="layui-col-md6">
-                       <iframe id="wxi" width='100%' height='100%'  frameborder='0'  src="WxSync/Default.aspx"></iframe>
+                        <iframe id="wxi" width='100%' height='100%' frameborder='0' src="WxSync/Default.aspx">
+                        </iframe>
                     </div>
                     <div class="layui-col-md6">
-                      
                     </div>
                 </div>
             </div>
         </div>
     </div>
- 
     </form>
     <script type="text/html" id="toolbar">
         <div class="layui-btn-container">
@@ -203,15 +217,33 @@
                     },
                     url: "Module/OrgSync/data/data.ashx",
                     success: function (data) {
+                        var ousql = "with cte as  (" +
+ "select OUName AS 部门名称,Code AS 部门Code, OUID AS 部门ID," +
+ "ISNULL(ParentOUID,0) AS 父部门ID,OrderIndex AS  排序 from BPMSysOUs A where ParentOUID=1" +
+ "union all" +
+ " select OUName AS 部门名称,Code AS 部门Code,OUID AS 部门ID,ISNULL(ParentOUID,0) AS 父部门ID,OrderIndex AS  排序 from BPMSysOUs K inner join cte c on c.部门ID = k.ParentOUID" +
+ ")select 部门名称, 部门ID,父部门ID,排序 from cte  ParentOUID";
+
+                        var usersql = " with aa as( SELECT B.DisplayName,A.UserAccount,B.Mobile,B.EMail,OUID," +
+ " (SELECT TOP 1 LeaderTitle FROM BPMSysOUMembers WHERE UserAccount=A.UserAccount) LeaderTitle,case when Sex='Female' then '女'" +
+" else '男'end as Sex" +
+" FROM  BPMSysOUMembers A INNER JOIN BPMSysUsers B " +
+" ON A.UserAccount=B.Account" +
+" WHERE B.DisplayName IS NOT NULL AND B.Mobile IS NOT NULL AND Disabled=0)" +
+" select DisplayName,UserAccount,Mobile,EMail," +
+ " stuff((select ';'+CONVERT(nvarchar(50),OUID) from aa " +
+" where a.UserAccount=UserAccount for xml path('')),1,1,'') as OUID,LeaderTitle,Sex" +
+" from aa as a group by DisplayName,UserAccount,Mobile,EMail,LeaderTitle,Sex";
+
                         form.val("LAY-filter-Login-form", {
                             "WxCorpId": data.OrgSyncInfo.WxCorpId
                   , "WxSecret": data.OrgSyncInfo.WxSecret
                   , "DdCorpId": data.OrgSyncInfo.DdCorpId
                   , "DdSecret": data.OrgSyncInfo.DdSecret
-                  , 'DdOuSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.DdOuSql)
-                  , 'DdUserSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.DdUserSql)
-                  , 'WxOuSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.WxOuSql)
-                  , 'WxUserSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.WxUserSql)
+                  , 'DdOuSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.DdOuSql) == "" ? ousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.DdOuSql)
+                  , 'DdUserSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.DdUserSql) == "" ? usersql : HtmlUtil.htmlDecode(data.OrgSyncInfo.DdUserSql)
+                  , 'WxOuSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.WxOuSql) == "" ? ousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.WxOuSql)
+                  , 'WxUserSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.WxUserSql) == "" ? ousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.WxUserSql)
                         })
                     }
                 }

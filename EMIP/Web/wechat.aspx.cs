@@ -215,7 +215,7 @@ public partial class wechat : System.Web.UI.Page
     {
         string code = this.Request.Params["code"];
         string app = this.Request.Params["app"];
- 
+        string linsql = "";
         using (IYZAppAdminProvider applogin = IYZAppAdminProviderManager.DefaultProvider)
         {
             YZAppAdmin.LoginModule lm = applogin.LoadLogin();
@@ -228,6 +228,7 @@ public partial class wechat : System.Web.UI.Page
             wechat.corpId = lm.WxId;
             wechat.agentId = lm.WxAgentId;
             wechat.secret = lm.WxSecret;
+            linsql = lm.WxLinkSql;
         }
         if (String.IsNullOrEmpty(app))
             app = "main";
@@ -258,6 +259,12 @@ public partial class wechat : System.Web.UI.Page
 
                 if (String.IsNullOrEmpty(userid))
                     throw new Exception("非企业号用户！");
+
+                if (!string.IsNullOrEmpty(linsql))
+                {
+                    string sql = string.Format(linsql, userid);
+                    userid = Convert.ToString(DBUtil_APP.GetSingle(sql));
+                }
 
                 using (BPMConnection cn = new BPMConnection())
                 {

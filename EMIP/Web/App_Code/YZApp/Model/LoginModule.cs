@@ -16,5 +16,7 @@
         public string DdCorpId { get; set; }//钉钉参数
         public string DdSecret { get; set; }//钉钉参数
         public string OLogin { get; set; }//其他登录
+        public string WxLinkSql { get; set; }
+        public string DdLinkSql { get; set; }
     }
 }

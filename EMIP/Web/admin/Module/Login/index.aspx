@@ -33,7 +33,7 @@
                                         <input type="checkbox" name="WxLogin" lay-skin="switch" lay-text="开启登陆|关闭登陆">
                                     </div>
                                     <div class="wx">
-                                     <div class="layui-form-item">
+                                        <div class="layui-form-item">
                                             <a class="layui-form-label" href="https://work.weixin.qq.com/api/doc#90000/90135/90665/corpid"
                                                 target="_blank">agentid</a>
                                             <div class="layui-input-block">
@@ -55,6 +55,23 @@
                                                     class="layui-input">
                                             </div>
                                         </div>
+                                        <div class="layui-form-item layui-form-text">
+                                            <label class="layui-form-label">
+                                                注意</label>
+                                            <div class="layui-input-block">
+                                                <div class="layui-form-mid layui-word-aux" style="text-align: left;">
+                                                    默认关联字段为微信企业号后台账号(userid)->bpm的user表account字段<br>
+                                                    如有其他关联情况，请在下方输入关联语句
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item layui-form-text">
+                                            <label class="layui-form-label">
+                                                其他关联</label>
+                                            <div class="layui-input-block">
+                                                <textarea name="WxLinkSql" placeholder="输入SQL语句，{0}为微信后台账号，sql需返回一个字段做为单点登录账号" class="layui-textarea"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +85,7 @@
                                         <input type="checkbox" name="DdLogin" lay-skin="switch" lay-text="开启登陆|关闭登陆">
                                     </div>
                                     <div class="wx">
-                                    <div class="layui-form-item">
+                                        <div class="layui-form-item">
                                             <a class="layui-form-label">agentid</a>
                                             <div class="layui-input-block">
                                                 <input type="text" name="DdAgentId" autocomplete="off" placeholder="请输入agentid" class="layui-input">
@@ -88,17 +105,35 @@
                                                     class="layui-input">
                                             </div>
                                         </div>
-                                          <div class="layui-form-item">
-                                                <a class="layui-form-label" href="https://open-doc.dingtalk.com/microapp/serverapi2/eev437#a-namebq4tsta%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E8%AF%A6%E6%83%85" target="_blank">corpid</a>
-                                                <div class="layui-input-block">
-                                                    <input type="text" name="DdCorpId" autocomplete="off" placeholder="请输入corpid" class="layui-input">
+                                        <div class="layui-form-item">
+                                            <a class="layui-form-label" href="https://open-doc.dingtalk.com/microapp/serverapi2/eev437#a-namebq4tsta%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E8%AF%A6%E6%83%85"
+                                                target="_blank">corpid</a>
+                                            <div class="layui-input-block">
+                                                <input type="text" name="DdCorpId" autocomplete="off" placeholder="请输入corpid" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item layui-form-text">
+                                            <label class="layui-form-label">
+                                                注意</label>
+                                            <div class="layui-input-block">
+                                                <div class="layui-form-mid layui-word-aux" style="text-align: left;">
+                                                    默认关联字段为钉钉后台账号(userid)->bpm的user表account字段<br>
+                                                    如有其他关联情况，请在下方输入关联语句
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="layui-form-item layui-form-text">
+                                            <label class="layui-form-label">
+                                                其他关联</label>
+                                            <div class="layui-input-block">
+                                                <textarea name="DdLinkSql" placeholder="输入SQL语句，{0}为钉钉后台账号，sql需返回一个字段做为单点登录账号" class="layui-textarea"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                     <%--   <div class="layui-col-md4">
+                        <%--   <div class="layui-col-md4">
                             <div class="layui-card">
                                 <div class="layui-card-header" style="height: 80px; line-height: 80px">
                                     <i class="iconfont" style="font-size: 80px">&#xe602;</i></div>
@@ -132,6 +167,8 @@
 
                   , "WxId": data.LoginInfo.WxId
                    , "WxAgentId": data.LoginInfo.WxAgentId
+                    , "WxLinkSql": data.LoginInfo.WxLinkSql
+                   , "DdLinkSql": data.LoginInfo.DdLinkSql
                   , "WxSecret": data.LoginInfo.WxSecret
                   , "DdLogin": data.LoginInfo.DdLogin == "0" ? false : true
                   , "DdCorpId": data.LoginInfo.DdCorpId

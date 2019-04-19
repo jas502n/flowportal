@@ -17,6 +17,7 @@ using Top.Api.Request;
 using Top.Api.Response;
 using YZSoft.Web.Validation;
 using YZSoft.Web.DingTalk;
+using YZAppAdmin;
 
 namespace YZSoft.Services.REST.Mobile.core
 {
@@ -231,7 +232,17 @@ namespace YZSoft.Services.REST.Mobile.core
             string accesstoken = DingTalkManager.Instance.GetAccessToken(corpId, appSecret);
             string uid = DingTalkManager.Instance.TryGetUserIdFromCode(accesstoken, code);
             string regularAccount = null;
-
+            string linsql = "";
+            using (IYZAppAdminProvider applogin = IYZAppAdminProviderManager.DefaultProvider)
+            {
+                YZAppAdmin.LoginModule lm = applogin.LoadLogin();
+                linsql = lm.DdLinkSql;
+            }
+            if (!string.IsNullOrEmpty(linsql))
+            {
+                string sql = string.Format(linsql, uid);
+                uid = Convert.ToString(DBUtil_APP.GetSingle(sql));
+            }
             using (BPMConnection cn = new BPMConnection())
             {
                 cn.WebOpenAnonymous();

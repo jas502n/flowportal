@@ -205,14 +205,14 @@ namespace YZAppAdmin
            ,[DDID]
            ,[DDAGENTID]
            ,[DDSECRET]
-           ,[OLOGIN], [DDCORPID])
+           ,[OLOGIN], [DDCORPID],[WXLINKSQL],[DDLINKSQL])
      VALUES
            ('{0}'
            ,'{1}'
            ,'{2}'
            ,'{3}'
            ,'{4}'
-           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, login.WxLogin,  login.WxId, login.WxAgentId, login.WxSecret, login.DdLogin,  login.DdId,login.DdAgentId, login.DdSecret, login.OLogin,login.DdCorpId);
+           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, login.WxLogin,  login.WxId, login.WxAgentId, login.WxSecret, login.DdLogin,  login.DdId,login.DdAgentId, login.DdSecret, login.OLogin,login.DdCorpId,login.WxLinkSql,login.DdLinkSql);
             DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
         }
 
@@ -229,14 +229,14 @@ namespace YZAppAdmin
            ,[WXPUSHURL]
            ,[DDID]
            ,[DDAGENTID]
-           ,[DDSECRET],[DDPUSHURL])
+           ,[DDSECRET],[DDPUSHURL],[WXLINKSQL],[DDLINKSQL])
      VALUES
            ('{0}'
            ,'{1}'
            ,'{2}'
            ,'{3}'
            ,'{4}'
-           ,'{5}','{6}','{7}','{8}','{9}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, Notice.WxId, Notice.WxAgentid, Notice.WxSecret, Notice.WxPushUrl, Notice.DdId, Notice.DdAgentid, Notice.DdSecret, Notice.DdPushUrl);
+           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, Notice.WxId, Notice.WxAgentid, Notice.WxSecret, Notice.WxPushUrl, Notice.DdId, Notice.DdAgentid, Notice.DdSecret, Notice.DdPushUrl,Notice.WxLinkSql,Notice.DdLinkSql);
             DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
         }
 

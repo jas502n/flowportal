@@ -5,3 +5,8 @@ F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\bin\D
 F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\bin\Debug\Newtonsoft.Json.dll
 F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\obj\Debug\DingTalkProvider.dll
 F:\研发部\Flowportal\WEB_App\download\DingTalkProvider\DingTalkProvider\obj\Debug\DingTalkProvider.pdb
+C:\Users\lin\Desktop\DingTalkProvider\DingTalkProvider\bin\Debug\DingTalkProvider.dll
+C:\Users\lin\Desktop\DingTalkProvider\DingTalkProvider\bin\Debug\DingTalkProvider.pdb
+C:\Users\lin\Desktop\DingTalkProvider\DingTalkProvider\obj\Debug\DingTalkProvider.csprojResolveAssemblyReference.cache
+C:\Users\lin\Desktop\DingTalkProvider\DingTalkProvider\obj\Debug\DingTalkProvider.dll
+C:\Users\lin\Desktop\DingTalkProvider\DingTalkProvider\obj\Debug\DingTalkProvider.pdb

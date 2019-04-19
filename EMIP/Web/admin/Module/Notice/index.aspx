@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="Notice_index" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,70 +15,103 @@
 </head>
 <body>
     <form class="layui-form" lay-filter="LAY-filter-Login-form">
-        <div class="layui-fluid">
-            <div class="layui-row">
-                <div class="layui-card">
-                    <div class="layui-card-header">
-                        <i class="iconfont icon-xiaoxi"></i>消息配置<div style="float: right">
-                            <button lay-submit="" lay-filter="save" type="button" class="layui-btn">保存设置</button>
-                        </div>
+    <div class="layui-fluid">
+        <div class="layui-row">
+            <div class="layui-card">
+                <div class="layui-card-header">
+                    <i class="iconfont icon-xiaoxi"></i>消息配置<div style="float: right">
+                        <button lay-submit="" lay-filter="save" type="button" class="layui-btn">
+                            保存设置</button>
                     </div>
-                    <div class="app layui-card-body">
-                        <div class="layui-row layui-col-space15">
-                            <div class="layui-col-md6">
-                                <div class="layui-card">
-                                    <div class="layui-card-header" style="height: 80px; line-height:25px; text-align: center">
-                                        <i class="iconfont wxicon" style="font-size: 80px; display: block; margin-top: 30px; margin-bottom: 30px;">&#xe768;</i><div>
-                                            <button type="button" class="wxmb layui-btn layui-btn-xs">消息模板<span class="layui-badge-dot"></span></button>
-                                            <button type="button" class="wxcs layui-btn layui-btn-xs" style="display: none">消息参数</button>
-                                            <button type="button" class="wxtscs layui-btn layui-btn-xs">推送测试</button>
-                                            <button type="button" class="wxwjxz layui-btn layui-btn-xs">文件下载</button>
+                </div>
+                <div class="app layui-card-body">
+                    <div class="layui-row layui-col-space15">
+                        <div class="layui-col-md6">
+                            <div class="layui-card">
+                                <div class="layui-card-header" style="height: 80px; line-height: 25px; text-align: center">
+                                    <i class="iconfont wxicon" style="font-size: 80px; display: block; margin-top: 30px;
+                                        margin-bottom: 30px;">&#xe768;</i><div>
+                                            <button type="button" class="wxmb layui-btn layui-btn-xs">
+                                                消息模板<span class="layui-badge-dot"></span></button>
+                                            <button type="button" class="wxcs layui-btn layui-btn-xs" style="display: none">
+                                                消息参数</button>
+                                            <button type="button" class="wxtscs layui-btn layui-btn-xs">
+                                                推送测试</button>
+                                            <button type="button" class="wxwjxz layui-btn layui-btn-xs">
+                                                文件下载</button>
                                         </div>
+                                </div>
+                                <div class="layui-card-body">
+                                    <div id="wxmb" style="display: none" class="animated fadeInDown">
+                                        <table class="layui-table" lay-size="sm">
+                                            <colgroup>
+                                                <col width="80">
+                                                <col>
+                                                <col>
+                                                <col width="80">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        消息
+                                                    </th>
+                                                    <th>
+                                                        标题
+                                                    </th>
+                                                    <th>
+                                                        内容
+                                                    </th>
+                                                    <th>
+                                                        是否启用
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="layui-card-body">
-                                        <div id="wxmb" style="display: none" class="animated fadeInDown">
-                                            <table class="layui-table" lay-size="sm">
-                                                <colgroup>
-                                                    <col width="80">
-                                                    <col>
-                                                    <col>
-                                                    <col width="80">
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>消息</th>
-                                                        <th>标题</th>
-                                                        <th>内容</th>
-                                                        <th>是否启用</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+                                    <div id="wxcs">
+                                        <div class="layui-form-item">
+                                            <a class="layui-form-label" href="https://work.weixin.qq.com/api/doc#90000/90135/90665/agentid"
+                                                target="_blank">agentid</a>
+                                            <div class="layui-input-block">
+                                                <input type="text" name="WxAgentid" autocomplete="off" placeholder="请输入Agentid" class="layui-input">
+                                            </div>
                                         </div>
-
-                                        <div id="wxcs">
+                                        <div class="wx">
                                             <div class="layui-form-item">
-                                                <a class="layui-form-label" href="https://work.weixin.qq.com/api/doc#90000/90135/90665/agentid" target="_blank">agentid</a>
+                                                <a class="layui-form-label" href="https://work.weixin.qq.com/api/doc#90000/90135/90665/corpid"
+                                                    target="_blank">corpid</a>
                                                 <div class="layui-input-block">
-                                                    <input type="text" name="WxAgentid" autocomplete="off" placeholder="请输入Agentid" class="layui-input">
+                                                    <input type="text" name="WxId" autocomplete="off" placeholder="请输入corpid" class="layui-input">
                                                 </div>
                                             </div>
-
-                                            <div class="wx">
-                                                <div class="layui-form-item">
-                                                    <a class="layui-form-label" href="https://work.weixin.qq.com/api/doc#90000/90135/90665/corpid" target="_blank">corpid</a>
-                                                    <div class="layui-input-block">
-                                                        <input type="text" name="WxId" autocomplete="off" placeholder="请输入corpid" class="layui-input">
+                                            <div class="layui-form-item">
+                                                <a class="layui-form-label" href="https://work.weixin.qq.com/api/doc#90000/90135/90665/secret"
+                                                    target="_blank">corpsecret</a>
+                                                <div class="layui-input-block">
+                                                    <input type="text" name="WxSecret" autocomplete="off" placeholder="请输入corpsecret"
+                                                        class="layui-input">
+                                                </div>
+                                            </div>
+                                            <div class="layui-form-item layui-form-text">
+                                                <label class="layui-form-label">
+                                                    注意</label>
+                                                <div class="layui-input-block">
+                                                    <div class="layui-form-mid layui-word-aux" style="text-align: left;">
+                                                        默认推送账号为系统用户账号<br>
+                                                        如微信后台账号和用户账号不一致，请在下方输入关联语句
                                                     </div>
                                                 </div>
-                                                <div class="layui-form-item">
-                                                    <a class="layui-form-label" href="https://work.weixin.qq.com/api/doc#90000/90135/90665/secret" target="_blank">corpsecret</a>
-                                                    <div class="layui-input-block">
-                                                        <input type="text" name="WxSecret" autocomplete="off" placeholder="请输入corpsecret" class="layui-input">
-                                                    </div>
+                                            </div>
+                                            <div class="layui-form-item layui-form-text">
+                                                <label class="layui-form-label">
+                                                    其他关联</label>
+                                                <div class="layui-input-block">
+                                                    <textarea name="WxLinkSql" placeholder="输入SQL语句，{0}为微信后台账号，sql需返回一个字段做为单点登录账号" class="layui-textarea"></textarea>
                                                 </div>
-                                                <%--<div class="layui-form-item">
+                                            </div>
+                                            <%--<div class="layui-form-item">
                                                     <label class="layui-form-label">推送链接</label>
                                                     <div class="layui-input-block">
                                                         <input type="text" name="WxPushUrl" autocomplete="off" placeholder="请输入推送链接" class="layui-input">
@@ -87,130 +119,157 @@
                                                     </div>
 
                                                 </div>--%>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="layui-col-md6">
-                                <div class="layui-card">
-                                    <div class="layui-card-header" style="height: 80px;line-height:25px; ">
-                                        <i class="iconfont ddicon" style="font-size: 80px; display: block; margin-top: 30px; margin-bottom: 30px;">&#xe601;</i><div>
-                                            <button type="button" class="ddmb layui-btn layui-btn-xs">消息模板<span class="layui-badge-dot"></span></button>
-                                            <button type="button" class="ddcs layui-btn layui-btn-xs" style="display: none">消息参数</button>
-                                            <button type="button" class="ddtscs layui-btn layui-btn-xs">推送测试</button>
-                                            <button type="button" class="ddwjxz layui-btn layui-btn-xs">文件下载</button>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="layui-card">
+                                <div class="layui-card-header" style="height: 80px; line-height: 25px;">
+                                    <i class="iconfont ddicon" style="font-size: 80px; display: block; margin-top: 30px;
+                                        margin-bottom: 30px;">&#xe601;</i><div>
+                                            <button type="button" class="ddmb layui-btn layui-btn-xs">
+                                                消息模板<span class="layui-badge-dot"></span></button>
+                                            <button type="button" class="ddcs layui-btn layui-btn-xs" style="display: none">
+                                                消息参数</button>
+                                            <button type="button" class="ddtscs layui-btn layui-btn-xs">
+                                                推送测试</button>
+                                            <button type="button" class="ddwjxz layui-btn layui-btn-xs">
+                                                文件下载</button>
                                         </div>
+                                </div>
+                                <div class="layui-card-body">
+                                    <div id="ddmb" style="display: none" class="animated fadeInDown">
+                                        <table class="layui-table" lay-size="sm">
+                                            <colgroup>
+                                                <col width="80">
+                                                <col>
+                                                <col>
+                                                <col width="80">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        消息
+                                                    </th>
+                                                    <th>
+                                                        标题
+                                                    </th>
+                                                    <th>
+                                                        内容
+                                                    </th>
+                                                    <th>
+                                                        是否启用
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="layui-card-body">
-                                        <div id="ddmb" style="display: none" class="animated fadeInDown">
-                                            <table class="layui-table" lay-size="sm">
-                                                <colgroup>
-                                                    <col width="80">
-                                                    <col>
-                                                    <col>
-                                                    <col width="80">
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>消息</th>
-                                                        <th>标题</th>
-                                                        <th>内容</th>
-                                                        <th>是否启用</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+                                    <div id="ddcs">
+                                        <div class="layui-form-item">
+                                            <a class="layui-form-label">agent_id</a>
+                                            <div class="layui-input-block">
+                                                <input type="text" name="DdAgentid" autocomplete="off" placeholder="请输入agent_id"
+                                                    class="layui-input">
+                                            </div>
                                         </div>
-                                        <div id="ddcs">
-                                            <div class="layui-form-item">
-                                                <a class="layui-form-label">agent_id</a>
+                                        <div class="layui-form-item">
+                                            <a class="layui-form-label" href="https://open-doc.dingtalk.com/microapp/serverapi2/eev437#a-namebq4tsta%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E8%AF%A6%E6%83%85"
+                                                target="_blank">appkey</a>
+                                            <div class="layui-input-block">
+                                                <input type="text" name="DdId" autocomplete="off" placeholder="请输入appkey" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <a class="layui-form-label">appsecret</a>
+                                            <div class="layui-input-block">
+                                                <input type="text" name="DdSecret" autocomplete="off" placeholder="请输入appsecret"
+                                                    class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item layui-form-text">
+                                                <label class="layui-form-label">
+                                                    注意</label>
                                                 <div class="layui-input-block">
-                                                    <input type="text" name="DdAgentid" autocomplete="off" placeholder="请输入agent_id" class="layui-input">
+                                                    <div class="layui-form-mid layui-word-aux" style="text-align: left;">
+                                                        默认推送账号为系统用户账号<br>
+                                                        如钉钉后台账号和用户账号不一致，请在下方输入关联语句
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="layui-form-item">
-                                                <a class="layui-form-label" href="https://open-doc.dingtalk.com/microapp/serverapi2/eev437#a-namebq4tsta%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E8%AF%A6%E6%83%85" target="_blank">appkey</a>
+                                            <div class="layui-form-item layui-form-text">
+                                                <label class="layui-form-label">
+                                                    其他关联</label>
                                                 <div class="layui-input-block">
-                                                    <input type="text" name="DdId" autocomplete="off" placeholder="请输入appkey" class="layui-input">
+                                                    <textarea name="DdLinkSql" placeholder="输入SQL语句，{0}为钉钉后台账号，sql需返回一个字段做为推送账号" class="layui-textarea"></textarea>
                                                 </div>
                                             </div>
-                                            <div class="layui-form-item">
-                                                <a class="layui-form-label">appsecret</a>
-                                                <div class="layui-input-block">
-                                                    <input type="text" name="DdSecret" autocomplete="off" placeholder="请输入appsecret" class="layui-input">
-                                                </div>
-                                            </div>
-                                           
-                                           <%-- <div class="layui-form-item">
+                                        <%-- <div class="layui-form-item">
                                                 <label class="layui-form-label">推送链接</label>
                                                 <div class="layui-input-block">
                                                     <input type="text" name="DdPushUrl" autocomplete="off" placeholder="请输入推送链接" class="layui-input">
                                                     <div class="layui-form-mid layui-word-aux">不填写推送链接，则所有消息以文本推送</div>
                                                 </div>
                                             </div>--%>
-                                        </div>
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="layui-row" style="margin-top: 10px">
-                <div class="layui-card">
-                    <div class="layui-card-header">
-                        <i class="iconfont icon-rizhi"></i>消息日志
-                    </div>
-
-                    <div class="app layui-card-body">
-                        <div class="layui-row layui-col-space15">
-                            <div class="layui-col-md6">
-                                <div class="layui-tab">
-                                    <ul class="layui-tab-title">
-                                        <li class="layui-this">成功</li>
-                                        <li>失败</li>
-                                    </ul>
-                                    <div class="layui-tab-content">
-                                        <div class="layui-tab-item layui-show">
-
-                                            <table id="wxlogsuccess" lay-filter="wxlogsuccess"></table>
-                                        </div>
-                                        <div class="layui-tab-item">
-                                            <table id="wxlogerror" lay-filter="wxlogerror"></table>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="layui-col-md6">
-                                <div class="layui-tab">
-                                    <ul class="layui-tab-title">
-                                        <li class="layui-this">成功</li>
-                                        <li>失败</li>
-                                    </ul>
-                                    <div class="layui-tab-content">
-                                        <div class="layui-tab-item layui-show">
-                                            <table id="ddlogsuccess" lay-filter="ddlogsuccess"></table>
-                                        </div>
-                                        <div class="layui-tab-item">
-                                            <table id="ddlogerror" lay-filter="ddlogerror"></table>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
+        <div class="layui-row" style="margin-top: 10px">
+            <div class="layui-card">
+                <div class="layui-card-header">
+                    <i class="iconfont icon-rizhi"></i>消息日志
+                </div>
+                <div class="app layui-card-body">
+                    <div class="layui-row layui-col-space15">
+                        <div class="layui-col-md6">
+                            <div class="layui-tab">
+                                <ul class="layui-tab-title">
+                                    <li class="layui-this">成功</li>
+                                    <li>失败</li>
+                                </ul>
+                                <div class="layui-tab-content">
+                                    <div class="layui-tab-item layui-show">
+                                        <table id="wxlogsuccess" lay-filter="wxlogsuccess">
+                                        </table>
+                                    </div>
+                                    <div class="layui-tab-item">
+                                        <table id="wxlogerror" lay-filter="wxlogerror">
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="layui-tab">
+                                <ul class="layui-tab-title">
+                                    <li class="layui-this">成功</li>
+                                    <li>失败</li>
+                                </ul>
+                                <div class="layui-tab-content">
+                                    <div class="layui-tab-item layui-show">
+                                        <table id="ddlogsuccess" lay-filter="ddlogsuccess">
+                                        </table>
+                                    </div>
+                                    <div class="layui-tab-item">
+                                        <table id="ddlogerror" lay-filter="ddlogerror">
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </form>
     <script type="text/html" id="toolbar">
         <div class="layui-btn-container">
@@ -240,11 +299,13 @@
                             "WxAgentid": data.NoticeInfo.WxAgentid
                   , "WxId": data.NoticeInfo.WxId
                   , "WxSecret": data.NoticeInfo.WxSecret
-                  //, "WxPushUrl": data.NoticeInfo.WxPushUrl
+                   , "WxLinkSql": data.NoticeInfo.WxLinkSql
+                  , "DdLinkSql": data.NoticeInfo.DdLinkSql
+                            //, "WxPushUrl": data.NoticeInfo.WxPushUrl
                   , "DdAgentid": data.NoticeInfo.DdAgentid
                   , "DdId": data.NoticeInfo.DdId
                   , "DdSecret": data.NoticeInfo.DdSecret
-                  //, "DdPushUrl": data.NoticeInfo.DdPushUrl
+                            //, "DdPushUrl": data.NoticeInfo.DdPushUrl
                         })
                         var wxhtml = "";
                         var ddhtml = "";
