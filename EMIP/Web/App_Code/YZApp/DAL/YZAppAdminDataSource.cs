@@ -31,8 +31,8 @@ namespace YZAppAdmin
             DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
         }
 
-   
- 
+
+
         /// <summary>
         /// 读取应用
         /// </summary>
@@ -62,13 +62,15 @@ namespace YZAppAdmin
         {
             List<ApplistItem> AP = new List<ApplistItem>();
             string sql = "";
+            string appid = YZApp.App.GetAllAppId("");
+          
             if (string.IsNullOrEmpty(type))
             {
-                sql = " select VIEWTYPE,MAX(sort) as SORT from  App_Index where Enable=1  group by  VIEWTYPE  order by sort";
+                sql = " select VIEWTYPE,MAX(sort) as SORT from  App_Index where Enable=1 and ID IN (" + appid + @") group by  VIEWTYPE  order by sort";
             }
             else
             {
-                sql = " select VIEWTYPE,MAX(sort) as SORT from  App_Index   where    Enable=1  and ViewType='" + type + "'  group by  VIEWTYPE  order by sort";
+                sql = " select VIEWTYPE,MAX(sort) as SORT from  App_Index   where    Enable=1 and ID IN (" + appid + @")  and ViewType='" + type + "'  group by  VIEWTYPE  order by sort";
             }
             DataTable dt = DBUtil_APP.Query(sql).Tables[0];
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -77,7 +79,7 @@ namespace YZAppAdmin
                 ApplistItem apl = new ApplistItem();
                 apl.GroupName = GroupName;
                 List<AppItem> atl = new List<AppItem>();
-                string sql2 = " select AppName,AppUrl,Badge,Icon,IconColor,IconSize,Type,ID  from  App_Index  where     Enable=1  and VIEWTYPE='" + GroupName + "'  order by sort";
+                string sql2 = " select AppName,AppUrl,Badge,Icon,IconColor,IconSize,Type,ID  from  App_Index  where     Enable=1  and ID IN (" + appid + @") and VIEWTYPE='" + GroupName + "'  order by sort";
                 DataTable dt2 = DBUtil_APP.Query(sql2).Tables[0];
                 for (int j = 0; j < dt2.Rows.Count; j++)
                 {
@@ -101,7 +103,7 @@ namespace YZAppAdmin
                     at.IconColor = Convert.ToString(dt2.Rows[j][4]);//图标颜色
                     at.IconSize = Convert.ToString(dt2.Rows[j][5]);//图标大小
                     at.Type = Convert.ToString(dt2.Rows[j][6]);//图标类别
-                    at.Json =Convert.ToString(DBUtil_APP.GetSingle("select  JSON from  APP_APPINFO  where PID='" + Convert.ToString(dt2.Rows[j][7]) + "'"));
+                    at.Json = Convert.ToString(DBUtil_APP.GetSingle("select  JSON from  APP_APPINFO  where PID='" + Convert.ToString(dt2.Rows[j][7]) + "'"));
                     atl.Add(at);
                 }
                 apl.App = atl;
@@ -157,16 +159,17 @@ namespace YZAppAdmin
 
         public LoginModule LoadLogin()
         {
-        
-             string sql = "select * from  APP_LOGIN_CONFIG  ";
-       
+
+            string sql = "select * from  APP_LOGIN_CONFIG  ";
+
             DataTable dt = DBUtil_APP.Query(sql).Tables[0];
             if (dt.Rows.Count > 0)
             {
 
                 return YZApp.DataTableToModel.ToSingleModel<LoginModule>(dt);
             }
-            else {
+            else
+            {
 
                 return new LoginModule();
             }
@@ -189,7 +192,7 @@ namespace YZAppAdmin
             }
         }
 
-      
+
 
         public void SaveLogin(LoginModule login)
         {
@@ -212,11 +215,11 @@ namespace YZAppAdmin
            ,'{2}'
            ,'{3}'
            ,'{4}'
-           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, login.WxLogin,  login.WxId, login.WxAgentId, login.WxSecret, login.DdLogin,  login.DdId,login.DdAgentId, login.DdSecret, login.OLogin,login.DdCorpId,login.WxLinkSql,login.DdLinkSql);
+           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, login.WxLogin, login.WxId, login.WxAgentId, login.WxSecret, login.DdLogin, login.DdId, login.DdAgentId, login.DdSecret, login.OLogin, login.DdCorpId, login.WxLinkSql, login.DdLinkSql);
             DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
         }
 
-      
+
 
         public void SaveNotice(PushNoticeModule Notice)
         {
@@ -236,7 +239,7 @@ namespace YZAppAdmin
            ,'{2}'
            ,'{3}'
            ,'{4}'
-           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, Notice.WxId, Notice.WxAgentid, Notice.WxSecret, Notice.WxPushUrl, Notice.DdId, Notice.DdAgentid, Notice.DdSecret, Notice.DdPushUrl,Notice.WxLinkSql,Notice.DdLinkSql);
+           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, Notice.WxId, Notice.WxAgentid, Notice.WxSecret, Notice.WxPushUrl, Notice.DdId, Notice.DdAgentid, Notice.DdSecret, Notice.DdPushUrl, Notice.WxLinkSql, Notice.DdLinkSql);
             DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
         }
 
@@ -245,7 +248,8 @@ namespace YZAppAdmin
 
         public List<AppModule> GetMFavorite()
         {
-            string sql = "select * from YZSysFavorites  A LEFT JOIN  App_Index  B  ON A.resID=B.AppName   LEFT JOIN  APP_APPINFO C ON B.ID=C.PID where  Enable=1  and  resType='App'   and  a.uid='" + YZAuthHelper.LoginUserAccount + "' and AppName is not null  ORDER BY orderIndex";
+            string appid = YZApp.App.GetAllAppId("");
+            string sql = "select * from YZSysFavorites  A LEFT JOIN  App_Index  B  ON A.resID=B.AppName   LEFT JOIN  APP_APPINFO C ON B.ID=C.PID where  Enable=1 and B.ID IN (" + appid + @")   and  resType='App'   and  a.uid='" + YZAuthHelper.LoginUserAccount + "' and AppName is not null  ORDER BY orderIndex";
             DataTable dt = DBUtil_APP.Query(sql).Tables[0];
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -256,10 +260,10 @@ namespace YZAppAdmin
                     SqlParameter[] paras = new SqlParameter[]
                         { new SqlParameter("@Account",YZAuthHelper.LoginUserAccount)
                          };
-                   Badge = Convert.ToInt32(DBUtil_APP.GetSingle(Badgesql, paras));
+                    Badge = Convert.ToInt32(DBUtil_APP.GetSingle(Badgesql, paras));
                 }
                 dt.Rows[i]["BADGE"] = Badge;
-                     
+
             }
             return YZApp.DataTableToModel.ToListModel<AppModule>(dt);
 
@@ -268,7 +272,7 @@ namespace YZAppAdmin
         {
             string sql = "delete   YZSysFavorites   where resID='" + resID + "' and   resType='App'  and  uid='" + YZAuthHelper.LoginUserAccount + "' ";
             DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
-            
+
         }
 
 
@@ -277,18 +281,19 @@ namespace YZAppAdmin
         public List<SearchAppModule> SearchMApplist(string kwd)
         {
             string sql = "";
+            string appid = YZApp.App.GetAllAppId("");
             if (string.IsNullOrEmpty(kwd))
             {
-                 sql = @"select *,case   when resID is not null then 'true' else 'false' end as Favorited from App_Index  A LEFT JOIN YZSysFavorites  B  ON A.AppName=B.resID  and resType='App' and uid='" + YZAuthHelper.LoginUserAccount + @"'
-                          LEFT JOIN  APP_APPINFO C ON A.ID=C.PID     where    Enable=1   and AppName is not null  ORDER BY a.Sort";
+                sql = @"select *,case   when resID is not null then 'true' else 'false' end as Favorited from App_Index  A LEFT JOIN YZSysFavorites  B  ON A.AppName=B.resID  and resType='App' and uid='" + YZAuthHelper.LoginUserAccount + @"'
+                          LEFT JOIN  APP_APPINFO C ON A.ID=C.PID     where    Enable=1  and A.ID IN (" + appid + @")  and AppName is not null  ORDER BY a.Sort";
             }
             else
             {
 
 
-                 sql = @"select *,case   when resID is not null then 'true' else 'false' end as Favorited from App_Index  A LEFT JOIN YZSysFavorites  B  ON A.AppName=B.resID  and resType='App' and uid='" + YZAuthHelper.LoginUserAccount + @"'
-                          LEFT JOIN  APP_APPINFO C ON A.ID=C.PID    where  AppName like '%" + kwd + @"%' and  Enable=1   and AppName is not null  ORDER BY a.Sort";
-             
+                sql = @"select *,case   when resID is not null then 'true' else 'false' end as Favorited from App_Index  A LEFT JOIN YZSysFavorites  B  ON A.AppName=B.resID  and resType='App' and uid='" + YZAuthHelper.LoginUserAccount + @"'
+                          LEFT JOIN  APP_APPINFO C ON A.ID=C.PID    where  AppName like '%" + kwd + @"%' and  Enable=1  and A.ID IN (" + appid + @")   and AppName is not null  ORDER BY a.Sort";
+
             }
             DataTable dt = DBUtil_APP.Query(sql).Tables[0];
             return YZApp.DataTableToModel.ToListModel<SearchAppModule>(dt);
@@ -303,7 +308,7 @@ namespace YZAppAdmin
             if (!DBUtil_APP.Exists(sql))
             {
                 string sql3 = "select max(ORDERINDEX) from  YZSysFavorites where uid='" + YZAuthHelper.LoginUserAccount + "'  and resType='App'";
-                int ORDERINDEX=Convert.ToInt32(DBUtil_APP.GetSingle(sql3))+1;
+                int ORDERINDEX = Convert.ToInt32(DBUtil_APP.GetSingle(sql3)) + 1;
                 string sql2 = string.Format(@"INSERT INTO [YZSysFavorites]
            (
             [UID]
@@ -321,22 +326,22 @@ namespace YZAppAdmin
            ,'{4}'
            ,'{5}')", YZAuthHelper.LoginUserAccount, "App", resID, DateTime.Now.ToString(), "", ORDERINDEX);
                 DBUtil_APP.ExecuteSqlWithGoUseTran(sql2);
-            
+
             }
 
-          
+
         }
 
 
         public void SaveAppInfo(AppInfoModule aim)
         {
-            string sql = @"DELETE  APP_APPINFO WHERE PID='"+aim.PID+@"';INSERT INTO APP_APPINFO
+            string sql = @"DELETE  APP_APPINFO WHERE PID='" + aim.PID + @"';INSERT INTO APP_APPINFO
            ([UID]
            ,[PID]
            ,[CREATEDATE]
            ,[JSON])
      VALUES
-           ('" + aim.UID+ @"'
+           ('" + aim.UID + @"'
            ,'" + aim.PID + @"'
            ,'" + aim.CREATEDATE + @"'
            ,'" + aim.JSON + "')";
@@ -360,7 +365,8 @@ namespace YZAppAdmin
                     return new AppInfoModule();
                 }
             }
-            else {
+            else
+            {
 
                 return new AppInfoModule();
             }
@@ -403,7 +409,7 @@ namespace YZAppAdmin
            ,'{1}'
            ,'{2}'
            ,'{3}','{4}','{5}','{6}','{7}'
-           )", OrgSync.WxCorpId, OrgSync.WxSecret,OrgSync.DdCorpId,OrgSync.DdSecret,System.Web.HttpUtility.HtmlEncode(OrgSync.DdOuSql),System.Web.HttpUtility.HtmlEncode(OrgSync.DdUserSql),System.Web.HttpUtility.HtmlEncode(OrgSync.WxOuSql),System.Web.HttpUtility.HtmlEncode(OrgSync.WxUserSql));
+           )", OrgSync.WxCorpId, OrgSync.WxSecret, OrgSync.DdCorpId, OrgSync.DdSecret, System.Web.HttpUtility.HtmlEncode(OrgSync.DdOuSql), System.Web.HttpUtility.HtmlEncode(OrgSync.DdUserSql), System.Web.HttpUtility.HtmlEncode(OrgSync.WxOuSql), System.Web.HttpUtility.HtmlEncode(OrgSync.WxUserSql));
             DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
         }
     }

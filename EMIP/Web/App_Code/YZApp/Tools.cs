@@ -6,8 +6,69 @@ using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Web;
+using BPM.Client;
+using YZSoft.Web.Org;
 namespace YZApp
 {
+
+    public static class App
+    {
+
+        public static string GetAllAppId(string sid)
+        {
+            string appid = "";
+            if (string.IsNullOrEmpty(sid))
+            {
+                using (BPMConnection cn = new BPMConnection())
+                {
+                    cn.WebOpen();
+                    object[] groups = OrgManager.GetGroups(cn, YZAuthHelper.LoginUserAccount);
+                    ArrayList al = (ArrayList)JSON.Decode(JsonConvert.SerializeObject(groups));
+                    for (int i = 0; i < al.Count; i++)
+                    {
+                        Hashtable ht = (Hashtable)al[i];
+                        string sids = Convert.ToString(ht["SID"]);
+
+                        DataTable dt = DBUtil_APP.Query("select APPID from  APP_APPAUTH where sid=" + sids + "").Tables[0];
+                        for (int j = 0; j < dt.Rows.Count; j++)
+                        {
+                            appid += "'" + dt.Rows[j][0] + "',";
+                        }
+                    }
+                    DataTable dtt = DBUtil_APP.Query("select APPID from  APP_APPAUTH where sid='S_GS_90674E5E-AC3C-4032-9EDF-7477F2247542'").Tables[0];
+                    for (int j = 0; j < dtt.Rows.Count; j++)
+                    {
+                        appid += "'" + dtt.Rows[j][0] + "',";
+                    }
+
+                }
+            }
+            else
+            {
+                DataTable dt = DBUtil_APP.Query("select APPID from  APP_APPAUTH where sid=" + sid + "").Tables[0];
+                for (int j = 0; j < dt.Rows.Count; j++)
+                {
+                    appid += "'" + dt.Rows[j][0] + "',";
+                }
+            }
+            if (!string.IsNullOrEmpty(appid))
+            {
+                return appid.Trim(',');
+            }
+            else {
+                return "'-1'";
+            }
+            
+        }
+
+    }
+
+
+
+
+
+
+
     /// <summary>
     /// DataTableToModel 的摘要说明
     /// </summary>
@@ -169,12 +230,12 @@ namespace YZApp
                 if (source.ContainsKey(p.Name))
                 {
                     tv = source[p.Name];
-                 
+
                     if (p.PropertyType.IsArray)//数组类型,单独处理
                     {
                         p.SetValue(obj, tv, null);
                     }
-                    else if (p.PropertyType.FullName== "System.Collections.ArrayList")
+                    else if (p.PropertyType.FullName == "System.Collections.ArrayList")
                     {
                         p.SetValue(obj, tv, null);
                     }
@@ -183,7 +244,7 @@ namespace YZApp
                         if (String.IsNullOrEmpty(tv.ToString()))//空值
                             tv = p.PropertyType.IsValueType ? Activator.CreateInstance(p.PropertyType) : null;//值类型
                         else
-                           tv = System.ComponentModel.TypeDescriptor.GetConverter(p.PropertyType).ConvertFromString(tv.ToString());//创建对象
+                            tv = System.ComponentModel.TypeDescriptor.GetConverter(p.PropertyType).ConvertFromString(tv.ToString());//创建对象
 
                         p.SetValue(obj, tv, null);
                     }
@@ -195,7 +256,7 @@ namespace YZApp
         }
 
 
-        }
-
-
     }
+
+
+}

@@ -7,6 +7,9 @@ using YZAppAdmin;
 using System.Web.Script.Serialization;
 using BPM;
 using BPM.Client;
+using System.Collections.Generic;
+using System.Data;
+using System.Collections;
 public class data : YZApplHandler
 {
 
@@ -16,7 +19,7 @@ public class data : YZApplHandler
         JObject rv = new JObject();
         using (IYZAppAdminProvider app = IYZAppAdminProviderManager.DefaultProvider)
         {
-            rv["Applist"] =JArray.FromObject(app.GetApplist(""));
+            rv["Applist"] = JArray.FromObject(app.GetApplist(""));
         }
         return rv;
     }
@@ -25,8 +28,8 @@ public class data : YZApplHandler
         YZRequest request = new YZRequest(context);
         string TableName = request.GetString("TableName", null);
         string DataSourceName = request.GetString("DataSourceName", null);
-         bool IsRepeatableTable = request.GetBool("IsRepeatableTable", false);
-        TableIdentityCollection tables = new TableIdentityCollection ();
+        bool IsRepeatableTable = request.GetBool("IsRepeatableTable", false);
+        TableIdentityCollection tables = new TableIdentityCollection();
         TableIdentity item = new TableIdentity();
         item.IsRepeatableTable = IsRepeatableTable;
         item.TableName = TableName;
@@ -44,7 +47,7 @@ public class data : YZApplHandler
 
     public JObject LoadFormApplication(HttpContext context)
     {
-        
+
         using (BPMConnection cn = new BPMConnection())
         {
             cn.WebOpen();
@@ -60,8 +63,8 @@ public class data : YZApplHandler
             return rv;
         }
     }
-    
-    
+
+
     protected virtual void ExpandTree(BPMConnection cn, JArray items, string path, StoreZoneType zone, BPMPermision perm, bool expand)
     {
         BPMObjectNameCollection folderNames = cn.GetFolders(zone, path, perm);
@@ -99,10 +102,10 @@ public class data : YZApplHandler
 
             item["FormFile"] = formapp.Form;
         }
-        
-        
-        
-        
+
+
+
+
         foreach (String folderName in folderNames)
         {
             string folderPath;
@@ -127,10 +130,10 @@ public class data : YZApplHandler
             item[YZJsonProperty.children] = children;
             this.ExpandTree(cn, children, folderPath, zone, perm, expand);
         }
-       
 
-       
-        
+
+
+
     }
 
     public void SaveAppInfo(HttpContext context)
@@ -139,12 +142,12 @@ public class data : YZApplHandler
         string data = request.GetString("data");
         string pid = request.GetString("pid");
         AppInfoModule AIM = new AppInfoModule();
-        AIM.CREATEDATE=DateTime.Now.ToString();
+        AIM.CREATEDATE = DateTime.Now.ToString();
         AIM.PID = pid;
         AIM.UID = YZAuthHelper.LoginUserAccount;
         AIM.JSON = data;
-       
-       
+
+
         using (IYZAppAdminProvider app = IYZAppAdminProviderManager.DefaultProvider)
         {
             app.SaveAppInfo(AIM);
@@ -156,11 +159,11 @@ public class data : YZApplHandler
         YZRequest request = new YZRequest(context);
         string formservice = request.GetString("formservice", "");
         JObject rv = new JObject();
-         using (BPMConnection cn = new BPMConnection())
+        using (BPMConnection cn = new BPMConnection())
         {
             cn.WebOpen();
             rv["Formservice"] = JToken.FromObject(FormApplication.Open(cn, formservice));
-         }
+        }
         return rv;
     }
     public JObject LoadAppInfo(HttpContext context)
@@ -175,7 +178,8 @@ public class data : YZApplHandler
             {
                 rv["appinfo"] = JToken.FromObject(app.LoadAppInfo(pid).JSON);
             }
-            else {
+            else
+            {
                 rv["appinfo"] = 0;
             }
         }
@@ -210,5 +214,78 @@ public class data : YZApplHandler
 
         return rv;
     }
+    public JObject LoadGroups(HttpContext context)
+    {
+        YZRequest request = new YZRequest(context);
+        JObject rv = new JObject();
 
+        YZSoft.Services.REST.BPM.SecurityGroupHandler s = new YZSoft.Services.REST.BPM.SecurityGroupHandler();
+        rv["Groups"] = JArray.FromObject(s.GetGroups(context));
+        return rv;
+    }
+
+    public JObject LoadApp(HttpContext context)
+    {
+        YZRequest request = new YZRequest(context);
+        JObject rv = new JObject();
+        string sid = request.GetString("sid");
+      
+        string sql = "";
+        sql = " select VIEWTYPE,MAX(sort) as SORT from  App_Index where Enable=1  group by  VIEWTYPE  order by sort";
+        DataTable dt = DBUtil_APP.Query(sql).Tables[0];
+        ArrayList list2=new ArrayList ();
+        for (int i = 0; i < dt.Rows.Count; i++)
+        {
+            Hashtable ht = new Hashtable();
+            string GroupName = Convert.ToString(dt.Rows[i][0]);
+            ht["GroupName"] = GroupName;
+            string sql2 = " select AppName,ID  from  App_Index  where     Enable=1   and VIEWTYPE='" + GroupName + "'  order by sort";
+            DataTable dt2 = DBUtil_APP.Query(sql2).Tables[0];
+            ArrayList list = new ArrayList();
+            for (int j = 0; j < dt2.Rows.Count; j++)
+            {
+                Hashtable ht2 = new Hashtable();
+                string appname = Convert.ToString(dt2.Rows[j][0]);
+                string id = Convert.ToString(dt2.Rows[j][1]);
+                ht2["appname"] = appname;
+                ht2["id"] = id;
+                ht2["check"] = DBUtil_APP.Exists("select count(*) from  APP_APPAUTH  where SID='" + sid + "' and APPID='" + id + "'");
+                list.Add(ht2);
+            }
+            ht["data"]=list;
+            list2.Add(ht);
+        }
+        rv["applist"] = JArray.FromObject(list2);
+        return rv;
+    }
+
+    public void updateapp(HttpContext context)
+    {
+        YZRequest request = new YZRequest(context);
+        JObject rv = new JObject();
+        string sid = request.GetString("sid");
+        string appid = request.GetString("appid");
+        bool check = request.GetBool("check");
+        string sql="";
+        if (check)
+        {
+
+            sql = string.Format(@"INSERT INTO [APP_APPAUTH]
+           ([CREATEDATE]
+           ,[CREATEUSER]
+           ,[SID]
+           ,[APPID])
+     VALUES
+           ('{0}'
+           ,'{1}'
+           ,'{2}'
+           ,'{3}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, sid, appid);
+
+        }
+        else {
+                sql = string.Format(@"delete [APP_APPAUTH]
+               where  SID='{0}' and APPID='{1}'",  sid, appid);
+        }
+        DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
+    }
 }

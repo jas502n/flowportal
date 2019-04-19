@@ -27,14 +27,13 @@
                         <i class="layui-icon layui-icon-theme"></i></a></li>
                     <li class="layui-nav-item layui-hide-xs" lay-unselect><a href="javascript:;" layadmin-event="fullscreen">
                         <i class="layui-icon layui-icon-screen-full"></i></a></li>
-                    <li class="layui-nav-item">
-                        <a href="javascript:;">
-                            <i class="layui-icon layui-icon-website"></i>
-                        </a>
+                    <li class="layui-nav-item"><a href="javascript:;"><i class="layui-icon layui-icon-website">
+                    </i></a>
                         <dl class="layui-nav-child">
-                            <div id="QRCode" style=" padding:15px 20px"></div>
+                            <div id="QRCode" style="padding: 15px 20px">
+                            </div>
                         </dl>
-                    </li>
+                    </li>
                     <li class="layui-nav-item"><a href="javascript:;" class="fly-nav-avatar">
                         <img src="http://doc.qizhixiong.com/data/upload/avatar/default_160.jpg?v=1550198068">
                     </a>
@@ -60,7 +59,13 @@
                                     <a lay-href="Module/Login/"><cite>登录管理</cite></a>
                                 </dd>
                                 <dd>
-                                    <a lay-href="Module/App/"><cite>应用管理</cite></a>
+                                    <a>应用管理</a>
+                                    <dl class="layui-nav-child">
+                                        <dd>
+                                            <a lay-href="Module/App/"><cite>应用列表</cite></a></dd>
+                                        <dd>
+                                            <a lay-href="Module/App/Auth.aspx"><cite>应用权限</cite></a></dd>
+                                    </dl>
                                 </dd>
                                 <dd>
                                     <a lay-href="Module/Notice/"><cite>消息管理</cite></a>
