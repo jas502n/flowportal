@@ -12,8 +12,8 @@ using BPM.Client.Security;
 using YZSoft.Web.DAL;
 using YZSoft.Web.Mobile;
 using Top.Api;
-using Top.Api.Request;
-using Top.Api.Response;
+//using Top.Api.Request;
+//using Top.Api.Response;
 using YZSoft.Web.Validation;
 
 namespace YZSoft.Services.REST.Mobile.core
@@ -82,17 +82,17 @@ namespace YZSoft.Services.REST.Mobile.core
             string secret = "76a58b1f3739694821c2d1e83e248c12";
 
             ITopClient client = new DefaultTopClient(url, appkey, secret);
-            AlibabaAliqinFcSmsNumSendRequest req = new AlibabaAliqinFcSmsNumSendRequest();
-            req.Extend = "";
-            req.SmsType = "normal";
-            req.SmsFreeSignName = "公司门户";
-            req.SmsParam = jsmsParam.ToString();
-            req.RecNum = phoneNumber;
-            req.SmsTemplateCode = "SMS_70455212";
+            //AlibabaAliqinFcSmsNumSendRequest req = new AlibabaAliqinFcSmsNumSendRequest();
+            //req.Extend = "";
+            //req.SmsType = "normal";
+            //req.SmsFreeSignName = "公司门户";
+            //req.SmsParam = jsmsParam.ToString();
+            //req.RecNum = phoneNumber;
+            //req.SmsTemplateCode = "SMS_70455212";
 
-            AlibabaAliqinFcSmsNumSendResponse rsp = client.Execute(req);
-            if (rsp.IsError)
-                throw new Exception(rsp.SubErrMsg);
+            //AlibabaAliqinFcSmsNumSendResponse rsp = client.Execute(req);
+            //if (rsp.IsError)
+            //    throw new Exception(rsp.SubErrMsg);
 
             SMS sms = new SMS();
             sms.ItemGUID = Guid.NewGuid().ToString("");

@@ -430,7 +430,7 @@
           , area: ['280px', '290px']
           , id: 'layadmin-layer-skin-test'
           , skin: 'layui-anim layui-anim-upbit'
-          , content: '<input type="text" name="WxAccount" placeholder="请输入账号"  value="linxueyang" autocomplete="off" class="layui-input"><textarea name="WxContent" placeholder="请输入推送内容" class="layui-textarea">微信推送测试</textarea>',
+          , content: '<input type="text" name="WxAccount" placeholder="请输入账号"  value="" autocomplete="off" class="layui-input"><textarea name="WxContent" placeholder="请输入推送内容" class="layui-textarea">微信推送测试</textarea>',
                     btn: ['推送', '取消'],
                     yes: function (index, layero) {
                         var _index = index;
@@ -491,7 +491,7 @@
           , area: ['280px', '290px']
           , id: 'layadmin-layer-skin-test'
           , skin: 'layui-anim layui-anim-upbit'
-          , content: '<input type="text" name="DdAccount" placeholder="请输入账号"  value="manager5898" autocomplete="off" class="layui-input"><textarea name="DdContent" placeholder="请输入推送内容" class="layui-textarea">钉钉推送测试</textarea>',
+          , content: '<input type="text" name="DdAccount" placeholder="请输入账号"  value="" autocomplete="off" class="layui-input"><textarea name="DdContent" placeholder="请输入推送内容" class="layui-textarea">钉钉推送测试</textarea>',
                     btn: ['推送', '取消'],
                     yes: function (index, layero) {
                         var _index = index;

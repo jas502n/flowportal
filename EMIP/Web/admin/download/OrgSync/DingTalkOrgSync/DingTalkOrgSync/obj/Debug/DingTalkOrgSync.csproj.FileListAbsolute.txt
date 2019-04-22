@@ -1,0 +1,7 @@
+F:\研发部\Flowportal\WEB_App\download\DingTalkOrgSync\DingTalkOrgSync\bin\Debug\DingTalkOrgSync.exe
+F:\研发部\Flowportal\WEB_App\download\DingTalkOrgSync\DingTalkOrgSync\bin\Debug\DingTalkOrgSync.pdb
+F:\研发部\Flowportal\WEB_App\download\DingTalkOrgSync\DingTalkOrgSync\bin\Debug\TopSdk.dll
+F:\研发部\Flowportal\WEB_App\download\DingTalkOrgSync\DingTalkOrgSync\obj\Debug\DingTalkOrgSync.exe
+F:\研发部\Flowportal\WEB_App\download\DingTalkOrgSync\DingTalkOrgSync\obj\Debug\DingTalkOrgSync.pdb
+F:\研发部\Flowportal\WEB_App\download\DingTalkOrgSync\DingTalkOrgSync\bin\Debug\DingTalkOrgSync.exe.config
+F:\研发部\Flowportal\WEB_App\download\DingTalkOrgSync\DingTalkOrgSync\obj\Debug\DingTalkOrgSync.csprojResolveAssemblyReference.cache

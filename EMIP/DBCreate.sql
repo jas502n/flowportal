@@ -85,3 +85,12 @@ CREATE TABLE [dbo].[APP_APPAUTH](
 GO
 
 
+CREATE TABLE [dbo].[APP_ORGSYNC_DEPTBPM2DD](
+	[OUID] [int] NULL,
+	[DDID] [int] NULL,
+	[DATETIME] [datetime] NULL
+) ON [PRIMARY]
+
+GO
+
+

@@ -105,8 +105,14 @@
                                 <div class="layui-card-header" style="height: 80px; line-height: 25px; text-align: center">
                                     <i class="iconfont ddicon" style="font-size: 80px; display: block; margin-top: 30px;
                                         margin-bottom: 30px;">&#xe601;</i><div>
-                                            <button type="button" class="ddtscs layui-btn layui-btn-xs">
-                                                立即同步</button>
+                                            <button type="button" class="ddbm layui-btn layui-btn-xs">
+                                                同步部门</button>
+                                            <button type="button" class="ddry layui-btn layui-btn-xs">
+                                                同步人员</button>
+                                            <button type="button" class="ddqbtb layui-btn layui-btn-xs">
+                                                全部同步</button>
+                                            <button type="button" class="ddxz layui-btn layui-btn-xs">
+                                                下载同步程序</button>
                                         </div>
                                 </div>
                                 <div class="layui-card-body">
@@ -132,6 +138,15 @@
                                                 <textarea placeholder="请输入部门SQL" name="DdOuSql" class="layui-textarea"></textarea>
                                             </div>
                                         </div>
+                                         <div class="layui-form-item layui-form-text">
+                                                <label class="layui-form-label">
+                                                    注意</label>
+                                                <div class="layui-input-block">
+                                                    <div class="layui-form-mid layui-word-aux" style="text-align: left;">
+                                                       部门默认获取OUID为1下面的子部门，如不一致则请修改上述SQL语句
+                                                    </div>
+                                                </div>
+                                            </div>
                                         <div class="layui-form-item layui-form-text">
                                             <label class="layui-form-label">
                                                 人员SQL</label>
@@ -139,6 +154,18 @@
                                                 <textarea placeholder="请输入人员SQL" name="DdUserSql" class="layui-textarea"></textarea>
                                             </div>
                                         </div>
+                                        <div class="layui-form-item layui-form-text">
+                                                <label class="layui-form-label">
+                                                    注意</label>
+                                                <div class="layui-input-block">
+                                                    <div class="layui-form-mid layui-word-aux" style="text-align: left;">
+                                                        人员同步默认字段：姓名，账号，手机号，邮箱，部门，职位<br>
+                                                        如需同步其他字段，则需修改<br>
+                                                        1.修改EMIP\Web\admin\Module\OrgSync\DdSync\Default.aspx.cs中UserSync方法<br>
+                                                        2.修改同步人员SQL
+                                                    </div>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -160,6 +187,8 @@
                         </iframe>
                     </div>
                     <div class="layui-col-md6">
+                     <iframe id="ddorg" width='100%' height='100%' frameborder='0' src="DdSync/Default.aspx">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -217,14 +246,14 @@
                     },
                     url: "Module/OrgSync/data/data.ashx",
                     success: function (data) {
-                        var ousql = "with cte as  (" +
+                        var wxousql = "with cte as  (" +
  "select OUName AS 部门名称,Code AS 部门Code, OUID AS 部门ID," +
  "ISNULL(ParentOUID,0) AS 父部门ID,OrderIndex AS  排序 from BPMSysOUs A where ParentOUID=1" +
  "union all" +
  " select OUName AS 部门名称,Code AS 部门Code,OUID AS 部门ID,ISNULL(ParentOUID,0) AS 父部门ID,OrderIndex AS  排序 from BPMSysOUs K inner join cte c on c.部门ID = k.ParentOUID" +
  ")select 部门名称, 部门ID,父部门ID,排序 from cte  ParentOUID";
 
-                        var usersql = " with aa as( SELECT B.DisplayName,A.UserAccount,B.Mobile,B.EMail,OUID," +
+                        var wxusersql = " with aa as( SELECT B.DisplayName,A.UserAccount,B.Mobile,B.EMail,OUID," +
  " (SELECT TOP 1 LeaderTitle FROM BPMSysOUMembers WHERE UserAccount=A.UserAccount) LeaderTitle,case when Sex='Female' then '女'" +
 " else '男'end as Sex" +
 " FROM  BPMSysOUMembers A INNER JOIN BPMSysUsers B " +
@@ -234,16 +263,34 @@
  " stuff((select ';'+CONVERT(nvarchar(50),OUID) from aa " +
 " where a.UserAccount=UserAccount for xml path('')),1,1,'') as OUID,LeaderTitle,Sex" +
 " from aa as a group by DisplayName,UserAccount,Mobile,EMail,LeaderTitle,Sex";
+                        var ddousql = " with cte as  ( "+
+ "select OUName,Code, OUID,"+
+ "ISNULL(ParentOUID,0) AS ParentOUID,OrderIndex  from BPMSysOUs A where ParentOUID=1 "+
+ "union all "+
+ "select K.OUName,K.Code,K.OUID,ISNULL(K.ParentOUID,0) AS ParentOUID,K.OrderIndex from BPMSysOUs K inner join cte c on c.OUID = k.ParentOUID " +
+ ") "+
+ "select OUName, a.OUID,ParentOUID,OrderIndex,ISNULL(b.DDID,'')AS DDID from cte  A "+
+ "LEFT JOIN APP_ORGSYNC_DEPTBPM2DD  B ON A.OUID=B.OUID";
 
+                        var ddusersql = " with aa as( SELECT B.DisplayName,A.UserAccount,B.Mobile,B.EMail,OUID,B.HRID, "+
+  "(SELECT TOP 1 LeaderTitle FROM BPMSysOUMembers WHERE UserAccount = A.UserAccount) LeaderTitle "+
+   " FROM  BPMSysOUMembers A INNER JOIN BPMSysUsers B "+
+ "ON A.UserAccount=B.Account "+
+ "WHERE B.DisplayName IS NOT NULL AND B.Mobile IS NOT NULL AND Disabled = 0) "+
+ " select DisplayName as Name,UserAccount as Userid,Mobile,EMail,HRID, "+
+ " stuff((select ';'+CONVERT(nvarchar(50),OUID) from aa where a.UserAccount=UserAccount for xml path('')),1,1,'') as OUID,LeaderTitle " +
+ " from aa as a group by DisplayName, UserAccount, Mobile, EMail, LeaderTitle, HRID";
+   
                         form.val("LAY-filter-Login-form", {
                             "WxCorpId": data.OrgSyncInfo.WxCorpId
                   , "WxSecret": data.OrgSyncInfo.WxSecret
                   , "DdCorpId": data.OrgSyncInfo.DdCorpId
                   , "DdSecret": data.OrgSyncInfo.DdSecret
-                  , 'DdOuSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.DdOuSql) == "" ? ousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.DdOuSql)
-                  , 'DdUserSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.DdUserSql) == "" ? usersql : HtmlUtil.htmlDecode(data.OrgSyncInfo.DdUserSql)
-                  , 'WxOuSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.WxOuSql) == "" ? ousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.WxOuSql)
-                  , 'WxUserSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.WxUserSql) == "" ? ousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.WxUserSql)
+                  , 'DdOuSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.DdOuSql) == "" ? ddousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.DdOuSql)
+                  , 'DdUserSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.DdUserSql) == "" ? ddusersql : HtmlUtil.htmlDecode(data.OrgSyncInfo.DdUserSql)
+                  , 'WxOuSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.WxOuSql) == "" ? wxousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.WxOuSql)
+                  , 'WxUserSql': HtmlUtil.htmlDecode(data.OrgSyncInfo.WxUserSql) == "" ? wxousql : HtmlUtil.htmlDecode(data.OrgSyncInfo.WxUserSql)
+                     
                         })
                     }
                 }
@@ -265,6 +312,21 @@
             })
             $(".wxxz").click(function () {
                 window.location = "../../../admin/download/OrgSync/WeChatSync.rar";
+            })
+            $(".ddbm").click(function () {
+                $("#ddorg").attr("src", "DdSync/Default.aspx?method=syncou");
+
+            })
+            $(".ddry").click(function () {
+                $("#ddorg").attr("src", "DdSync/Default.aspx?method=syncuser");
+
+            })
+            $(".ddqbtb").click(function () {
+                $("#ddorg").attr("src", "DdSync/Default.aspx?method=all");
+
+            })
+            $(".ddxz").click(function () {
+                window.location = "../../../admin/download/OrgSync/DingTalkOrgSync.rar";
             })
             form.on('submit(save)', function (data) {
                 var option = {

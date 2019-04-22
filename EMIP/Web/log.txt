@@ -11,6 +11,7 @@ YZSoft\form\field\ScanQRCode.js
 YZSoft\form\src\field\ScanQRCode.js
 YZSoft\form\src\ScanQRCode
 YZSoft\resources\base.css
+bin\TopSdk.dll
 
 
 
