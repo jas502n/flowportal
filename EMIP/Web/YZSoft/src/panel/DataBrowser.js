@@ -293,7 +293,6 @@ Ext.define('YZSoft.src.panel.DataBrowser', {
 
     updateSingleSelection: function (newValue) {
         var me = this;
-
         me.list[newValue ? 'removeCls' : 'addCls']('yz-list-selmode-m');
         me.list[newValue ? 'addCls' : 'removeCls']('yz-list-selmode-s');
     },

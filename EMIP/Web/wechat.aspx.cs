@@ -288,7 +288,6 @@ public partial class wechat : System.Web.UI.Page
                     jAppResult["signature"] = signature;
                     jAppResult["jsApiList"] = jApp["jsApiList"];
                     jAppResult["xclass"] = jApp["xclass"];
-
                     JObject jConfig = jApp["config"] == null ? new JObject() : JObject.FromObject(jApp["config"]);
                     jAppResult["config"] = jConfig;
                     foreach (string key in this.Request.QueryString.Keys)
@@ -299,7 +298,25 @@ public partial class wechat : System.Web.UI.Page
             }
             catch (Exception exp)
             {
-                this.Response.Redirect("~/YZSoft/assist/AspxError/default.aspx?err=" + HttpUtility.UrlEncode(exp.Message));
+
+                if (exp.Message.Contains("query?e=40029"))
+                {
+                    YZUrlBuilder uri = new YZUrlBuilder("https://open.weixin.qq.com/connect/oauth2/authorize");
+                    uri.QueryString["appid"] = wechat.corpId;
+                    uri.QueryString["response_type"] = "code";
+                    string url = this.Request.Url.ToString();
+                    int code2=url.IndexOf("code");
+                    url = url.Substring(0, code2-1);
+                    uri.QueryString["redirect_uri"] = url;
+                    uri.QueryString["scope"] = "SCOPE";
+                    uri.QueryString["state"] = "STATE#wechat_redirect";
+                    this.Response.Redirect(uri.ToString());
+                }
+                else
+                {
+
+                    this.Response.Redirect("~/YZSoft/assist/AspxError/default.aspx?err=" + HttpUtility.UrlEncode(exp.Message));
+                }
             }
         }
     }

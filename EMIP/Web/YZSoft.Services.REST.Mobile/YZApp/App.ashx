@@ -157,7 +157,7 @@ public class App : YZApplHandler
         string sql = request.GetString("sql", "");
         string key = request.GetString("key", "");
         string sql2 = string.Format(System.Web.HttpUtility.UrlDecode(sql), key);
-        DBUtil_APP.Execute(sql2);
+        DBUtil_APP.ExecuteSqlWithGoUseTran(sql2);
     }
 
 }

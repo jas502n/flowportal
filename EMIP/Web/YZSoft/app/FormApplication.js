@@ -113,14 +113,14 @@ loadForm: function (args) {
 
     args = args || {};
 
-    if (me.config.del.show) {
+    if (me.config.del.show & me.config.del.mdel) {
         me.actionBar.show();
         var btns = [];
 
         btns.push(Ext.create('Ext.Button', {
             flex: 1,
             text: '删除',
-            cls: ['yz-button-flat', 'yz-button-noflex', 'yz-button-action-del'],
+            cls: ['yz-button-flat','yz-button-flat-del', 'yz-button-noflex', 'yz-button-action-del'],
             padding: '16 3',
             iconCls: 'yz-glyph',
             handler: function () {
@@ -131,7 +131,8 @@ loadForm: function (args) {
                     hideOnMaskTap: true,
                     buttons: [{
                         text: "是",
-                        flex: 0.2,
+                        width: 100,
+                        margin: '0 10 0 0',
                         cls: 'yzlg-button-flat yzlg-button-action-hot',
                         itemId: 'ok',
                         handler: function (button) {
@@ -175,7 +176,7 @@ loadForm: function (args) {
 
                     }, {
                         text: "否",
-                        flex: 0.2,
+                        width: 100,
                         cls: 'yzlg-button-flat yzlg-button-action-hot',
                         itemId: 'cancle'
                     }]

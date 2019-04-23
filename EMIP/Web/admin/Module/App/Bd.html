@@ -54,7 +54,7 @@
   <table class="layui-table" lay-size="sm">
    <colgroup>
     <col width="80">
-    <col width="80">
+    <col width="110">
     <col>
   </colgroup>
   <thead>
@@ -78,7 +78,7 @@
     </tr>
     <tr>
       <td>删除</td>
-      <td><input type='checkbox'  id="delcheck"  name="delcheck" lay-skin='switch' lay-text='是|否'></td>
+      <td><input type='checkbox'  id="delcheck"  name="delcheck" lay-skin='switch' lay-text='是|否'><input type='checkbox'  id="mdel"  name="mdel" lay-skin='switch' lay-text='单选删除|多选删除'></td>
       <td> <textarea placeholder="请输入SQL" id="delsql" name="delsql" class="layui-textarea"></textarea></td>
     </tr>
   </tbody>
@@ -133,6 +133,7 @@
                              type: 'post',
                              url: '../../../admin/Module/App/data/data.ashx',
                              success: function (data) {
+                                 
                                  loadcol(data.Formservice, json.table.columns, true, json.table.name);
                                  form.val('LAY-filter-AppEdit-form', {
                                      "FormService": json.formservice,
@@ -141,9 +142,11 @@
                                      "addcheck": json.formstate.add.show,
                                      "editcheck": json.formstate.edit.show,
                                      "delcheck": json.formstate.del.show,
+                                     "mdel": json.formstate.del.mdel == undefined ? false : json.formstate.del.mdel,
                                      "Add": json.formstate.add.state,
                                      "Edit": json.formstate.edit.state,
                                      "delsql": unescape(json.formstate.del.state)
+
                                  })
                                  form.render('select');
                              }
@@ -176,7 +179,7 @@
                  $(".ele5").toggle();
              })
              loadcol = function (data, data2, flag, table) {
-           
+
                  var sel = $("#Table");
                  sel.empty();
                  var Asel = $("#SelectAdd");
@@ -187,7 +190,7 @@
                      if (i == 0 && flag == false) {
                          loadtable(item.DataSourceName, item.IsRepeatableTable, item.TableName, data2);
                      } else if (i == 0 && flag == true) {
-                       
+
                          loadtable(item.DataSourceName, item.IsRepeatableTable, table, data2);
                      }
                      sel.append("<option  value=\"" + item.TableName + "\" name='" + item.TableName + "' data-DataSourceName='" + item.DataSourceName + "' data-IsRepeatableTable='" + item.IsRepeatableTable + "'>" + item.TableName + "</option>");
@@ -256,7 +259,7 @@
 
                      $("[name='FormService']").val(d.data.currentData.FullName);
                      $(".ele5").hide();
-                     loadcol(d.data.currentData.data,false,null);
+                     loadcol(d.data.currentData.data, false, null);
 
 
 
@@ -303,6 +306,7 @@
                          },
                          del: {
                              show: $("#delcheck").prop("checked"),
+                             mdel: $("#mdel").prop("checked"),
                              state: escape($("#delsql").val())
                          }
 
