@@ -54,7 +54,7 @@ public class App : YZApplHandler
         List<string> ids = post.ToObject<List<string>>();
         if (position == MovePosition.Before)
         {
-            string sql = "select orderIndex from YZSysFavorites  where resID='" + target + "'";
+            string sql = "select orderIndex from YZSysFavorites  where resID='" + target + "' and  resType='App' and uid='" + YZAuthHelper.LoginUserAccount + @"'";
             int orderIndex = Convert.ToInt32(DBUtil_APP.GetSingle(sql));
             string sql2 = @"update YZSysFavorites set orderIndex=orderIndex+1 where orderIndex>='" + orderIndex + "' and  resType='App'  and uid='" + YZAuthHelper.LoginUserAccount + @"';
                update  YZSysFavorites  set orderIndex='" + orderIndex + @"' where   resType='App'  and uid='" + YZAuthHelper.LoginUserAccount + @"' and  resId='" + ids[0] + "'";

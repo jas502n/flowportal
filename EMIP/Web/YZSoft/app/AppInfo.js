@@ -6,7 +6,7 @@
         displayColumns = config.displayColumns,
         formstate = {},
         formservice;
-
+       
         me.selection = [];
         me.btnBack = Ext.create('Ext.Button', {
             cls: ['yz-button-flat', 'yz-button-titlebar'],
@@ -28,20 +28,26 @@
                 searchClick: 'onSearchClick'
             }
         });
-
-        me.titleBar = Ext.create('Ext.Container', {
+       
+       me.titleBar = Ext.create('Ext.TitleBar', {
+            docked: 'top',
+             title: config.title || '',
+            cls: ['yz-titlebar'],
+            items: [me.btnBack]
+        });
+        
+        me.searchBar = Ext.create('Ext.Container', {
             docked: 'top',
             cls: ['yz-searchbar', 'yz-padding-0'],
             style: (application.statusbarOverlays ? 'padding-top:27px': '') + 'border-bottom-width:0px!important',
-            padding: '1 0 0 0',
+            padding: '5 0 5 0',
             minHeight: 0,
             layout: {
                 type: 'hbox',
                 align: 'center'
             },
-            items: [me.btnBack, me.search]
+            items: [me.search]
         });
-
         YZSoft.Ajax.request({
             method: 'POST',
             url: YZSoft.$url('YZSoft.Services.REST.Mobile/YZApp/App.ashx'),
@@ -148,7 +154,7 @@
         });
         var cfg = {
             layout: 'fit',
-            items: [me.titleBar, me.list, me.actionBar]
+            items: [me.titleBar, me.searchBar , me.list, me.actionBar]
         };
 
         Ext.apply(cfg, config);
@@ -208,7 +214,17 @@
             emptyText: '尚无数据',
             itemCls: ['yz-list-item-flat', 'yz-list-item-border', 'yz-list-item-databrowser'],
             selectedCls: 'yz-item-selected',
-            itemTpl: Ext.create('Ext.XTemplate', '<div class="yz-layout-columns" style="border-bottom:1px solid #eee">', '<div class="yz-column-left yz-align-vcenter yz-list-item-check-column">', '<div class="check"></div>', '</div>', '<div class="yz-column-center body" style="padding:10px">', items.join(''), '</div>', '<div class="yz-column-right yz-align-vcenter yz-list-item-more-column">', '<div class="yz-list-item-more"></div>', '</div>', '</div>', {
+            itemTpl: Ext.create('Ext.XTemplate', '<div class="yz-layout-columns" style="border-bottom:1px solid #eee">', 
+            '<div class="yz-column-left yz-align-vcenter yz-list-item-check-column" style="width: 40px;">',
+             '<div class="check"></div>', 
+             '</div>', 
+             '<div class="yz-column-center body" style="padding:10px">', 
+                    items.join(''), 
+             '</div>',
+              '<div class="yz-column-right yz-align-vcenter yz-list-item-more-column">',
+               '<div class="yz-list-item-more"></div>',
+                '</div>', 
+                '</div>', {
                 renderValue: function(values, columnIndex) {
                     var column = displayColumns[columnIndex],
                     value = values[column.name];
@@ -221,6 +237,7 @@
             }
         });
     },
+  
     onWorkListChanged: function(message) {
         this.store.loadPage(1, {
             delay: false,

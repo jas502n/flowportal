@@ -12,7 +12,7 @@ Ext.define('YZSoft.App.Favorite', {
             wrap: true
         },
         cls: 'yz-dataview-favorite-process',
-        itemCls: 'yz-dataview-item-app yz-dataview-app',
+        itemCls: 'yz-dataview-item-process yz-dataview-item-process-favorite',
         itemTpl: [
             '<div class="d-flex flex-column">',
                 '<div class="align-self-center shortname" style="background-color:{IconColor}"><i style="color:white;font-size:{IconSize}px" class="iconfont {Icon}"></i>',
