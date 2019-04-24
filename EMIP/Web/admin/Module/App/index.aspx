@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="../../../assets/layuiadmin/layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="../../../assets/layuiadmin/style/admin.css" media="all" />
     <link href="../../../assets/css/main.css" rel="stylesheet" />
-    <link href="../../../assets/layuiadmin/layui/css/eleTree/eleTree.css?v=1.6" rel="stylesheet"
-        type="text/css" />
+    <link href="../../../assets/layuiadmin/layui/css/eleTree/eleTree.css?v=1.6" rel="stylesheet"type="text/css" />
     <link href="//at.alicdn.com/t/font_1076139_i1iz34nakgq.css" rel="stylesheet" />
     <link href="../../../assets/css/app.css" rel="stylesheet" />
 </head>

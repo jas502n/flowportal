@@ -51,6 +51,10 @@ Ext.define('YZSoft.form.aspx.field.Text', {
         if (attrs.hiddeninput == 'True')
             cfg.hidden = true;
 
+        //readonly
+        if (attrs.readonly == 'True')
+            cfg.readOnly = true;
+
         //PlaceHolder
         if (attrs.placeholder)
             cfg.placeHolder = attrs.placeholder;
