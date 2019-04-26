@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../../../assets/layuiadmin/layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="../../../assets/layuiadmin/style/admin.css" media="all" />
     <link href="../../../assets/css/main.css" rel="stylesheet" />
-    <link href="../../../assets/layuiadmin/layui/css/eleTree/eleTree.css?v=1.6" rel="stylesheet"type="text/css" />
+    <link href="../../../assets/layuiadmin/layui/css/eleTree/eleTree.css?v=1.6" rel="stylesheet"
+        type="text/css" />
     <link href="//at.alicdn.com/t/font_1076139_i1iz34nakgq.css" rel="stylesheet" />
     <link href="../../../assets/css/app.css" rel="stylesheet" />
 </head>
@@ -32,7 +33,7 @@
                     <script type="text/html" id="tbar">
                             <a class="layui-btn  layui-btn-xs" lay-event="edit">编辑</a>
                             <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-                            <a class="layui-btn layui-btn-normal layui-btn-xs {{d.Type=="SYSTEM"?"":"layui-btn-disabled"}}"   lay-event="bd">绑定</a>
+                            <a class="layui-btn layui-btn-normal layui-btn-xs {{(d.Type=="SYSTEM"||d.Type=="REPORT")?"":"layui-btn-disabled"}}"   lay-event="bd">绑定</a>
                     </script>
                 </div>
             </div>
@@ -154,6 +155,17 @@
                             id: 'LAY-popup-right-editApp'
                           , success: function () {
                               layui.view(this.id).render('Bd', data);
+                          }
+                        });
+                    }
+                    if (data.Type == "REPORT") {
+                        layui.setter.views = "../../../Admin/Module/App/";
+                        admin.popupRight({
+                            title: '图表配置',
+                            area: ['550px'],
+                            id: 'LAY-popup-right-editApp'
+                          , success: function () {
+                              layui.view(this.id).render('Report', data);
                           }
                         });
                     }

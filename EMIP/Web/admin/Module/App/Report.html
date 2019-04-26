@@ -1,0 +1,111 @@
+﻿<script type="text/html" template lay-done="layui.data.sendParams(d)">
+    <div class="layui-form" lay-filter="LAY-filter-AppEdit-form" style="padding:10px">
+        <div class="layui-form-item">
+    <label class="layui-form-label">图表类型</label>
+  
+      <div class="layui-input-inline">
+        <select name="type" lay-verify="required" lay-search="">
+          <option value="Bar">柱状图</option>
+          <option value="Line">折线图</option>
+          <option value="Pie">饼图</option>
+        </select>
+      </div>
+    </div>
+ 
+ 
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">标题列</label>
+    <div class="layui-input-block">
+      <textarea name="legend" placeholder="请输入内容,用逗号隔开" class="layui-textarea"></textarea>
+    </div>
+  </div>
+
+
+    
+   <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">数据源</label>
+    <div class="layui-input-block">
+      <textarea name="datas" placeholder="请输入SQL" class="layui-textarea"></textarea>
+    </div>
+  </div>
+   <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="LAY-filter-AppEdit-form_Submit">确定</button>
+
+            </div>
+        </div>
+    </div>
+</script>
+<script src="../../../assets/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var Pid = 0;
+     var _data2;
+     layui.data.sendParams = function (d) {
+         Pid = d.params.Id;
+         layui.config({
+             base: "../../../assets/layuiadmin/layui/lay/extendmodules/"
+         }).use(['form', 'table', 'eleTree', 'layer'], function () {
+             var form = layui.form
+              , $ = layui.jquery;
+             var layer = layui.layer;
+             load = function () {
+                 var option = {
+                     data: {
+                         method: 'LoadAppInfo',
+                         pid: Pid
+                     },
+                     type: 'post',
+                     url: '../../../admin/Module/App/data/data.ashx',
+                     success: function (data) {
+                         if (data.appinfo == "0") {
+                             return;
+                         }
+                         var json = JSON.parse(data.appinfo);
+                         form.val('LAY-filter-AppEdit-form', {
+                             "type": json.type,
+                             "legend": json.legend,
+                             "datas": json.datas
+                         })
+                         form.render('select');
+
+                     }
+                 }
+                 layui.admin.req(option);
+             }
+             load();
+             form.render(null, 'LAY-filter-AppEdit-form');
+
+
+             //监听提交
+             form.on('submit(LAY-filter-AppEdit-form_Submit)', function (data) {
+                 data.field.pid = Pid;
+                 var option = {
+                     data: {
+                         method: 'SaveAppInfo',
+                         data: JSON.stringify(data.field),
+                         pid: Pid
+                     },
+                     type: 'post',
+                     url: '../../../admin/Module/App/data/data.ashx',
+                     success: function (data) {
+                         if (data.code == "-1") {
+
+                         } else {
+                             layer.msg('保存成功！', {
+                                 icon: 1,
+                                 time: 1000
+                             }, function () {
+
+                                 layer.closeAll();
+                             });
+                         }
+                     }
+                 }
+                 layui.admin.req(option);
+             });
+         })
+     }
+ 
+
+</script>

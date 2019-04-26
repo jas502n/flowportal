@@ -117,7 +117,7 @@ Ext.define('YZSoft.App.AllApp', {
     openapp: function (Type, app, AppName, AppUrl) {
 
         var me = this;
-        if (Type == "SYSTEM") {
+        if (Type == "SYSTEM" || Type == "REPORT") {
             if (app == "" || app == null) {
                 me.fireEvent('appClickError', AppName);
 

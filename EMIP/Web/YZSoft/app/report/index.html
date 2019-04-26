@@ -1,0 +1,97 @@
+﻿<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width = device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <script src="../../../assets/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="echarts.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="main" style="width: 98vw; height: 98vh">
+    </div>
+    <script>
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+
+        window.onload = function () {
+            var myChart = echarts.init(document.getElementById('main'));
+
+            $.ajax({
+                type: "GET",
+                url: parent.YZSoft.$url('../../../YZSoft.Services.REST.Mobile/YZApp/App.ashx'),
+                dataType: "json",
+                data: {
+                    method: "reportdefine",
+                    id: getQueryString("id")
+                },
+                success: function (data) {
+                    if (data.code == "-1") {
+                        parent.Ext.Msg.show({
+                            title: "配置不正确",
+                            message: data.msg,
+                            hideOnMaskTap: true,
+                            buttons: [{
+                                text: parent.$rs.YesISee,
+                                flex: 1,
+                                cls: 'yz-button-flat yz-button-action-hot',
+                                itemId: 'ok'
+                            }]
+                        })
+                    }
+                    else {
+                        if (data.type != "Pie") {
+                            var option = {
+                                legend: {
+                                    data:[]
+                                },
+                                tooltip: {
+                                    trigger: 'axis'
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                color: ['#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+                '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+                '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'],
+                                xAxis: {
+                                    data: data.xdata
+                                },
+                                yAxis: {
+                                    type: 'value'
+                                },
+                                series: data.data2
+                            };
+                            for (var i = 0; i < data.legend.length; i++) {
+                                option.legend.data.push('' + data.legend[i] + '');
+                            }
+                            myChart.setOption(option);
+                        }
+
+                        else {
+                            var option = {
+                                series: data.data
+                            };
+                            myChart.setOption(option);
+
+                        }
+                    }
+                },
+                error: function (jqXHR) {
+
+                }
+            });
+        }
+
+
+
+    
+    </script>
+    </script>
+</body>
+</html>

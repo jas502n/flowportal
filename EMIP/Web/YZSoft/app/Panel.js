@@ -82,6 +82,7 @@ Ext.define('YZSoft.app.Panel', {
         me.pnlSearch.doSearch(me.search.getValue());
     },
     onAppClick: function (record, AppName, Type, AppUrl) {
+
         var me = this,
             pnl;
         if (Type == "SYSTEM") {
@@ -116,6 +117,19 @@ Ext.define('YZSoft.app.Panel', {
                 fn: function () {
                     Ext.mainWin.pop(deep || 1);
                 }
+            });
+        }
+        else if (Type == "REPORT") {
+           
+            pnl = Ext.create('YZSoft.app.Iframe', {
+                title: AppName,
+                back: function () {
+                    Ext.mainWin.pop();
+                },
+                fn: function () {
+                    Ext.mainWin.pop(deep || 1);
+                },
+                url: "YZSoft/app/report/index.html?id=" + JSON.parse(record).pid + ""
             });
         }
         else {

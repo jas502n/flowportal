@@ -75,6 +75,8 @@
     <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script id="microloader" type="text/javascript" src=".sencha/app/microloader/development.js?_dc=5.70.006"></script>
       <link href="//at.alicdn.com/t/font_1076139_i1iz34nakgq.css?_dc=5.70.006" rel="stylesheet" />
+     <%--   <script src="assets/jSignature/libs/jquery.js" type="text/javascript"></script>
+    <script src="assets/jSignature/libs/jSignature.min.js" type="text/javascript"></script>--%>
 
 </head>
 <body>

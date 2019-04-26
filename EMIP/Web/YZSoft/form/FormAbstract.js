@@ -31,7 +31,7 @@ Ext.define('YZSoft.form.FormAbstract', {
             pnl;
 
         pnl = Ext.create(form.xclass, Ext.merge({
-            postContainer:me
+            postContainer: me
         }, args, form.config));
         return pnl;
     },
@@ -199,35 +199,82 @@ Ext.define('YZSoft.form.FormAbstract', {
 
         me.encodeHeader(header);
         xmlData = YZSoft.src.ux.xml.encode('XForm', data);
+//        var dlg = Ext.create('YZSoft.src.panel.Signature', {
+//            title: config.title || RS.$('All_BPM_ReturnToInitiatorTitle'),
+//            fn: function (comments) {
+//                dlg.hide();
+//                YZSoft.Ajax.request({
+//                    method: 'POST',
+//                    url: YZSoft.$url('YZSoft.Services.REST.Mobile/BPM/Post.ashx'),
+//                    waitMsg: Ext.apply({
+//                        message: config.waitMsg,
+//                        autoClose: false
+//                    }, maskExt),
+//                    delay: true,
+//                    params: config.params,
+//                    jsonData: xmlData,
+//                    success: function (action) {
+//                        Ext.Viewport.mask(Ext.apply({
+//                            cls: 'yz-mask-success',
+//                            message: config.successMessage || action.result.message,
+//                            delay: true,
+//                            fn: function () {
+//                                if (config.fn)
+//                                    config.fn.call(config.scope || me, action.result);
+//                            }
+//                        }, maskExt));
 
-        YZSoft.Ajax.request({
-            method: 'POST',
-            url: YZSoft.$url('YZSoft.Services.REST.Mobile/BPM/Post.ashx'),
-            waitMsg: Ext.apply({
-                message: config.waitMsg,
-                autoClose: false
-            }, maskExt),
-            delay: true,
-            params: config.params,
-            jsonData: xmlData,
-            success: function (action) {
-                Ext.Viewport.mask(Ext.apply({
-                    cls: 'yz-mask-success',
-                    message: config.successMessage || action.result.message,
+//                        if (config.done)
+//                            config.done.call(config.scope || me, action.result);
+//                    },
+//                    failure: function (action) {
+//                        Ext.Msg.alert(RS.$('All_Form_Approve_Title_Failed'), action.result.errorMessage);
+//                    }
+//                });
+//              
+//            },
+//            listeners: {
+//                order: 'after',
+//                hide: function () {
+//                    this.destroy();
+//                }
+//            }
+//        });
+
+//        Ext.Viewport.add(dlg);
+//        dlg.show();
+
+ YZSoft.Ajax.request({
+                    method: 'POST',
+                    url: YZSoft.$url('YZSoft.Services.REST.Mobile/BPM/Post.ashx'),
+                    waitMsg: Ext.apply({
+                        message: config.waitMsg,
+                        autoClose: false
+                    }, maskExt),
                     delay: true,
-                    fn: function () {
-                        if (config.fn)
-                            config.fn.call(config.scope || me, action.result);
-                    }
-                }, maskExt));
+                    params: config.params,
+                    jsonData: xmlData,
+                    success: function (action) {
+                        Ext.Viewport.mask(Ext.apply({
+                            cls: 'yz-mask-success',
+                            message: config.successMessage || action.result.message,
+                            delay: true,
+                            fn: function () {
+                                if (config.fn)
+                                    config.fn.call(config.scope || me, action.result);
+                            }
+                        }, maskExt));
 
-                if (config.done)
-                    config.done.call(config.scope || me, action.result);
-            },
-            failure: function (action) {
-                Ext.Msg.alert(RS.$('All_Form_Approve_Title_Failed'), action.result.errorMessage);
-            }
-        });
+                        if (config.done)
+                            config.done.call(config.scope || me, action.result);
+                    },
+                    failure: function (action) {
+                        Ext.Msg.defaultAllowedConfig.showAnimation = false;
+                        Ext.Msg.defaultAllowedConfig.hideAnimation = false;
+                        Ext.Msg.alert(RS.$('All_Form_Approve_Title_Failed'), action.result.errorMessage);
+                    }
+                });
+         
     },
 
     doAction: function (config) {

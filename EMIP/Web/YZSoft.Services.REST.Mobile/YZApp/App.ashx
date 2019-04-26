@@ -10,6 +10,8 @@ using BPM;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Data.SqlClient;
+using System.Data;
 public class App : YZApplHandler
 {
     public JObject GetMFavorite(HttpContext context)
@@ -108,12 +110,12 @@ public class App : YZApplHandler
         string primarykey = Convert.ToString(rv2["primarykey"]);
         string tablename = Convert.ToString(rv2["table"]["name"]);
         JArray columns = JArray.Parse(Convert.ToString(rv2["table"]["columns"]));
-        JArray newcolumns =JArray.FromObject(columns.Where(x => Convert.ToBoolean(x["show"]) == true).OrderBy(s=> s["sort"]).ToList());
+        JArray newcolumns = JArray.FromObject(columns.Where(x => Convert.ToBoolean(x["show"]) == true).OrderBy(s => s["sort"]).ToList());
         string sqlcol = "";
         foreach (JObject item in newcolumns)
         {
-            sqlcol +=item["name"]+",";
-            
+            sqlcol += item["name"] + ",";
+
         }
         string sql2 = "";
         string sql3 = "";
@@ -122,17 +124,18 @@ public class App : YZApplHandler
             sql2 = "select * from (select  " + primarykey + " as primarykeyyzapp," + sqlcol.TrimEnd(',') + ", ROW_NUMBER() OVER(Order by " + primarykey + @" desc) AS RowId from " + tablename + " ) as b where RowId between " + start + " and " + end + "";
             sql3 = "select * from " + tablename + "";
         }
-        else {
+        else
+        {
             string where = "";
             foreach (JObject item in newcolumns)
             {
-                where += item["name"] + " like '%"+kwd+"%' or ";
+                where += item["name"] + " like '%" + kwd + "%' or ";
             }
 
             sql2 = "select * from (select  " + primarykey + " as primarykeyyzapp," + sqlcol.TrimEnd(',') + ", ROW_NUMBER() OVER(Order by " + primarykey + @" desc) AS RowId from " + tablename + "  where  " + where.Substring(0, where.Length - 3) + ") as b where RowId between " + start + " and " + end + "";
             sql3 = "select * from " + tablename + "  where  " + where.Substring(0, where.Length - 3) + "";
         }
-        rv["children"] =JArray.FromObject(DBUtil_APP.Select(sql2));
+        rv["children"] = JArray.FromObject(DBUtil_APP.Select(sql2));
         rv["total"] = DBUtil_APP.Select(sql3).Count;
         return rv;
     }
@@ -148,7 +151,7 @@ public class App : YZApplHandler
         JArray newcolumns = JArray.FromObject(columns.Where(x => Convert.ToBoolean(x["show"]) == true).OrderBy(s => s["sort"]).ToList());
         rv["displayname"] = newcolumns;
         rv["formstate"] = JObject.Parse(Convert.ToString(rv2["formstate"]));
-        rv["formservice"] =Convert.ToString(rv2["formservice"]);
+        rv["formservice"] = Convert.ToString(rv2["formservice"]);
         return rv;
     }
     public void del(HttpContext context)
@@ -159,5 +162,58 @@ public class App : YZApplHandler
         string sql2 = string.Format(System.Web.HttpUtility.UrlDecode(sql), key);
         DBUtil_APP.ExecuteSqlWithGoUseTran(sql2);
     }
-
+    public JObject reportdefine(HttpContext context)
+    {
+        YZRequest request = new YZRequest(context);
+        string id = request.GetString("id", "");
+        JObject rv = new JObject();
+        string sql = "select json from  APP_APPINFO where PID='" + id + "'";
+        JObject rv2 = JObject.Parse(Convert.ToString(DBUtil_APP.GetSingle(sql)));
+        string type=Convert.ToString(rv2["type"]);
+        string datasql = Convert.ToString(rv2["datas"]);
+        rv["type"] =type;
+        Hashtable ht = new Hashtable();
+        ht["@Account"] = YZAuthHelper.LoginUserAccount;
+        DataTable dt = DBUtil_APP.Query(datasql, ht).Tables[0];
+        string legenddata=Convert.ToString(rv2["legend"]);
+        ArrayList htdata = new ArrayList();
+        Hashtable ht3 = new Hashtable();
+        if (type.ToLower() != "pie")
+        {
+            string[] legend = legenddata.Split(',');
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                string name = dt.Columns[i].ColumnName;
+                if (i == 0)
+                {
+                    var list = dt.AsEnumerable().Select(c => c.Field<string>(name)).ToList();
+                    rv["xdata"] = JArray.FromObject(list);
+                }
+                else
+                {
+                    Hashtable ht2 = new Hashtable();
+                    if (legend.Length == dt.Columns.Count-1)
+                    {
+                        ht2["name"] = legend[i-1];
+                    }
+                    else
+                    {
+                        ht2["name"] = legend[0];
+                    }
+                    ht2["type"] = type.ToLower();
+                    ht2["data"] = JArray.FromObject(dt.AsEnumerable().Select(d => d.Field<string>(name)).ToArray());
+                    htdata.Add(ht2);
+                }
+            }
+            rv["data2"] = JArray.FromObject(htdata);
+            rv["legend"] =JArray.FromObject(Convert.ToString(rv2["legend"]).Split(','));
+        }
+        else {
+            ht3["type"] = "pie";
+            ht3["data"] = dt;
+            ht3["radius"] = "55%";
+        }
+        rv["data"] = JObject.FromObject(ht3);
+        return rv;
+    }
 }

@@ -57,7 +57,7 @@ constructor: function (config) {
                 }
                 else {
 
-                    if (record.data.Type == "SYSTEM") {
+                    if (record.data.Type == "SYSTEM" || record.data.Type == "REPORT") {
                         if (record.data.Json == null) {
                             me.onAppClickError(record.data.AppName);
 
@@ -118,6 +118,28 @@ onAppClick: function (record, AppName, Type, AppUrl) {
             }
         });
 
+    }
+    else if (Type == "REPORT") {
+        pnl = Ext.create('YZSoft.app.Iframe', {
+            title: AppName,
+            back: function () {
+                Ext.mainWin.pop();
+            },
+            fn: function () {
+                Ext.mainWin.pop(deep || 1);
+            },
+            url: AppUrl
+        });
+    }
+    else if (Type == "CUSTOM") {
+        pnl = Ext.create(AppUrl, {
+            back: function () {
+                Ext.mainWin.pop();
+            },
+            fn: function () {
+                Ext.mainWin.pop(deep || 1);
+            }
+        });
     }
     else if (Type == "PROCESS") {
         pnl = Ext.create('YZSoft.form.Post', {

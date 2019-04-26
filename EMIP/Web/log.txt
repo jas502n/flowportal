@@ -6,12 +6,15 @@ YZSoft.Services.REST.Mobile\YZApp
 dingtalk.aspx
 wechat.aspx
 YZSoft\app
+YZSoft\form\aspx\form.js
 YZSoft\form\aspx\field\ScanQRCode.js
 YZSoft\form\field\ScanQRCode.js
 YZSoft\form\src\field\ScanQRCode.js
 YZSoft\form\src\ScanQRCode
 YZSoft\resources\base.css
 bin\TopSdk.dll
+App_Code\YZSoft.Services.REST.Mobile\core\Safe.cs
+App_Code\YZSoft.Services.REST.Mobile\core\User.cs
 
 
 

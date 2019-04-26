@@ -69,7 +69,7 @@ Ext.define('YZSoft.App.Favorite', {
                     }
                     if (!me.getEditing()) {
 
-                        if (record.data.Type == "SYSTEM") {
+                        if (record.data.Type == "SYSTEM" || record.data.Type == "REPORT") {
                             if (record.data.Json == null) {
                                 me.fireEvent('appClickError', record.data.AppName);
 
