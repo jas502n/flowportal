@@ -209,6 +209,24 @@ public class App : YZApplHandler
             rv["legend"] =JArray.FromObject(Convert.ToString(rv2["legend"]).Split(','));
         }
         else {
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                string name = dt.Columns[i].ColumnName;
+                if (i == 0)
+                {
+                    dt.Columns[name].ColumnName = "name";
+                }
+                else if (i == 1)
+                {
+                    dt.Columns[name].ColumnName = "value";
+                }
+                else {
+                    dt.Columns.Remove(name);
+                
+                }
+                
+            }
+            
             ht3["type"] = "pie";
             ht3["data"] = dt;
             ht3["radius"] = "55%";
