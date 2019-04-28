@@ -21,7 +21,7 @@
 
             $.ajax({
                 type: "GET",
-                url: parent.YZSoft.$url('../../../YZSoft.Services.REST.Mobile/YZApp/App.ashx'),
+                url: '../../../YZSoft.Services.REST.Mobile/YZApp/App.ashx',
                 dataType: "json",
                 data: {
                     method: "reportdefine",
@@ -29,17 +29,8 @@
                 },
                 success: function (data) {
                     if (data.code == "-1") {
-                        parent.Ext.Msg.show({
-                            title: "配置不正确",
-                            message: data.msg,
-                            hideOnMaskTap: true,
-                            buttons: [{
-                                text: parent.$rs.YesISee,
-                                flex: 1,
-                                cls: 'yz-button-flat yz-button-action-hot',
-                                itemId: 'ok'
-                            }]
-                        })
+                        alert(data.msg);
+                       
                     }
                     else {
                         if (data.type != "Pie") {
