@@ -129,7 +129,7 @@ Ext.define('YZSoft.app.Panel', {
                 fn: function () {
                     Ext.mainWin.pop(deep || 1);
                 },
-                url: "YZSoft/app/report/index.html?id=" + JSON.parse(record).pid + ""
+                url: YZSoft.$url("YZSoft/app/report/index.html?id=" + JSON.parse(record).pid + "")
             });
         }
         else {

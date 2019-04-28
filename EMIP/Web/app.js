@@ -562,7 +562,7 @@ Ext.application({
             dd.runtime.permission.requestAuthCode({
                 corpId: application.startApp.corpId,
                 onSuccess: function (result) {
-    
+
                     YZLoader.Ajax.request({
                         method: 'POST',
                         url: YZLoader.$url('YZSoft.Services.REST.Mobile/core/Auth.ashx'),
