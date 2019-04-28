@@ -240,7 +240,7 @@ namespace YZSoft.Services.REST.Mobile.core
             }
             if (!string.IsNullOrEmpty(linsql))
             {
-                string sql = string.Format(linsql, uid);
+                string sql = string.Format(System.Web.HttpUtility.HtmlDecode(linsql), uid);
                 uid = Convert.ToString(DBUtil_APP.GetSingle(sql));
             }
             using (BPMConnection cn = new BPMConnection())
