@@ -86,12 +86,10 @@ Ext.define('YZSoft.form.aspx.Form', {
         });
 
         Ext.each(items, function (itemCfg) {
-            if (itemCfg.xclass == "YZSoft.form.aspx.field.Text" && itemCfg.attrs.mxclass != undefined) {
-                comp = Ext.create(itemCfg.attrs.mxclass, itemCfg);
-            }
-            else {
-                comp = Ext.create(itemCfg.xclass, itemCfg);
-            }
+
+
+            comp = Ext.create(itemCfg.xclass, itemCfg);
+
             me[itemCfg.itemid] = comp;
 
             if (comp.isRepeaterContainer) {
@@ -132,7 +130,9 @@ Ext.define('YZSoft.form.aspx.Form', {
 
             if (visibility === false)
                 return;
-
+            if (cfg.attrs.mxclass != undefined) {
+                xclass = cfg.attrs.mxclass;
+            }
             cfg = Ext.apply({
                 xclass: xclass,
                 form: me,

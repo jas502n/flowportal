@@ -48,7 +48,8 @@ public partial class wechat : System.Web.UI.Page
                 "hideAllNonBaseMenuItem",
                 "showAllNonBaseMenuItem",
                 "closeWindow",
-                "scanQRCode"
+                "scanQRCode",
+                "getLocalImgData"
             },
             xclass = "EMIP.view.Main"
         },

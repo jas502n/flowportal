@@ -169,13 +169,13 @@ public class App : YZApplHandler
         JObject rv = new JObject();
         string sql = "select json from  APP_APPINFO where PID='" + id + "'";
         JObject rv2 = JObject.Parse(Convert.ToString(DBUtil_APP.GetSingle(sql)));
-        string type=Convert.ToString(rv2["type"]);
+        string type = Convert.ToString(rv2["type"]);
         string datasql = Convert.ToString(rv2["datas"]);
-        rv["type"] =type;
+        rv["type"] = type;
         Hashtable ht = new Hashtable();
         ht["@Account"] = YZAuthHelper.LoginUserAccount;
         DataTable dt = DBUtil_APP.Query(datasql, ht).Tables[0];
-        string legenddata=Convert.ToString(rv2["legend"]);
+        string legenddata = Convert.ToString(rv2["legend"]);
         ArrayList htdata = new ArrayList();
         Hashtable ht3 = new Hashtable();
         if (type.ToLower() != "pie")
@@ -192,9 +192,9 @@ public class App : YZApplHandler
                 else
                 {
                     Hashtable ht2 = new Hashtable();
-                    if (legend.Length == dt.Columns.Count-1)
+                    if (legend.Length == dt.Columns.Count - 1)
                     {
-                        ht2["name"] = legend[i-1];
+                        ht2["name"] = legend[i - 1];
                     }
                     else
                     {
@@ -206,9 +206,10 @@ public class App : YZApplHandler
                 }
             }
             rv["data2"] = JArray.FromObject(htdata);
-            rv["legend"] =JArray.FromObject(Convert.ToString(rv2["legend"]).Split(','));
+            rv["legend"] = JArray.FromObject(Convert.ToString(rv2["legend"]).Split(','));
         }
-        else {
+        else
+        {
             for (int i = 0; i < dt.Columns.Count; i++)
             {
                 string name = dt.Columns[i].ColumnName;
@@ -220,13 +221,14 @@ public class App : YZApplHandler
                 {
                     dt.Columns[name].ColumnName = "value";
                 }
-                else {
+                else
+                {
                     dt.Columns.Remove(name);
-                
+
                 }
-                
+
             }
-            
+
             ht3["type"] = "pie";
             ht3["data"] = dt;
             ht3["radius"] = "55%";
@@ -234,4 +236,92 @@ public class App : YZApplHandler
         rv["data"] = JObject.FromObject(ht3);
         return rv;
     }
+
+
+    public JObject GetInvoiceInfo(HttpContext context)
+    {
+        YZRequest request = new YZRequest(context);
+        JObject rv = new JObject();
+        string localData = request.GetString("localData", "");
+        string base64 = HttpUtility.UrlEncode(localData.Split(',')[1]);
+
+        string result = com.baidu.ai.baidu.getVat_invoice(base64);
+        JToken j = JObject.Parse(result);
+        string error_code = Convert.ToString(j["error_code"]);
+        rv["baidusuccess"] = "false";
+        if (error_code == "")
+        {
+            rv["baidusuccess"] = "true";
+            JToken ja = JToken.Parse(Convert.ToString(j["words_result"]));
+            rv["InvoiceNum"] = Convert.ToString(ja["InvoiceNum"]);
+            rv["TotalAmount"] = Convert.ToString(ja["TotalAmount"]);
+            rv["TotalTax"] = Convert.ToString(ja["TotalTax"]);
+            rv["AmountInFiguers"] = Convert.ToString(ja["AmountInFiguers"]);
+
+            JArray jaa = JArray.Parse(Convert.ToString(ja["CommodityName"]));
+            rv["word"] = Convert.ToString(jaa[0]["word"]);
+
+        }
+        else
+        {
+
+            rv["bderror_msg"] = Convert.ToString(j["error_msg"]);
+        }
+
+        return rv;
+    }
+
+    public JObject GetDdInvoiceInfo(HttpContext context)
+    {
+
+        YZRequest request = new YZRequest(context);
+        JObject rv = new JObject();
+        string mediaUrl = request.GetString("mediaUrl", "");
+
+        System.Net.WebClient webClient = new System.Net.WebClient();
+        webClient.Encoding = System.Text.Encoding.UTF8;
+        webClient.Headers.Add(System.Net.HttpRequestHeader.KeepAlive, "false");
+
+        using (System.IO.Stream stream = webClient.OpenRead(mediaUrl))
+        {
+
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            stream.CopyTo(ms);
+            //System.Drawing.Image img = System.Drawing.Image.FromStream(stream);
+            //img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] buff = new byte[ms.Length];
+            ms.Position = 0;
+            ms.Read(buff, 0, (int)ms.Length);
+            ms.Close();
+
+
+            string pic = HttpUtility.UrlEncode(Convert.ToBase64String(buff.ToArray()));
+            string result = com.baidu.ai.baidu.getVat_invoice(pic);
+            JToken j = JObject.Parse(result);
+            string error_code = Convert.ToString(j["error_code"]);
+            rv["baidusuccess"] = "false";
+            if (error_code == "")
+            {
+                rv["baidusuccess"] = "true";
+                JToken ja = JToken.Parse(Convert.ToString(j["words_result"]));
+                rv["InvoiceNum"] = Convert.ToString(ja["InvoiceNum"]);
+                rv["TotalAmount"] = Convert.ToString(ja["TotalAmount"]);
+                rv["TotalTax"] = Convert.ToString(ja["TotalTax"]);
+                rv["AmountInFiguers"] = Convert.ToString(ja["AmountInFiguers"]);
+
+                JArray jaa = JArray.Parse(Convert.ToString(ja["CommodityName"]));
+                rv["word"] = Convert.ToString(jaa[0]["word"]);
+
+            }
+            else
+            {
+
+                rv["bderror_msg"] = Convert.ToString(j["error_msg"]);
+            }
+
+            return rv;
+        }
+       
+    }
+
 }

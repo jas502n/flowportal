@@ -35,6 +35,7 @@ Ext.define('YZSoft.form.field.BrowserButtonAbstract', {
     },
 
     doMap: function (data) {
+       
         var me = this,
             data = Ext.isArray(data) ? data : [data],
             row = me.getRow(),

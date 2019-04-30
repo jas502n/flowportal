@@ -311,6 +311,7 @@ Ext.define('YZSoft$Boot.login.Panel', {
                 autoClose: false
             },
             success: function (action) {
+                debugger;
                 var keyInfo = action.result,
                     encrypt = new JSEncrypt();
 

@@ -56,6 +56,7 @@ Ext.define('YZSoft.form.field.DataBrowserButton', {
             },
             fn: function (rows, deep) {
                 Ext.mainWin.pop(deep);
+              
                 me.doMap(rows);
             }
         });

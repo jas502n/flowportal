@@ -72,6 +72,7 @@
     <!--<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=ecd458f7499e18a34d31f4f82ed70b0d"></script>-->
     <!--<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>-->
     <!--<script type="text/javascript" src="YZSoft/src/AMap/maps1.js?v=1.3&key=ecd458f7499e18a34d31f4f82ed70b0d"></script>-->
+
     <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script id="microloader" type="text/javascript" src=".sencha/app/microloader/development.js?_dc=5.70.006"></script>
    

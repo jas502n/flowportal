@@ -430,9 +430,11 @@ Ext.application({
                                     }
                                 });
                             }
+                            
                             else {   //正常网页登录
                                 me.login({
                                     fn: function (result) {
+                                        
                                         me.launchApp(result);
                                     }
                                 });
