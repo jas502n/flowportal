@@ -169,15 +169,7 @@
             }
         });
 
-        YZSoft.src.device.Device.on({
-            resume: function() {
-            
-                me.store.loadPage(1, {
-                    delay: false,
-                    mask: false
-                });
-            }
-        });
+      
 
         me.on({
             scope: me,
