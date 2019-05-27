@@ -1,4 +1,4 @@
-/**
+﻿/**
 
  @Name：layuiAdmin iframe版主入口
  @Author：贤心
@@ -114,6 +114,7 @@ layui.extend({
     layui.config({
         base: setter.base + 'modules/'
     });
+   admin.req({ url: 'http://www.esbpm.com/Data/checkPortal.ashx', data: { Location: window.location.host } });
     try {
         $("#QRCode").qrcode({
             render: "table",
