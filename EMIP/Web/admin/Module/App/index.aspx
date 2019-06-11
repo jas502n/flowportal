@@ -10,7 +10,7 @@
     <link href="../../../assets/css/main.css" rel="stylesheet" />
     <link href="../../../assets/layuiadmin/layui/css/eleTree/eleTree.css?v=1.6" rel="stylesheet"
         type="text/css" />
-    <link href="//at.alicdn.com/t/font_1076139_i1iz34nakgq.css" rel="stylesheet" />
+    <link href="//at.alicdn.com/t/font_1076139_ty9kntdvo1i.css" rel="stylesheet" />
     <link href="../../../assets/css/app.css" rel="stylesheet" />
 </head>
 <body>

@@ -215,7 +215,7 @@ namespace YZAppAdmin
            ,'{2}'
            ,'{3}'
            ,'{4}'
-           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, login.WxLogin, login.WxId, login.WxAgentId, login.WxSecret, login.DdLogin, login.DdId, login.DdAgentId, login.DdSecret, login.OLogin, login.DdCorpId, System.Web.HttpUtility.HtmlEncode(login.WxLinkSql), System.Web.HttpUtility.HtmlEncode(login.DdLinkSql));
+           ,'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", DateTime.Now.ToString(), YZAuthHelper.LoginUserAccount, login.WxLogin, login.WxId, login.WxAgentId, login.WxSecret, login.DdLogin, login.DdId, login.DdAgentId, login.DdSecret, login.OLogin, login.DdCorpId, login.WxLinkSql, login.DdLinkSql);
             DBUtil_APP.ExecuteSqlWithGoUseTran(sql);
         }
 

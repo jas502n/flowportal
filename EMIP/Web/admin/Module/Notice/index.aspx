@@ -294,13 +294,13 @@
                     },
                     url: "Module/Notice/data/data.ashx",
                     success: function (data) {
-
+                      
                         form.val("LAY-filter-Login-form", {
                             "WxAgentid": data.NoticeInfo.WxAgentid
                   , "WxId": data.NoticeInfo.WxId
                   , "WxSecret": data.NoticeInfo.WxSecret
-                   , "WxLinkSql": data.NoticeInfo.WxLinkSql
-                  , "DdLinkSql": data.NoticeInfo.DdLinkSql
+                   , "WxLinkSql": data.NoticeInfo.WxLinkSql ==null ? "" : unescape(data.NoticeInfo.WxLinkSql)
+                  , "DdLinkSql": data.NoticeInfo.DdLinkSql == null ? "" : unescape(data.NoticeInfo.DdLinkSql)
                             //, "WxPushUrl": data.NoticeInfo.WxPushUrl
                   , "DdAgentid": data.NoticeInfo.DdAgentid
                   , "DdId": data.NoticeInfo.DdId
@@ -667,6 +667,17 @@
                         Enabled: Enabled
                     })
                 })
+                var DdLinkSql = "";
+                if (data.field.DdLinkSql != "") {
+                    DdLinkSql = escape(data.field.DdLinkSql);
+                }
+                var WxLinkSql = "";
+                if (data.field.DdLinkSql != "") {
+                    WxLinkSql = escape(data.field.WxLinkSql);
+                }
+
+                data.field.DdLinkSql = DdLinkSql;
+                data.field.WxLinkSql = WxLinkSql;
                 var option = {
                     type: 'POST',
                     data: {

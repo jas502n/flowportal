@@ -167,8 +167,8 @@
 
                   , "WxId": data.LoginInfo.WxId
                    , "WxAgentId": data.LoginInfo.WxAgentId
-                    , "WxLinkSql": data.LoginInfo.WxLinkSql
-                   , "DdLinkSql": data.LoginInfo.DdLinkSql
+                    , "WxLinkSql":data.LoginInfo.WxLinkSql == null ?"":unescape(data.LoginInfo.WxLinkSql)
+                   , "DdLinkSql": data.LoginInfo.DdLinkSql == null ? "" : unescape(data.LoginInfo.DdLinkSql) 
                   , "WxSecret": data.LoginInfo.WxSecret
                   , "DdLogin": data.LoginInfo.DdLogin == "0" ? false : true
                   , "DdCorpId": data.LoginInfo.DdCorpId
@@ -204,8 +204,6 @@
                         return;
                     }
                 }
-
-
                 if (data.field.DdLogin == "on") {
                     data.field.DdLogin = 1;
                 }
@@ -226,6 +224,16 @@
                 else {
                     data.field.OLogin = 0;
                 }
+                var DdLinkSql = "";
+                if (data.field.DdLinkSql != "") {
+                    DdLinkSql = escape(data.field.DdLinkSql);
+                }
+                var WxLinkSql = "";
+                if (data.field.DdLinkSql != "") {
+                    WxLinkSql = escape(data.field.WxLinkSql);
+                }  
+                data.field.DdLinkSql = DdLinkSql;
+                data.field.WxLinkSql = WxLinkSql;
                 var option = {
                     data: {
                         method: 'SaveLoginConfig',
