@@ -49,12 +49,15 @@ public partial class wechat : System.Web.UI.Page
                 "showAllNonBaseMenuItem",
                 "closeWindow",
                 "scanQRCode",
-                "getLocalImgData"
+                "getLocalImgData",
+                "openDefaultBrowser"
             },
             xclass = "EMIP.view.Main"
         },
-        worklist = new {
-            title = "流程审批",
+       
+        worklist = new
+        {
+            title = "流程中心",
             jsApiList = new string[]{
                 "onMenuShareAppMessage",
                 "onMenuShareWechat",
@@ -82,17 +85,63 @@ public partial class wechat : System.Web.UI.Page
                 "hideAllNonBaseMenuItem",
                 "showAllNonBaseMenuItem",
                 "closeWindow",
-                "scanQRCode"
+                "scanQRCode",
+                "openDefaultBrowser"
             },
             xclass = "YZSoft.task.MainPanel",
             config = new
             {
-                titleBar = false
+                titleBar = true
             }
         },
-        post = new
+
+
+
+        ProcessList = new
         {
-            title = "流程发起",
+            title = "流程库",
+            jsApiList = new string[]{
+                "onMenuShareAppMessage",
+                "onMenuShareWechat",
+                "startRecord",
+                "stopRecord",
+                "onVoiceRecordEnd",
+                "playVoice",
+                "pauseVoice",
+                "stopVoice",
+                "onVoicePlayEnd",
+                "uploadVoice",
+                "downloadVoice",
+                "chooseImage",
+                "previewImage",
+                "previewFile",
+                "uploadImage",
+                "downloadImage",
+                "getNetworkType",
+                "openLocation",
+                "getLocation",
+                "hideOptionMenu",
+                "showOptionMenu",
+                "hideMenuItems",
+                "showMenuItems",
+                "hideAllNonBaseMenuItem",
+                "showAllNonBaseMenuItem",
+                "closeWindow",
+                "scanQRCode",
+                "openDefaultBrowser"
+            },
+            xclass = "YZSoft.newpost.Panel",
+            config = new
+            {
+                titleBar = true
+            }
+        },
+
+
+
+        Applist = new
+        {
+            title = "应用中心",
             jsApiList = new string[]{
                 "onMenuShareAppMessage",
                 "onMenuShareWechat",
@@ -122,10 +171,10 @@ public partial class wechat : System.Web.UI.Page
                 "closeWindow",
                 "scanQRCode"
             },
-            xclass = "YZSoft.request.MainPanel",
+            xclass = "YZSoft.app.Panel",
             config = new
             {
-                titleBar = false
+                titleBar = true
             }
         },
         process = new
@@ -158,7 +207,8 @@ public partial class wechat : System.Web.UI.Page
                 "hideAllNonBaseMenuItem",
                 "showAllNonBaseMenuItem",
                 "closeWindow",
-                "scanQRCode"
+                "scanQRCode",
+                "openDefaultBrowser"
             },
             xclass = "YZSoft.form.MessageCardProcess",
             config = new
@@ -196,7 +246,8 @@ public partial class wechat : System.Web.UI.Page
                 "hideAllNonBaseMenuItem",
                 "showAllNonBaseMenuItem",
                 "closeWindow",
-                "scanQRCode"
+                "scanQRCode",
+                "openDefaultBrowser"
             },
             xclass = "YZSoft.form.MessageCardOpenTask",
             config = new
@@ -229,7 +280,7 @@ public partial class wechat : System.Web.UI.Page
             wechat.corpId = lm.WxId;
             wechat.agentId = lm.WxAgentId;
             wechat.secret = lm.WxSecret;
-            linsql = lm.WxLinkSql;
+            linsql = Server.UrlDecode(lm.WxLinkSql);
         }
         if (String.IsNullOrEmpty(app))
             app = "main";
@@ -263,7 +314,7 @@ public partial class wechat : System.Web.UI.Page
 
                 if (!string.IsNullOrEmpty(linsql))
                 {
-                    string sql = string.Format(linsql, userid);
+                    string sql = string.Format(System.Web.HttpUtility.UrlDecode(linsql), userid);
                     userid = Convert.ToString(DBUtil_APP.GetSingle(sql));
                 }
 
