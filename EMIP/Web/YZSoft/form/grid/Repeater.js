@@ -50,6 +50,11 @@ Ext.define('YZSoft.form.grid.Repeater', {
             }
         });
 
+        if (config.attrs.title != undefined) {
+            me.config.titleBarConfig.title = config.attrs.title;
+        } else {
+            me.config.titleBarConfig.title = RS.$('All__DetailTable');
+        }
         me.titleBar = Ext.create('Ext.TitleBar', Ext.apply({
             title: config.title
         }, config.titleBarConfig, me.config.titleBarConfig));
